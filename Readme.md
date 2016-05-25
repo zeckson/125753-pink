@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Щепотьев](https://up.htmlacademy.ru/adaptive/7/user/125753).
-* Наставник: `Неизвестно`.
+* Наставник: `Никита Рогатнев`.
 
 ---
 
