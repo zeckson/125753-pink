@@ -9,16 +9,16 @@
 <header class="header">
   <nav class="navigation">
     <section class="navigation__menu  navigation__menu--hidden">
-      <a href="#" class="navigation__title">PINK</a>
+      <a href="#" class="navigation__title">Pink</a>
       <ul class="navigation__list">
-        <li class="navigation__item">главная</li>
-        <li class="navigation__item">фотографии</li>
-        <li class="navigation__item">конкурс</li>
-        <li class="navigation__item">html academy</li>
+        <li class="navigation__item">Главная</li>
+        <li class="navigation__item">Фотографии</li>
+        <li class="navigation__item">Конкурс</li>
+        <li class="navigation__item">Html academy</li>
       </ul>
     </section>
     <section class="navigation__title">
-      <span>PINK</span>
+      <span>Pink</span>
       <a href="#"><img src="http://placehold.it/64x64" width="64" height="64" alt="Hamburger"></a>
     </section>
   </nav>
@@ -26,9 +26,10 @@
 
 <main class="main">
   <section class="about">
-    <section class="about__logo">
-      <img src="http://placehold.it/320x392" width="320" height="392" alt="Logo">
-    </section>
+    <!--<h2 class="about__title">Взгляните на жизнь иначе!</h2>-->
+    <div class="about__preview">
+      <img src="http://placehold.it/264x294" width="264" height="294" alt="Logo">
+    </div>
     <section class="about__download-section">
       <a href="#" class="about__download-button">Скачать приложение</a>
       <div class="platforms">
@@ -86,19 +87,17 @@
         </li>
       </ul>
       <div class="reviews__toggle-list  slider__toggles">
-        <label for="reviews-input-1"
-               class="slider__toggle">1</label>
+        <label for="reviews-input-1" class="slider__toggle">1</label>
         <label for="reviews-input-2" class="slider__toggle">2</label>
-        <label for="reviews-input-3"
-               class="slider__toggle">3</label>
+        <label for="reviews-input-3" class="slider__toggle">3</label>
       </div>
     </div>
   </section>
   <section class="packages">
     <form class="packages__wrapper  slider">
-      <input type="radio" class="packages__input" id="packages-input-1" name="review" checked>
-      <input type="radio" class="packages__input" id="packages-input-2" name="review">
-      <input type="radio" class="packages__input" id="packages-input-3" name="review">
+      <input type="radio" class="packages__input" id="packages-input-1" name="package" checked>
+      <input type="radio" class="packages__input" id="packages-input-2" name="package">
+      <input type="radio" class="packages__input" id="packages-input-3" name="package">
       <ul class="packages__list">
         <li class="packages__item  slider__item">
           <a href="#" class="packages__item-image">
@@ -117,31 +116,31 @@
         </li>
       </ul>
       <div class="packages__toggle-list  slider__toggles">
-        <label for="packages-input-1"
-               class="slider__toggle">1</label>
+        <label for="packages-input-1" class="slider__toggle">1</label>
         <label for="packages-input-2" class="slider__toggle">2</label>
-        <label for="packages-input-3"
-               class="slider__toggle">3</label>
+        <label for="packages-input-3" class="slider__toggle">3</label>
       </div>
     </form>
   </section>
 </main>
 
-<footer class="footer  contacts">
+<footer class="footer">
   <p>Остались вопросы? Свяжитесь с нами!</p>
-  <div class="contacts__item">
-    <h4 class="contacts__type">Звоните:</h4>
-    <a href="tel:78125556666" class="contacts__value">+7(812)555-66-66</a>
-  </div>
-  <div class="contacts__item">
-    <h4 class="contacts__type">Пишите:</h4>
-    <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
-  </div>
-  <div class="contacts__item">
-    <h4 class="contacts__type">Приходите в гости:</h4>
-    <a href="http://maps.google.com/?q=ул.Большая Конюшенная, 19/8" class="contacts__value">ул.Большая Конюшенная,
-      19/8</a>
-  </div>
+  <address class="contacts">
+    <div class="contacts__item">
+      <h4 class="contacts__type">Звоните:</h4>
+      <a href="tel:78125556666" class="contacts__value">+7(812)555-66-66</a>
+    </div>
+    <div class="contacts__item">
+      <h4 class="contacts__type">Пишите:</h4>
+      <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
+    </div>
+    <div class="contacts__item">
+      <h4 class="contacts__type">Приходите в гости:</h4>
+      <a href="http://maps.google.com/?q=ул.Большая Конюшенная, 19/8" class="contacts__value">ул.Большая Конюшенная,
+        19/8</a>
+    </div>
+  </address>
   <div class="contacts__map">
     <img src="http://placehold.it/320x204" alt="Our Office Map" width="320" height="204">
   </div>
