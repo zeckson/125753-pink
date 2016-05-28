@@ -7,18 +7,18 @@
 <body>
 
 <header class="header">
-  <nav>
-    <section class="navigation  navigation--hidden">
-      <h1 class="navigation__title">PINK</h1>
+  <nav class="navigation">
+    <section class="navigation__menu  navigation__menu--hidden">
+      <a href="#" class="navigation__title">Pink</a>
       <ul class="navigation__list">
-        <li class="navigation__item">главная</li>
-        <li class="navigation__item">фотографии</li>
-        <li class="navigation__item">конкурс</li>
-        <li class="navigation__item">html academy</li>
+        <li class="navigation__item">Главная</li>
+        <li class="navigation__item">Фотографии</li>
+        <li class="navigation__item">Конкурс</li>
+        <li class="navigation__item">Html academy</li>
       </ul>
     </section>
-    <section class="title">
-      <span>PINK</span>
+    <section class="navigation__title">
+      <span>Pink</span>
       <a href="#"><img src="http://placehold.it/64x64" width="64" height="64" alt="Hamburger"></a>
     </section>
   </nav>
@@ -26,8 +26,8 @@
 <main class="main">
   <section class="about">
     <h2 class="about__title">Фотографии пользователей</h2>
-    <p class="about__description">Взгляните на фото, которые выкладывают пользователи! Видите, как не хватаешь
-      ваших?</p>
+    <div class="about__description"><p>Взгляните на фото, которые выкладывают пользователи! Видите, как не хватает
+      ваших?</p></div>
   </section>
   <section class="photos">
     <article class="post">
@@ -117,25 +117,25 @@
       </span>
     </article>
   </section>
-  <section class="submit-photo">
+  <section class="catchword">
     <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+  </section>
+  <section class="submit-photo">
     <form class="submit-photo__form" action="http://dev.null">
       <img src="http://placehold.it/282x376" alt="Photo Preview" width="282" height="376">
-      <section class="submit-photo__controls">
+      <div class="submit-photo__controls">
         <a href="#" class="submit-photo__control  submit-photo__control--active"><img
           src="http://placehold.it/48x48" alt="crop" width="48" height="48"></a>
         <a href="#" class="submit-photo__control"><img
           src="http://placehold.it/48x48" alt="fill" width="48" height="48"></a>
         <a href="#" class="submit-photo__control submit-photo__control--active"><img
           src="http://placehold.it/48x48" alt="contrast" width="48" height="48"></a>
-        <br>
         <label>
           <input class="submit-photo__slider  submit-photo__slider--active" type="range" name="control-value"
                  min="0" max="100" step="5" value="70">
         </label>
-      </section>
+      </div>
       <button type="submit">Запостить</button>
-      <br>
       <button type="reset">Отмена</button>
     </form>
   </section>
