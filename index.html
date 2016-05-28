@@ -7,9 +7,9 @@
 <body>
 
 <header class="header">
-  <nav>
-    <section class="navigation  navigation--hidden">
-      <h1 class="navigation__title">PINK</h1>
+  <nav class="navigation">
+    <section class="navigation__menu  navigation__menu--hidden">
+      <a href="#" class="navigation__title">PINK</a>
       <ul class="navigation__list">
         <li class="navigation__item">главная</li>
         <li class="navigation__item">фотографии</li>
@@ -17,7 +17,7 @@
         <li class="navigation__item">html academy</li>
       </ul>
     </section>
-    <section class="title">
+    <section class="navigation__title">
       <span>PINK</span>
       <a href="#"><img src="http://placehold.it/64x64" width="64" height="64" alt="Hamburger"></a>
     </section>
@@ -30,26 +30,21 @@
       <img src="http://placehold.it/320x392" width="320" height="392" alt="Logo">
     </section>
     <section class="about__download-section">
-      <button class="about__download-button">Скачать приложение</button>
-      <br>
-        <span class="platforms">
-          <a class="platform  platform--ios" href="http://appstore">IOS</a>
-          <a class="platform  platform--android"
-             href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink"
-          >Android</a>
-          <a class="platform platform--windows"
-             href="http://microsoft.com"
-          >Windows Mobile</a>
-        </span>
+      <a href="#" class="about__download-button">Скачать приложение</a>
+      <div class="platforms">
+        <a class="platform  platform--ios" href="http://appstore">IOS</a>
+        <a class="platform  platform--android" href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink">Android</a>
+        <a class="platform platform--windows" href="http://microsoft.com">Windows Mobile</a>
+      </div>
       <p class="about__description">
         Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
       </p>
     </section>
   </section>
   <section class="offer">
-    <section class="offer__motto">
-      <p>Устали от серости мегаполиса?<br>Нам есть, что вам предложить!</p>
-    </section>
+    <div class="offer__motto">
+      <p>Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+    </div>
     <article class="advantage">
       <h3 class="advantage__title">Поднимает настроение</h3>
       <p class="advantage__description">Приложение позволит Вам победить осеннюю хандру и депрессию буквально в
@@ -66,12 +61,12 @@
       <p class="advantage__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
         новых</p>
     </article>
-    <section class="offer__preview">
+    <div class="offer__preview">
       <img src="http://placehold.it/160x278" width="160" height="278" alt="Application Preview">
-    </section>
+    </div>
   </section>
   <section class="reviews">
-    <form class="reviews__wrapper  slider">
+    <div class="reviews__wrapper  slider">
       <input type="radio" class="reviews__input" id="reviews-input-1" name="review" checked>
       <input type="radio" class="reviews__input" id="reviews-input-2" name="review">
       <input type="radio" class="reviews__input" id="reviews-input-3" name="review">
@@ -97,7 +92,7 @@
         <label for="reviews-input-3"
                class="slider__toggle">3</label>
       </div>
-    </form>
+    </div>
   </section>
   <section class="packages">
     <form class="packages__wrapper  slider">
@@ -106,18 +101,19 @@
       <input type="radio" class="packages__input" id="packages-input-3" name="review">
       <ul class="packages__list">
         <li class="packages__item  slider__item">
-          <a href="#" class="packages__item-image"><img src="http://placehold.it/276x280" alt="Small package"
-                                                        width="276"
-                                                        height="280"></a>
+          <a href="#" class="packages__item-image">
+            <img src="http://placehold.it/276x280" alt="Small package" width="276" height="280">
+          </a>
         </li>
         <li class="packages__item  slider__item">
-          <a href="#" class="packages__item-image"><img src="http://placehold.it/276x280" alt="Standard package"
-                                                        width="276"
-                                                        height="280"></a>
+          <a href="#" class="packages__item-image">
+            <img src="http://placehold.it/276x280" alt="Standard package" width="276" height="280">
+          </a>
         </li>
         <li class="packages__item  slider__item">
-          <a href="#" class="packages__item-image"><img
-            src="http://placehold.it/276x280" alt="Big package" width="276" height="280"></a>
+          <a href="#" class="packages__item-image">
+            <img src="http://placehold.it/276x280" alt="Big package" width="276" height="280">
+          </a>
         </li>
       </ul>
       <div class="packages__toggle-list  slider__toggles">
@@ -131,20 +127,24 @@
   </section>
 </main>
 
-<footer class="footer">
-  <address class="contacts">
-    <p>Остались вопросы? Свяжитесь с нами!</p>
+<footer class="footer  contacts">
+  <p>Остались вопросы? Свяжитесь с нами!</p>
+  <div class="contacts__item">
     <h4 class="contacts__type">Звоните:</h4>
     <a href="tel:78125556666" class="contacts__value">+7(812)555-66-66</a>
+  </div>
+  <div class="contacts__item">
     <h4 class="contacts__type">Пишите:</h4>
     <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
+  </div>
+  <div class="contacts__item">
     <h4 class="contacts__type">Приходите в гости:</h4>
     <a href="http://maps.google.com/?q=ул.Большая Конюшенная, 19/8" class="contacts__value">ул.Большая Конюшенная,
       19/8</a>
-    <div class="contacts__map">
-      <img src="http://placehold.it/320x204" alt="Our Office Map" width="320" height="204">
-    </div>
-  </address>
+  </div>
+  <div class="contacts__map">
+    <img src="http://placehold.it/320x204" alt="Our Office Map" width="320" height="204">
+  </div>
 </footer>
 
 </body>
