@@ -1,12 +1,18 @@
 @import "colors";
 @import "grid";
 
+@mixin clear-fix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .navigation {
   background-color: $BACKGROUND;
   color: $WHITE;
-  font-family: "OpenSans", sans-serif;
-  font-size: 16px;
-  line-height: 2em;
+  font-family: "OpenSans Bold", sans-serif;
 }
 
 .navigation__button {
@@ -17,8 +23,9 @@
 
 .navigation__menu {
   color: $WHITE;
+  font-size: 18pt;
   text-transform: uppercase;
-  line-height: 1.778;
+  line-height: 32pt;
 
   .navigation__logo {
     padding: $STEP * 2;
@@ -28,12 +35,26 @@
 
 .navigation__list {
   list-style-type: none;
-  font-weight: bold;
   padding: 0;
   text-align: center;
   margin: 0;
 
   .navigation__item {
-    height: $STEP * 10;
+    border-bottom: solid black thin;
+    border-top: solid #485461 thin;
   }
 }
+
+.navigation__logo {
+  // Как лучше размещать элементы? Сначала шрифты, потом выравнивание?
+  display: inline-block;
+  padding: 8px;
+}
+
+.navigation__menu-burger {
+  float: right;
+  padding: 4px;
+
+  @include clear-fix;
+}
+
