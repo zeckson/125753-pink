@@ -43,9 +43,18 @@
   }
 }
 
-.about__description {
+.about__download-info {
   text-align: center;
   margin: 0;
   font-family: $LIGHT;
+  padding: 5px;
+}
+
+.about__description {
+  background: white;
+  text-align: center;
+  margin: 0;
+  font-family: $LIGHT;
+  color: $GREY;
   padding: 5px;
 }

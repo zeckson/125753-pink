@@ -1,0 +1,56 @@
+@import "colors";
+@import "fonts";
+
+.post {
+  padding: 10px;
+
+  .post__photo {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .post__photo--wide {
+    overflow: visible;
+  }
+
+  .post__photo-of-the-day {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+    background-color: #d22856;
+    color: white;
+  }
+
+  .post__author {
+    a, a:hover {
+      text-decoration: none;
+      color: black;
+      font-family: $BOLD;
+    }
+    .post__time {
+      padding-left: 4px;
+      color: #283645;
+    }
+  }
+
+  .post__description {
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .post__like-panel {
+    color: #d22856;
+    text-transform: uppercase;
+    span {
+      padding-left: 10px;
+    }
+  }
+
+  .post__wrapper {
+    background-color: $LIGHT-GREY;
+  }
+
+}
+
