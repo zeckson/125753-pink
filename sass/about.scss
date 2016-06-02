@@ -1,0 +1,52 @@
+@import "colors";
+
+$LIGHT: "OpenSans Light", sans-serif;
+
+.about {
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  font-family: $LIGHT;
+  color: white;
+
+  .about__title {
+    margin: 0;
+    font-size: 24pt;
+    text-align: center;
+    font-weight: normal;
+    padding: 25px 50px;
+  }
+
+  .about__preview {
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+
+.about__download-section {
+  background-color: $BACKGROUND;
+
+  .about__download-button {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px 50px;
+  }
+}
+
+.about__platforms {
+  text-align: center;
+
+  .about__platform {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+  }
+}
+
+.about__description {
+  text-align: center;
+  margin: 0;
+  font-family: $LIGHT;
+  padding: 5px;
+}
