@@ -1,15 +1,28 @@
 @import "colors";
 @import "grid";
 
+@mixin clear-fix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 .main {
   background-image: url("/img/bg-back-mobile@1x.jpg");
   vertical-align: middle;
 }
 
 .main__logo {
-  padding: $STEP;
+  // Как лучше размещать элементы? Сначала шрифты, потом выравнивание?
+  display: inline-block;
+  padding: 2 * $STEP;
 }
+
 .main__menu-burger {
   float: right;
   padding: $STEP;
+
+  @include clear-fix;
 }
