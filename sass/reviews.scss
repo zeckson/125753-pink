@@ -1,0 +1,22 @@
+@import "colors";
+
+.reviews {
+  color: $GREY;
+}
+
+.reviews__list {
+
+  .reviews__item {
+    text-align: center;
+
+    .reviews__item-author {
+      margin: 0;
+      padding: 10px;
+    }
+
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+  }
+}

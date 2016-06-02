@@ -1,0 +1,25 @@
+@import "fonts";
+
+.contacts {
+  font-style: normal;
+  text-align: center;
+
+  .contacts__item {
+    padding: 10px;
+    .contacts__type {
+      margin: 0;
+      font-family: $BOLD;
+    }
+
+    .contacts__value {
+      margin: 0;
+      font-family: $LIGHT;
+      color: #d22856;
+    }
+
+    a, a:hover {
+      text-decoration: none;
+    }
+
+  }
+}

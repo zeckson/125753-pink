@@ -1,0 +1,12 @@
+@import "colors";
+@import "contacts";
+
+.footer {
+  color: $GREY;
+
+  p {
+    margin: 0;
+    text-align: center;
+    padding: 25px 50px;
+  }
+}
