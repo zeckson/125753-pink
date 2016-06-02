@@ -42,6 +42,11 @@
   .navigation__item {
     border-bottom: solid black thin;
     border-top: solid #485461 thin;
+
+    a, a:hover {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
