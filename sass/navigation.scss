@@ -1,0 +1,39 @@
+@import "colors";
+@import "grid";
+
+.navigation {
+  background-color: $BACKGROUND;
+  color: $WHITE;
+  font-family: "OpenSans", sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.navigation__button {
+  float: right;
+  display: inline-block;
+  padding: $STEP;
+}
+
+.navigation__menu {
+  color: $WHITE;
+  text-transform: uppercase;
+  line-height: 1.778;
+
+  .navigation__logo {
+    padding: $STEP * 2;
+    display: inline-block;
+  }
+}
+
+.navigation__list {
+  list-style-type: none;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+
+  .navigation__item {
+    height: $STEP * 10;
+  }
+}

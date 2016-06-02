@@ -1,0 +1,15 @@
+@import "colors";
+@import "grid";
+
+.main {
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  vertical-align: middle;
+}
+
+.main__logo {
+  padding: $STEP;
+}
+.main__menu-burger {
+  float: right;
+  padding: $STEP;
+}
