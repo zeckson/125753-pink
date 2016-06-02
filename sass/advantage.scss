@@ -1,0 +1,15 @@
+.advantage {
+  text-align: center;
+
+  .advantage__title {
+    padding: 10px;
+    font-family: $BOLD;
+    margin: 0;
+  }
+
+  .advantage__description {
+    font-family: $REGULAR;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+}

@@ -1,5 +1,5 @@
 @import "colors";
-@import "grid";
+@import "fonts";
 
 @mixin clear-fix {
   &:after {
@@ -12,13 +12,13 @@
 .navigation {
   background-color: $BACKGROUND;
   color: $WHITE;
-  font-family: "OpenSans Bold", sans-serif;
+  font-family: $BOLD;
 }
 
 .navigation__button {
   float: right;
   display: inline-block;
-  padding: $STEP;
+  padding: 4px;
 }
 
 .navigation__menu {
@@ -28,7 +28,7 @@
   line-height: 32pt;
 
   .navigation__logo {
-    padding: $STEP * 2;
+    padding: 8px;
     display: inline-block;
   }
 }
