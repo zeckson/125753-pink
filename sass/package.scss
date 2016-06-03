@@ -1,33 +1,31 @@
 @import "fonts";
 
 .package {
-
   table, th, td, tbody, thead {
     width: 100%;
-    border: 1px solid #e5e5e5;
     border-spacing: 0;
+    border: 1px solid #e5e5e5;
   }
 
   thead {
-    background-color: $GREY;
     color: white;
+    background-color: $GREY;
   }
   .package__hit {
     float: left;
     background-image: url("../img/bg-hit.svg");
   }
   .package__title {
-    text-align: center;
-    display: block;
     font-family: $BOLD;
+    display: block;
+    text-align: center;
   }
   .package__price {
-    text-align: center;
     display: block;
+    text-align: center;
   }
 
   .package__option-name {
     text-transform: uppercase;
   }
-
 }

@@ -2,16 +2,16 @@
 @import "fonts";
 
 .about {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
   font-family: $LIGHT;
   color: white;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
 
   .about__title {
-    margin: 0;
     font-size: 24pt;
-    text-align: center;
     font-weight: normal;
+    margin: 0;
     padding: 25px 50px;
+    text-align: center;
   }
 
   .about__preview {
@@ -26,10 +26,10 @@
 
   .about__download-button {
     display: block;
-    color: white;
-    text-decoration: none;
-    text-align: center;
     padding: 25px 50px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -37,24 +37,24 @@
   text-align: center;
 
   .about__platform {
-    color: white;
-    text-decoration: none;
     padding: 0 10px;
+    text-decoration: none;
+    color: white;
   }
 }
 
 .about__download-info {
-  text-align: center;
-  margin: 0;
   font-family: $LIGHT;
+  margin: 0;
   padding: 5px;
+  text-align: center;
 }
 
 .about__description {
-  background: white;
-  text-align: center;
-  margin: 0;
   font-family: $LIGHT;
-  color: $GREY;
+  margin: 0;
   padding: 5px;
+  text-align: center;
+  color: $GREY;
+  background: white;
 }

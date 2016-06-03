@@ -6,8 +6,8 @@
 
   .post__photo {
     position: relative;
-    text-align: center;
     overflow: hidden;
+    text-align: center;
   }
 
   .post__photo--wide {
@@ -16,18 +16,18 @@
 
   .post__photo-of-the-day {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     padding: 5px;
-    background-color: #d22856;
     color: white;
+    background-color: #d22856;
   }
 
   .post__author {
     a, a:hover {
+      font-family: $BOLD;
       text-decoration: none;
       color: black;
-      font-family: $BOLD;
     }
     .post__time {
       padding-left: 4px;
@@ -41,8 +41,8 @@
   }
 
   .post__like-panel {
-    color: #d22856;
     text-transform: uppercase;
+    color: #d22856;
     span {
       padding-left: 10px;
     }
@@ -51,6 +51,4 @@
   .post__wrapper {
     background-color: $LIGHT-GREY;
   }
-
 }
-

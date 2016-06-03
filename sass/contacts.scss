@@ -7,19 +7,18 @@
   .contacts__item {
     padding: 10px;
     .contacts__type {
-      margin: 0;
       font-family: $BOLD;
+      margin: 0;
     }
 
     .contacts__value {
-      margin: 0;
       font-family: $LIGHT;
+      margin: 0;
       color: #d22856;
     }
 
     a, a:hover {
       text-decoration: none;
     }
-
   }
 }
