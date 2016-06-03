@@ -4,9 +4,34 @@
 .footer {
   color: $GREY;
 
+  .footer__logo {
+    img {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
   p {
     margin: 0;
     text-align: center;
     padding: 25px 50px;
   }
+}
+
+.footer__social {
+  text-align: center;
+}
+
+.footer__social-link {
+  padding: 5px;
+}
+
+.footer__developer-logo {
+
+}
+
+.footer__developer {
+  padding: 10px;
+  text-align: center;
 }

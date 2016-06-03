@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <link rel="stylesheet" type="text/css" href="sass/footer.scss"/>
+  <link rel="stylesheet" type="text/css" href="sass/submit-photo.scss"/>
   <link rel="stylesheet" type="text/css" href="sass/catchword.scss"/>
   <link rel="stylesheet" type="text/css" href="sass/post.scss"/>
   <link rel="stylesheet" href="css/style.css">
@@ -142,14 +144,14 @@
   </section>
   <section class="submit-photo">
     <form class="submit-photo__form" action="http://dev.null">
-      <img src="http://placehold.it/282x376" alt="Photo Preview" width="282" height="376">
+      <img class="submit-photo__preview" src="/img/photo-7-mobile@1x.jpg" alt="Photo Preview" width="280" height="374">
       <div class="submit-photo__controls">
         <a href="#" class="submit-photo__control  submit-photo__control--active"><img
-          src="http://placehold.it/48x48" alt="crop" width="48" height="48"></a>
+          src="/img/icon-editor-crop.svg" alt="crop" width="48" height="48"></a>
         <a href="#" class="submit-photo__control"><img
-          src="http://placehold.it/48x48" alt="fill" width="48" height="48"></a>
+          src="/img/icon-editor-fill.svg" alt="fill" width="48" height="48"></a>
         <a href="#" class="submit-photo__control submit-photo__control--active"><img
-          src="http://placehold.it/48x48" alt="contrast" width="48" height="48"></a>
+          src="/img/icon-editor-contrast.svg" alt="contrast" width="48" height="48"></a>
         <label>
           <input class="submit-photo__slider  submit-photo__slider--active" type="range" name="control-value"
                  min="0" max="100" step="5" value="70">
@@ -163,18 +165,17 @@
 
 <footer class="footer">
   <div class="footer__logo">
-    <img src="http://placehold.it/72x48" alt="Logo" width="72" height="48"><span
-    class="footer__name">PINK</span>
+    <img src="/img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
   </div>
   <div class="footer__social">
-    <a href="#" class="footer__social-link footer__social-link--twi">Twitter</a>
-    <a href="#" class="footer__social-link footer__social-link--fb">Facebook</a>
-    <a href="#" class="footer__social-link footer__social-link--yt">YouTube</a>
+    <a href="#" class="footer__social-link footer__social-link--twi"><img src="/img/icon-twitter.svg" alt="Twitter" width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--fb"><img src="/img/icon-facebook.svg" alt="Facebook" width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--yt"><img src="/img/icon-youtube.svg" alt="YouTube" width="32" height="32"></a>
   </div>
   <div class="footer__developer">
     <span>Разработано</span>
     <a href="#" class="footer__developer-logo">
-      <img src="http://placehold.it/32x34" alt="HTML Academy" width="32" height="34">
+      <img src="/img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
     </a>
   </div>
 </footer>
