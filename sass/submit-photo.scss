@@ -1,0 +1,34 @@
+@import "colors";
+
+.submit-photo {
+  background-color: $LIGHT-GREY;
+
+  .submit-photo__preview {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+.submit-photo__controls {
+  text-align: center;
+  padding: 10px 10px;
+
+  label {
+    display: block;
+  }
+  .submit-photo__control {
+    padding-left: 10px;
+  }
+}
+
+.submit-photo__form {
+  button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
