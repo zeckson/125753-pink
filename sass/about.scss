@@ -1,8 +1,7 @@
-@import "colors";
 @import "fonts";
 
 .about {
-  color: white;
+  color: $white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
   font-family: $LIGHT;
@@ -25,7 +24,7 @@
 }
 
 .about__download-section {
-  background-color: $BACKGROUND;
+  background-color: $background;
 
   .about__download-button {
     display: block;
@@ -35,7 +34,7 @@
     text-align: center;
     text-decoration: none;
 
-    color: white;
+    color: $white;
   }
 }
 
@@ -47,7 +46,7 @@
 
     text-decoration: none;
 
-    color: white;
+    color: $white;
   }
 }
 
@@ -66,8 +65,8 @@
 
   text-align: center;
 
-  color: $GREY;
-  background: white;
+  color: $grey;
+  background: $white;
 
   font-family: $LIGHT;
 }

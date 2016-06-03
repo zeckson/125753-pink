@@ -3,14 +3,14 @@
 .offer {
   text-align: center;
 
-  color: $GREY;
-  background-color: $LIGHT-GREY;
+  color: $grey;
+  background-color: $light-grey;
 
   font-family: $LIGHT;
 
   .offer__motto {
     padding: 25px 25px;
 
-    background-color: white;
+    background-color: $white;
   }
 }

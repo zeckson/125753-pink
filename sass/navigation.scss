@@ -11,8 +11,8 @@
 }
 
 .navigation {
-  color: $WHITE;
-  background-color: $BACKGROUND;
+  color: $white;
+  background-color: $background;
 
   font-family: $BOLD;
 }
@@ -27,7 +27,7 @@
 .navigation__menu {
   text-transform: uppercase;
 
-  color: $WHITE;
+  color: $white;
 
   font-size: 18pt;
   line-height: 32pt;
@@ -54,7 +54,7 @@
     a, a:hover {
       text-decoration: none;
 
-      color: white;
+      color: $white;
     }
   }
 }
