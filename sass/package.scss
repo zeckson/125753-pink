@@ -1,4 +1,3 @@
-@import "fonts";
 
 .package {
   table, th, td, tbody, thead {
@@ -23,7 +22,7 @@
 
     text-align: center;
 
-    font-family: $BOLD;
+    font-family: $bold;
   }
   .package__price {
     display: block;

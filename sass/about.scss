@@ -1,10 +1,8 @@
-@import "fonts";
-
 .about {
   color: $white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
-  font-family: $LIGHT;
+  font-family: $light;
 
   .about__title {
     margin: 0;
@@ -56,7 +54,7 @@
 
   text-align: center;
 
-  font-family: $LIGHT;
+  font-family: $light;
 }
 
 .about__description {
@@ -68,5 +66,5 @@
   color: $grey;
   background: $white;
 
-  font-family: $LIGHT;
+  font-family: $light;
 }

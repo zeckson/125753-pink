@@ -1,5 +1,4 @@
 @import "colors";
-@import "fonts";
 
 @mixin clear-fix {
   &:after {
@@ -14,7 +13,7 @@
   color: $white;
   background-color: $background;
 
-  font-family: $BOLD;
+  font-family: $bold;
 }
 
 .navigation__button {

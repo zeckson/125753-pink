@@ -1,5 +1,3 @@
-@import "fonts";
-
 .contacts {
   text-align: center;
 
@@ -10,7 +8,7 @@
     .contacts__type {
       margin: 0;
 
-      font-family: $BOLD;
+      font-family: $bold;
     }
 
     .contacts__value {
@@ -18,7 +16,7 @@
 
       color: $red;
 
-      font-family: $LIGHT;
+      font-family: $light;
     }
 
     a, a:hover {
