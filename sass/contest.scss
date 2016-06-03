@@ -1,0 +1,77 @@
+$red: #d22856;
+.contest {
+  fieldset {
+    border: 0;
+  }
+
+  .contest__form-label {
+    display: block;
+    line-height: 30pt;
+    color: $red;
+    text-transform: uppercase;
+    .contest__form-input {
+      display: block;
+      height: 40px;
+      min-width: 200px;
+      font-size: 14pt;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $red;
+    text-transform: uppercase;
+  }
+
+  .contest__achievements {
+    background-color: $LIGHT-GREY;
+    .contest__form-label {
+      color: $GREY;
+      text-transform: none;
+    }
+
+    .contest__form-checkbox {
+      width: 32px;
+      height: 32px;
+      color: $red;
+    }
+  }
+
+  .contest__device {
+    background-color: $LIGHT-GREY;
+    .contest__form-label {
+      color: $GREY;
+      text-transform: none;
+    }
+    .contest__form-radio {
+      width: 32px;
+      height: 32px;
+      color: $red;
+    }
+  }
+
+  .contest__review {
+    textarea {
+      font-size: 12pt;
+      min-width: 276px;
+      min-height: 200px;
+    }
+    button {
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .contest__hint {
+    color: $GREY;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    sup {
+      color: $red;
+    }
+  }
+}
+
