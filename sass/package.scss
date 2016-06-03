@@ -3,7 +3,9 @@
 .package {
   table, th, td, tbody, thead {
     width: 100%;
+
     border-spacing: 0;
+
     border: 1px solid #e5e5e5;
   }
 
@@ -13,15 +15,19 @@
   }
   .package__hit {
     float: left;
+
     background-image: url("../img/bg-hit.svg");
   }
   .package__title {
-    font-family: $BOLD;
     display: block;
+
     text-align: center;
+
+    font-family: $BOLD;
   }
   .package__price {
     display: block;
+
     text-align: center;
   }
 

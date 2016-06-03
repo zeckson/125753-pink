@@ -2,14 +2,16 @@
   text-align: center;
 
   .advantage__title {
-    font-family: $BOLD;
     margin: 0;
     padding: 10px;
+
+    font-family: $BOLD;
   }
 
   .advantage__description {
-    font-family: $REGULAR;
     margin: 0;
     padding-bottom: 25px;
+
+    font-family: $REGULAR;
   }
 }

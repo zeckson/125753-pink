@@ -1,20 +1,24 @@
 @import "fonts";
 
 .contacts {
-  font-style: normal;
   text-align: center;
+
+  font-style: normal;
 
   .contacts__item {
     padding: 10px;
     .contacts__type {
-      font-family: $BOLD;
       margin: 0;
+
+      font-family: $BOLD;
     }
 
     .contacts__value {
-      font-family: $LIGHT;
       margin: 0;
+
       color: #d22856;
+
+      font-family: $LIGHT;
     }
 
     a, a:hover {

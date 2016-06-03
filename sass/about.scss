@@ -2,16 +2,19 @@
 @import "fonts";
 
 .about {
-  font-family: $LIGHT;
   color: white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
+  font-family: $LIGHT;
+
   .about__title {
-    font-size: 24pt;
-    font-weight: normal;
     margin: 0;
     padding: 25px 50px;
+
     text-align: center;
+
+    font-size: 24pt;
+    font-weight: normal;
   }
 
   .about__preview {
@@ -26,9 +29,12 @@
 
   .about__download-button {
     display: block;
+
     padding: 25px 50px;
+
     text-align: center;
     text-decoration: none;
+
     color: white;
   }
 }
@@ -38,23 +44,30 @@
 
   .about__platform {
     padding: 0 10px;
+
     text-decoration: none;
+
     color: white;
   }
 }
 
 .about__download-info {
-  font-family: $LIGHT;
   margin: 0;
   padding: 5px;
+
   text-align: center;
+
+  font-family: $LIGHT;
 }
 
 .about__description {
-  font-family: $LIGHT;
   margin: 0;
   padding: 5px;
+
   text-align: center;
+
   color: $GREY;
   background: white;
+
+  font-family: $LIGHT;
 }

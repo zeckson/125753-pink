@@ -6,33 +6,41 @@ $red: #d22856;
 
   .contest__form-label {
     display: block;
-    line-height: 30pt;
-    color: $red;
+
     text-transform: uppercase;
+
+    color: $red;
+
+    line-height: 30pt;
     .contest__form-input {
       display: block;
-      height: 40px;
+
       min-width: 200px;
+      height: 40px;
+
       font-size: 14pt;
     }
   }
 
   p {
     text-align: center;
-    color: $red;
     text-transform: uppercase;
+
+    color: $red;
   }
 
   .contest__achievements {
     background-color: $LIGHT-GREY;
     .contest__form-label {
-      color: $GREY;
       text-transform: none;
+
+      color: $GREY;
     }
 
     .contest__form-checkbox {
       width: 32px;
       height: 32px;
+
       color: $red;
     }
   }
@@ -40,38 +48,44 @@ $red: #d22856;
   .contest__device {
     background-color: $LIGHT-GREY;
     .contest__form-label {
-      color: $GREY;
       text-transform: none;
+
+      color: $GREY;
     }
     .contest__form-radio {
       width: 32px;
       height: 32px;
+
       color: $red;
     }
   }
 
   .contest__review {
     textarea {
-      font-size: 12pt;
       min-width: 276px;
       min-height: 200px;
+
+      font-size: 12pt;
     }
     button {
       display: block;
-      text-align: center;
-      margin-left: auto;
+
       margin-right: auto;
+      margin-left: auto;
+
+      text-align: center;
     }
   }
 
   .contest__hint {
-    color: $GREY;
-    text-align: center;
     display: block;
+
+    text-align: center;
     text-transform: uppercase;
+
+    color: $GREY;
     sup {
       color: $red;
     }
   }
 }
-

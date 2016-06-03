@@ -1,13 +1,16 @@
 @import "colors";
 
 .offer {
-  font-family: $LIGHT;
   text-align: center;
+
   color: $GREY;
   background-color: $LIGHT-GREY;
 
+  font-family: $LIGHT;
+
   .offer__motto {
     padding: 25px 25px;
+
     background-color: white;
   }
 }
