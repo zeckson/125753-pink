@@ -16,5 +16,10 @@
 
   .slider__toggles {
     text-align: center;
+    .slider__toggle {
+      border: 2px solid black;
+      border-radius: 50%;
+      background: $white;
+    }
   }
 }
