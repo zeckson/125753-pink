@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
 <body>
@@ -9,42 +10,44 @@
 <header class="header">
   <nav class="navigation">
     <div class="navigation__menu  navigation__menu--hidden">
-      <a class="navigation__title" href="#">Pink</a>
+      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
+      <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
       <ul class="navigation__list">
-        <li class="navigation__item">Главная</li>
-        <li class="navigation__item">Фотографии</li>
-        <li class="navigation__item">Конкурс</li>
-        <li class="navigation__item">Html academy</li>
+        <li class="navigation__item"><a href="index.html">Главная</a></li>
+        <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
+        <li class="navigation__item"><a href="form.html">Конкурс</a></li>
+        <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
       </ul>
     </div>
-    <div class="navigation__title">
-      <a class="navigation__logo" href="#">Pink</a>
-      <a href="#"><img src="http://placehold.it/64x64" width="64" height="64" alt="Hamburger"></a>
-    </div>
+    <section class="navigation__header">
+      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
+      <a class="navigation__menu-burger" href="#"><img src="img/icon-menu-burger.svg" width="32" height="32" alt="Hamburger"></a>
+    </section>
   </nav>
 </header>
 
 <main class="main">
   <section class="about">
-    <!--<h2 class="about__title">Взгляните на жизнь иначе!</h2>-->
+    <h2 class="about__title">Взгляните на жизнь иначе!</h2>
     <div class="about__preview">
-      <img src="http://placehold.it/264x294" width="264" height="294" alt="Logo">
+      <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Logo">
     </div>
     <section class="about__download-section">
       <a href="#" class="about__download-button">Скачать приложение</a>
-      <div class="platforms">
-        <a class="platform  platform--ios" href="http://appstore">IOS</a>
-        <a class="platform  platform--android" href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink">Android</a>
-        <a class="platform  platform--windows" href="http://microsoft.com">Windows Mobile</a>
+      <div class="about__platforms">
+        <a class="about__platform  about__platform--ios" href="http://appstore"><img src="img/logo-apple.svg" width="56" height="56" alt="IOS"></a>
+        <a class="about__platform  about__platform--android" href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink"><img src="img/logo-android.svg" width="56" height="56" alt="Android"></a>
+        <a class="about__platform  about__platform--windows" href="http://microsoft.com"><img src="img/logo-microsoft.svg" width="56" height="56" alt="Windows Mobile"></a>
       </div>
-      <p class="about__description">
+      <p class="about__download-info">
         Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
       </p>
     </section>
   </section>
   <section class="offer">
     <div class="offer__motto">
-      <p>Устали от серости мегаполиса? Нам есть, что вам предложить!</p>
+      <p>Устали от серости мегаполиса?</p>
+      <p>Нам есть, что вам предложить!</p>
     </div>
     <article class="advantage">
       <h3 class="advantage__title">Поднимает настроение</h3>
@@ -63,16 +66,16 @@
         новых</p>
     </article>
     <div class="offer__preview">
-      <img src="http://placehold.it/160x278" width="160" height="278" alt="Application Preview">
+      <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Application Preview">
     </div>
   </section>
   <section class="reviews">
     <div class="reviews__wrapper  slider">
-      <input type="radio" class="reviews__input" id="reviews-input-1" name="review" checked>
-      <input type="radio" class="reviews__input" id="reviews-input-2" name="review">
-      <input type="radio" class="reviews__input" id="reviews-input-3" name="review">
-      <ul class="reviews__list">
-        <li class="reviews__item  slider__item">
+      <input type="radio" class="reviews__input" id="reviews-input-1" name="review" hidden checked>
+      <input type="radio" class="reviews__input" id="reviews-input-2" name="review" hidden>
+      <input type="radio" class="reviews__input" id="reviews-input-3" name="review" hidden>
+      <ul class="reviews__list  slider__list">
+        <li class="reviews__item  slider__item  slider__item--selected">
           <h3 class="reviews__item-author">Николай Петоров</h3>
           <p>&quot;Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные вещи! А еще я
             познакомился со своей будущей женой в комментариях к выложенной фотографии!&quot;</p>
@@ -94,11 +97,11 @@
     </div>
   </section>
   <section class="packages">
-    <form class="packages__wrapper  slider">
-      <input type="radio" class="packages__input" id="packages-input-1" name="package" checked>
-      <input type="radio" class="packages__input" id="packages-input-2" name="package">
-      <input type="radio" class="packages__input" id="packages-input-3" name="package">
-      <ul class="packages__list">
+    <div class="packages__wrapper  slider">
+      <input type="radio" class="packages__input" id="packages-input-1" name="package" hidden checked>
+      <input type="radio" class="packages__input" id="packages-input-2" name="package" hidden>
+      <input type="radio" class="packages__input" id="packages-input-3" name="package" hidden>
+      <ul class="packages__list  slider__list">
         <li class="packages__item  slider__item">
           <article class="package">
             <table>
@@ -114,19 +117,19 @@
               <tr>
                 <td class="package__option-name">Розовый фильтр</td>
                 <td class="package__option package__option--off">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="Off">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Смайлики</td>
                 <td class="package__option package__option--off">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="Off">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Комментарии</td>
                 <td class="package__option package__option--off">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="Off">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
                 </td>
               </tr>
               </tbody>
@@ -149,19 +152,19 @@
               <tr>
                 <td class="package__option-name">Розовый фильтр</td>
                 <td class="package__option package__option--on">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="On">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Смайлики</td>
                 <td class="package__option package__option--on">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="On">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Комментарии</td>
                 <td class="package__option package__option--off">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="Off">
+                  <img src="img/icon-no.svg" width="32" height="32" alt="Off">
                 </td>
               </tr>
               </tbody>
@@ -183,19 +186,19 @@
               <tr>
                 <td class="package__option-name">Розовый фильтр</td>
                 <td class="package__option package__option--on">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="On">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Смайлики</td>
                 <td class="package__option package__option--on">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="On">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
                 </td>
               </tr>
               <tr>
                 <td class="package__option-name">Комментарии</td>
                 <td class="package__option package__option--on">
-                  <img src="http://placehold.it/32x32" width="32" height="32" alt="On">
+                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
                 </td>
               </tr>
               </tbody>
@@ -208,7 +211,7 @@
         <label for="packages-input-2" class="slider__toggle">2</label>
         <label for="packages-input-3" class="slider__toggle">3</label>
       </div>
-    </form>
+    </div>
   </section>
 </main>
 
@@ -230,7 +233,7 @@
     </div>
   </address>
   <div class="footer__map">
-    <img src="http://placehold.it/320x204" alt="Our Office Map" width="320" height="204">
+    <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
   </div>
 </footer>
 

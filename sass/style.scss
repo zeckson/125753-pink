@@ -1,0 +1,17 @@
+//common variables
+@import "fonts";
+@import "colors";
+
+@import "navigation";
+@import "main";
+@import "footer";
+
+body {
+  margin: 0;
+
+  color: $white;
+
+  font-family: $regular;
+  font-size: 14pt;
+  line-height: 24pt;
+}

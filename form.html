@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Конкурс</title>
 </head>
 <body>
@@ -9,18 +10,20 @@
 <header class="header">
   <nav class="navigation">
     <div class="navigation__menu  navigation__menu--hidden">
-      <a class="navigation__title" href="#">Pink</a>
+      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
+      <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
       <ul class="navigation__list">
-        <li class="navigation__item">Главная</li>
-        <li class="navigation__item">Фотографии</li>
-        <li class="navigation__item">Конкурс</li>
-        <li class="navigation__item">Html academy</li>
+        <li class="navigation__item"><a href="index.html">Главная</a></li>
+        <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
+        <li class="navigation__item"><a href="form.html">Конкурс</a></li>
+        <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
       </ul>
     </div>
-    <div class="navigation__title">
-      <a class="navigation__logo" href="#">Pink</a>
-      <a href="#"><img src="http://placehold.it/64x64" width="64" height="64" alt="Hamburger"></a>
-    </div>
+    <section class="navigation__header">
+      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
+      <a class="navigation__menu-burger" href="#"><img src="img/icon-menu-burger.svg" width="32" height="32"
+                                                       alt="Hamburger"></a>
+    </section>
   </nav>
 </header>
 
@@ -32,7 +35,7 @@
         Вашу бонусную карту</p>
     </div>
   </section>
-  <form class="contest__form">
+  <form class="contest">
     <fieldset class="contest__basic-info">
       <label class="contest__form-label">
         Фамилия:<input type="text" class="contest__form-input" placeholder="Укажите фамилию">
@@ -93,7 +96,7 @@
       </fieldset>
     </fieldset>
     <fieldset class="contest__review">
-      <label>опишите свои эмоции
+      <label class="contest__form-label">опишите свои эмоции
         <textarea name="review" id="review" cols="30"
                   rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
       </label>
@@ -106,18 +109,20 @@
 
 <footer class="footer">
   <div class="footer__logo">
-    <img src="http://placehold.it/72x48" alt="Logo" width="72" height="48"><span
-    class="footer__name">PINK</span>
+    <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
   </div>
   <div class="footer__social">
-    <a href="#" class="footer__social-link footer__social-link--twi">Twitter</a>
-    <a href="#" class="footer__social-link footer__social-link--fb">Facebook</a>
-    <a href="#" class="footer__social-link footer__social-link--yt">YouTube</a>
+    <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
+                                                                          width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
+                                                                         width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
+                                                                         width="32" height="32"></a>
   </div>
   <div class="footer__developer">
     <span>Разработано</span>
     <a href="#" class="footer__developer-logo">
-      <img src="http://placehold.it/32x34" alt="HTML Academy" width="32" height="34">
+      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
     </a>
   </div>
 </footer>

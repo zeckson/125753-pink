@@ -1,0 +1,26 @@
+.contacts {
+  text-align: center;
+
+  font-style: normal;
+
+  .contacts__item {
+    padding: 10px;
+    .contacts__type {
+      margin: 0;
+
+      font-family: $bold;
+    }
+
+    .contacts__value {
+      margin: 0;
+
+      color: $red;
+
+      font-family: $light;
+    }
+
+    a, a:hover {
+      text-decoration: none;
+    }
+  }
+}

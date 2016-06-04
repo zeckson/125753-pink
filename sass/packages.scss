@@ -1,0 +1,10 @@
+@import "package";
+
+.packages {
+  color: $grey;
+  background-color: $light-grey;
+
+  .packages__list {
+    padding: 25px 50px;
+  }
+}

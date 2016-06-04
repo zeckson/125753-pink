@@ -1,0 +1,37 @@
+@import "contacts";
+
+.footer {
+  color: $grey;
+
+  .footer__logo {
+    img {
+      display: block;
+
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 25px 50px;
+
+    text-align: center;
+  }
+}
+
+.footer__social {
+  text-align: center;
+}
+
+.footer__social-link {
+  padding: 5px;
+}
+
+
+
+.footer__developer {
+  padding: 10px;
+
+  text-align: center;
+}
