@@ -12,3 +12,7 @@
 @import "submit-photo";
 //form.html
 @import "contest";
+
+.main {
+  @include container;
+}
