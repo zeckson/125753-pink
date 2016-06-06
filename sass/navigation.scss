@@ -1,18 +1,97 @@
-
-@mixin clear-fix {
-  &:after {
-    display: table;
-    clear: both;
-
-    content: "";
-  }
-}
-
 .navigation {
+  position: relative;
+
+  box-sizing: content-box;
+
   color: $white;
   background-color: $background;
 
   font-family: $bold;
+
+  @include container;
+}
+
+.navigation__controls {
+  min-height: 70px;
+}
+
+.navigation__header {
+  min-height: 67px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation__menu {
+  width: 100%;
+  min-height: 328px;
+
+  text-transform: uppercase;
+
+  color: $white;
+  background-color: $grey;
+
+  font-size: 18pt;
+  line-height: 32pt;
+}
+
+@media (min-width: $tablet-break) {
+  .navigation__menu {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .navigation__menu--hidden {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-break) {
+  .navigation__menu {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .navigation__menu--hidden {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-break) {
+  .navigation__menu {
+    position: static;
+
+    float: right;
+
+    width: 700px;
+
+    background: none;
+
+    .navigation__controls {
+      display: none;
+    }
+  }
+
+  .navigation__menu--hidden {
+    display: inline-block;
+  }
+
+  .navigation__item {
+    display: inline-block;
+
+    border: none;
+  }
+
+  .navigation__header {
+    position: static;
+
+    float: left;
+
+    background: none;
+  }
+
+  .navigation__menu-burger {
+    display: none;
+  }
 }
 
 .navigation__button {
@@ -22,30 +101,22 @@
   padding: 4px;
 }
 
-.navigation__menu {
-  text-transform: uppercase;
+.navigation__logo {
+  display: inline-block;
 
-  color: $white;
-
-  font-size: 18pt;
-  line-height: 32pt;
-
-  .navigation__logo {
-    display: inline-block;
-
-    padding: 8px;
-  }
+  padding: 8px;
 }
 
 .navigation__list {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-
   text-align: center;
 
+  @include drop-list;
+
   .navigation__item {
+    box-sizing: border-box;
+    height: 64px;
+    padding: 12px 0;
+
     border-top: solid #485461 thin;
     border-bottom: solid black thin;
 

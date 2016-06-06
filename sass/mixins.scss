@@ -1,0 +1,28 @@
+@mixin clear-fix {
+  &:after {
+    display: table;
+    clear: both;
+
+    content: "";
+  }
+}
+
+@mixin drop-list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+@mixin container {
+  width: 320px;
+  margin: 0 auto;
+
+  @media(min-width: $tablet-break) {
+    width: 620px;
+  }
+
+  @media(min-width: $desktop-break) {
+    width: 940px;
+  }
+}

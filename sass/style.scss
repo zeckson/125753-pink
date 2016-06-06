@@ -1,6 +1,7 @@
 //common variables
 @import "fonts";
-@import "colors";
+@import "variables";
+@import "mixins";
 
 @import "navigation";
 @import "main";
@@ -10,8 +11,9 @@ body {
   margin: 0;
 
   color: $white;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
 
   font-family: $regular;
   font-size: 14pt;
-  line-height: 24pt;
+  line-height: 24pt;;
 }
