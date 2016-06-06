@@ -5,13 +5,11 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
   font-family: $light;
-
-  @include container;
 }
 
 .about__title {
   margin: 0;
-  padding: 25px 50px;
+  padding: 21px 50px;
 
   text-align: center;
 
@@ -26,6 +24,8 @@
 }
 
 .about__download-section {
+  min-height: 271px;
+
   background-color: $background;
 
   .about__download-button {
@@ -49,14 +49,24 @@
   .about {
     position: static;
 
+    box-sizing: border-box;
     width: 300px;
+    min-height: 619px;
     margin: 0 0 auto 0;
+    padding: 100px 0;
 
     background: none;
   }
 
   .about__download-section {
     background: none;
+  }
+}
+
+@media (min-width: $desktop-break) {
+  .about {
+    min-height: 745px;
+    padding: 200px 0;
   }
 }
 
