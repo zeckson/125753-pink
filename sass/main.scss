@@ -13,5 +13,7 @@
 @import "contest";
 
 .main {
+  background-color: $white;
+
   @include container;
 }
