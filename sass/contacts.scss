@@ -25,3 +25,12 @@
 
   font-family: $light;
 }
+
+@media (min-width: $tablet-break) {
+  .contacts__item {
+    display: inline-block;
+  }
+  .contacts {
+    @include clear-fix;
+  }
+}
