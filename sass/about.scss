@@ -1,10 +1,9 @@
 .about {
-  min-height: 663px;
-
-  color: $white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
+  color: $white;
 
   font-family: $light;
+  min-height: 663px;
 }
 
 .about__title {
@@ -46,7 +45,7 @@
     right: 0;
   }
 
-  .about {
+  .about__wrapper {
     position: static;
 
     box-sizing: border-box;
@@ -64,7 +63,7 @@
 }
 
 @media (min-width: $desktop-break) {
-  .about {
+  .about__wrapper {
     min-height: 745px;
     padding: 200px 0;
   }
