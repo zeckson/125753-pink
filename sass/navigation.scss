@@ -104,10 +104,9 @@
     float: right;
 
     width: 700px;
+    min-height: 0;
 
     background: none;
-
-    min-height: 0;
 
     .navigation__controls {
       display: none;

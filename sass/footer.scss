@@ -3,6 +3,7 @@
 .footer {
   color: $grey;
   background-color: $white;
+
   @include container;
 
   .footer__logo {

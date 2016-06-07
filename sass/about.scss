@@ -1,9 +1,10 @@
 .about {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  min-height: 663px;
+
   color: $white;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
 
   font-family: $light;
-  min-height: 663px;
 }
 
 .about__title {
