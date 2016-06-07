@@ -1,10 +1,58 @@
-@import "package";
-
 .packages {
   color: $grey;
   background-color: $light-grey;
+}
 
-  .packages__list {
-    padding: 25px 50px;
+.packages__table {
+  width: 940px;
+  th, td, thead, tbody {
+    border-spacing: 0;
+
+    border: 1px solid #e5e5e5;
+  }
+
+  thead {
+    color: $white;
+    background-color: $grey;
+  }
+}
+
+.packages__table-wrapper {
+  overflow: scroll;
+}
+
+.packages__package-hit {
+  float: left;
+
+  background-image: url("../img/bg-hit.svg");
+}
+
+.packages__package-title {
+  display: block;
+
+  text-align: center;
+
+  font-family: $bold;
+}
+
+.packages__package-price {
+  display: block;
+
+  text-align: center;
+}
+
+.packages__package-option-name {
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-break) {
+  .packages__table {
+    width: 620px;
+  }
+}
+
+@media (min-width: $desktop-break) {
+  .packages__table {
+    width: 940px;
   }
 }

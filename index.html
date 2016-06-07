@@ -129,111 +129,66 @@
       <input type="radio" class="packages__input" id="packages-input-1" name="package" hidden checked>
       <input type="radio" class="packages__input" id="packages-input-2" name="package" hidden>
       <input type="radio" class="packages__input" id="packages-input-3" name="package" hidden>
-      <ul class="packages__list  slider__list">
-        <li class="packages__item  slider__item">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__title">Малый</span>
-                  <span class="package__price">1,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <li class="packages__item  slider__item  slider__item--selected">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__hit">Хит</span>
-                  <span class="package__title">Стандарт</span>
-                  <span class="package__price">3,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-no.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <li class="packages__item  slider__item">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__title">Большой</span>
-                  <span class="package__price">6,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-      </ul>
+      <article class="packages__table-wrapper">
+        <table class="packages__table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>
+              <span class="packages__package-title">Малый</span>
+              <span class="packages__package-price">1,99 USD</span>
+            </th>
+            <th>
+              <span class="packages__package-hit">Хит</span>
+              <span class="packages__package-title">Стандарт</span>
+              <span class="packages__package-price">3,99 USD</span>
+            </th>
+            <th>
+              <span class="packages__package-title">Большой</span>
+              <span class="packages__package-price">6,99 USD</span>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="packages__package-option-name">Розовый фильтр</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          <tr>
+            <td class="packages__package-option-name">Смайлики</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          <tr>
+            <td class="packages__package-option-name">Комментарии</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </article>
       <div class="packages__toggle-list  slider__toggles">
         <label for="packages-input-1" class="slider__toggle">1</label>
         <label for="packages-input-2" class="slider__toggle">2</label>
