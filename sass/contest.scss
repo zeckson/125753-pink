@@ -1,24 +1,7 @@
 .contest {
+  @include container;
   fieldset {
     border: 0;
-  }
-
-  .contest__form-label {
-    display: block;
-
-    text-transform: uppercase;
-
-    color: $red;
-
-    line-height: 30pt;
-    .contest__form-input {
-      display: block;
-
-      min-width: 200px;
-      height: 40px;
-
-      font-size: 14pt;
-    }
   }
 
   p {
@@ -28,63 +11,94 @@
     color: $red;
   }
 
-  .contest__achievements {
-    background-color: $light-grey;
-    .contest__form-label {
-      text-transform: none;
+}
 
-      color: $grey;
-    }
+.contest__form-label {
+  display: block;
 
-    .contest__form-checkbox {
-      width: 32px;
-      height: 32px;
+  text-transform: uppercase;
 
-      color: $red;
-    }
-  }
+  color: $red;
 
-  .contest__device {
-    background-color: $light-grey;
-    .contest__form-label {
-      text-transform: none;
-
-      color: $grey;
-    }
-    .contest__form-radio {
-      width: 32px;
-      height: 32px;
-
-      color: $red;
-    }
-  }
-
-  .contest__review {
-    textarea {
-      min-width: 276px;
-      min-height: 200px;
-
-      font-size: 12pt;
-    }
-    button {
-      display: block;
-
-      margin-right: auto;
-      margin-left: auto;
-
-      text-align: center;
-    }
-  }
-
-  .contest__hint {
+  line-height: 30pt;
+  .contest__form-input {
     display: block;
 
-    text-align: center;
-    text-transform: uppercase;
+    min-width: 200px;
+    height: 40px;
+
+    font-size: 14pt;
+  }
+}
+
+.contest__achievements {
+  background-color: $light-grey;
+  .contest__form-label {
+    text-transform: none;
 
     color: $grey;
-    sup {
-      color: $red;
+  }
+
+  .contest__form-checkbox {
+    width: 32px;
+    height: 32px;
+
+    color: $red;
+  }
+}
+
+.contest__device {
+  background-color: $light-grey;
+  .contest__form-label {
+    text-transform: none;
+
+    color: $grey;
+  }
+  .contest__form-radio {
+    width: 32px;
+    height: 32px;
+
+    color: $red;
+  }
+}
+
+.contest__review {
+  textarea {
+    min-width: 276px;
+    min-height: 200px;
+
+    font-size: 12pt;
+  }
+  button {
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+}
+
+.contest__hint {
+  display: block;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $grey;
+  sup {
+    color: $red;
+  }
+}
+
+@media (min-width: $tablet-break) {
+  // Как поменять местами блоки как на макете?
+  .contest__basic-info {
+    .contest__form-input {
+      // Как растянуть и выровнять по правому краю?
+      // Как сделать отступ слева?
+      box-sizing: content-box;
+      display: inline-block;
     }
   }
 }
