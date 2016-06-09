@@ -1,62 +1,87 @@
 
 .post {
   padding: 10px;
+  box-sizing: border-box;
+}
 
-  .post__photo {
-    position: relative;
+.post__photo {
+  position: relative;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    text-align: center;
+  text-align: center;
+}
+
+.post__photo--wide {
+  overflow: visible;
+}
+
+.post__photo-of-the-day {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 5px;
+
+  color: $white;
+  background-color: $red;
+}
+
+.post__author {
+  a, a:hover {
+    text-decoration: none;
+
+    color: $grey;
+
+    font-family: $bold;
+  }
+  .post__time {
+    padding-left: 4px;
+
+    color: $grey;
+  }
+}
+
+.post__description {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.post__like-panel {
+  text-transform: uppercase;
+
+  color: $red;
+  span {
+    padding-left: 10px;
+  }
+}
+
+.post__wrapper {
+  background-color: $light-grey;
+}
+
+@media (min-width: $tablet-break) {
+  .photos {
+    @include clear-fix;
+  }
+  .post {
+    float: right;
+    width: 50%;
+    min-height: 360px;
   }
 
-  .post__photo--wide {
-    overflow: visible;
+  .post:nth-child(1) {
+    float: none;
+    clear: both;
+    width: 100%;
   }
 
-  .post__photo-of-the-day {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    padding: 5px;
-
-    color: $white;
-    background-color: $red;
+}
+@media (min-width: $desktop-break) {
+  .post {
+    width: 33%;
   }
 
-  .post__author {
-    a, a:hover {
-      text-decoration: none;
-
-      color: $grey;
-
-      font-family: $bold;
-    }
-    .post__time {
-      padding-left: 4px;
-
-      color: $grey;
-    }
-  }
-
-  .post__description {
-    margin: 0;
-    padding: 10px 0;
-  }
-
-  .post__like-panel {
-    text-transform: uppercase;
-
-    color: $red;
-    span {
-      padding-left: 10px;
-    }
-  }
-
-  .post__wrapper {
-    background-color: $light-grey;
-  }
 }

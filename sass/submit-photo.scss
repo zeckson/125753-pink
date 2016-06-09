@@ -2,12 +2,13 @@
 .submit-photo {
   background-color: $light-grey;
 
-  .submit-photo__preview {
-    display: block;
+}
 
-    margin-right: auto;
-    margin-left: auto;
-  }
+.submit-photo__preview {
+  display: block;
+
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .submit-photo__controls {
@@ -29,5 +30,18 @@
 
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $tablet-break) {
+  .submit-photo__form {
+    @include clear-fix;
+  }
+  .submit-photo__preview {
+    float: left;
+  }
+
+  .submit-photo__controls {
+    float: right;
   }
 }
