@@ -1,5 +1,6 @@
 .offer {
   text-align: center;
+  position: relative;
 
   color: $grey;
   background-color: $light-grey;
@@ -90,6 +91,7 @@
     width: 300px;
   }
   .offer__effect {
+    padding-left: 50%;
     display: block;
   }
 }
