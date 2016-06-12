@@ -1,8 +1,10 @@
 @import "navigation";
 
 .header {
-  background-color: $grey;
   position: relative;
+
+  background-color: $grey;
+
   @include outer-wrapper;
 }
 

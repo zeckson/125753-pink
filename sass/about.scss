@@ -1,6 +1,4 @@
 .about {
-
-
   color: $white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
@@ -8,7 +6,6 @@
 }
 
 .about__title {
-
   box-sizing: border-box;
   margin: 0;
   // Как выровнять текст по центру блока (вертикально)?
@@ -77,7 +74,6 @@
   font-family: $light;
 }
 @media (min-width: $tablet-break) {
-
   .about__preview {
     position: absolute;
     right: 0;

@@ -1,8 +1,9 @@
 .contacts {
   text-align: center;
-  @include container;
 
   font-style: normal;
+
+  @include container;
 }
 
 .contacts__item {

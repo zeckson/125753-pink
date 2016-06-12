@@ -7,6 +7,7 @@
 
 .contest__form-legend {
   display: none;
+
   text-align: center;
   text-transform: uppercase;
 
@@ -99,10 +100,11 @@
   // Как поменять местами блоки как на макете?
   .contest__basic-info {
     .contest__form-input {
+      display: inline-block;
       // Как растянуть и выровнять по правому краю?
       // Как сделать отступ слева?
+
       box-sizing: content-box;
-      display: inline-block;
     }
   }
 
@@ -120,6 +122,4 @@
   .contest__hint {
     float: right;
   }
-
-
 }

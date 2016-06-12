@@ -28,8 +28,8 @@
 }
 
 @mixin outer-wrapper {
-  margin: 0 auto;
   width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-break) {
     width: 700px;

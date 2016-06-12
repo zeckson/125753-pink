@@ -1,7 +1,7 @@
 
 .post {
-  padding: 10px;
   box-sizing: border-box;
+  padding: 10px;
 }
 
 .post__photo {
@@ -68,6 +68,7 @@
   }
   .post {
     float: right;
+
     width: 50%;
     // Как это сделать без задания высоты?
     min-height: 360px;
@@ -76,13 +77,12 @@
   .post:nth-child(1) {
     float: none;
     clear: both;
+
     width: 100%;
   }
-
 }
 @media (min-width: $desktop-break) {
   .post {
     width: 33%;
   }
-
 }

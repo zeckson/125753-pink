@@ -36,19 +36,24 @@
 
 @media (min-width: $tablet-break) {
   .footer__logo {
-    vertical-align: middle;
     display: inline-block;
 
     width: 32%;
+
+    vertical-align: middle;
   }
   .footer__social {
     display: inline-block;
-    vertical-align: middle;
+
     width: 32%;
+
+    vertical-align: middle;
   }
   .footer__developer {
     display: inline-block;
-    vertical-align: middle;
+
     width: 32%;
+
+    vertical-align: middle;
   }
 }
