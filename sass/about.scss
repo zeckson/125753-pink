@@ -78,15 +78,13 @@
   font-family: $light;
 }
 @media (min-width: $tablet-break) {
-  .about__title {
-    min-height: 400px;
-  }
 
   .about__preview {
     position: absolute;
     right: 0;
   }
 
+  // Что-то я окончательно запутался с этим блоком...
   .about__wrapper {
     position: static;
 

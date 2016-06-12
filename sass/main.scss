@@ -17,7 +17,7 @@
   @include outer-wrapper;
 }
 
-.main_wrapper {
+.main__container {
   background-color: $white;
   @include container;
 }
