@@ -1,5 +1,7 @@
 .about {
   color: $white;
+  position: relative;
+  @include container;
   background-image: url("../img/bg-back-mobile@1x.jpg");
 
   font-family: $light;
