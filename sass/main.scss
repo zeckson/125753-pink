@@ -13,6 +13,8 @@
 @import "contest";
 
 .main {
+  background-color: $white;
+  @include outer-wrapper;
 }
 
 .main_wrapper {

@@ -15,7 +15,7 @@
 }
 
 @mixin container {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
 
   @media(min-width: $tablet-break) {
@@ -24,5 +24,18 @@
 
   @media(min-width: $desktop-break) {
     width: 940px;
+  }
+}
+
+@mixin outer-wrapper {
+  margin: 0 auto;
+  width: 320px;
+
+  @media (min-width: $tablet-break) {
+    width: 700px;
+  }
+
+  @media (min-width: $desktop-break) {
+    width: 1200px;
   }
 }

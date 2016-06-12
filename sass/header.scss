@@ -1,6 +1,18 @@
 @import "navigation";
 
 .header {
+  background-color: $grey;
   position: relative;
+  @include outer-wrapper;
+}
+
+.header__container {
+  // Почему этот блок не центруется при таблете и десктопе?
   @include container;
+}
+
+@media (min-width: $tablet-break) {
+  .header__container {
+    position: absolute;
+  }
 }

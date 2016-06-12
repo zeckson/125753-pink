@@ -78,11 +78,6 @@
 }
 
 @media (min-width: $tablet-break) {
-  .navigation {
-    @include container;
-    position: absolute;
-  }
-
   .navigation__menu {
     position: absolute;
     z-index: 1;
