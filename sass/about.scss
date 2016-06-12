@@ -1,5 +1,5 @@
 .about {
-  min-height: 663px;
+
 
   color: $white;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -8,8 +8,12 @@
 }
 
 .about__title {
+
+  box-sizing: border-box;
+  min-height: 275px;
   margin: 0;
-  padding: 21px 50px;
+  // Как выровнять текст по центру блока?
+  padding: 25% 10%;
 
   text-align: center;
 
@@ -40,35 +44,6 @@
   }
 }
 
-@media (min-width: $tablet-break) {
-  .about__preview {
-    position: absolute;
-    right: 0;
-  }
-
-  .about__wrapper {
-    position: static;
-
-    box-sizing: border-box;
-    width: 300px;
-    min-height: 619px;
-    margin: 0 0 auto 0;
-    padding: 100px 0;
-
-    background: none;
-  }
-
-  .about__download-section {
-    background: none;
-  }
-}
-
-@media (min-width: $desktop-break) {
-  .about__wrapper {
-    min-height: 745px;
-    padding: 200px 0;
-  }
-}
 
 .about__platforms {
   text-align: center;
@@ -101,4 +76,36 @@
   background: $white;
 
   font-family: $light;
+}
+@media (min-width: $tablet-break) {
+  .about__title {
+    min-height: 445px;
+  }
+
+  .about__preview {
+    position: absolute;
+    right: 0;
+  }
+
+  .about__wrapper {
+    position: static;
+
+    box-sizing: border-box;
+    width: 300px;
+    min-height: 619px;
+    margin: 0 0 auto 0;
+    padding: 100px 0;
+
+    background: none;
+  }
+
+  .about__download-section {
+    background: none;
+  }
+}
+
+@media (min-width: $desktop-break) {
+  .about__wrapper {
+    padding: 200px 0;
+  }
 }

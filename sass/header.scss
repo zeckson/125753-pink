@@ -1,0 +1,6 @@
+@import "navigation";
+
+.header {
+  position: relative;
+  @include container;
+}

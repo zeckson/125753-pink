@@ -3,7 +3,7 @@
 @import "variables";
 @import "mixins";
 
-@import "navigation";
+@import "header";
 @import "main";
 @import "footer";
 
@@ -11,7 +11,7 @@ body {
   margin: 0;
 
   color: $white;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-color: grey;
 
   font-family: $regular;
   font-size: 14pt;

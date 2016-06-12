@@ -1,14 +1,9 @@
 .navigation {
-  position: relative;
-
   box-sizing: content-box;
 
   color: $white;
-  background-color: $background;
 
   font-family: $bold;
-
-  @include container;
 }
 
 .navigation__controls {
@@ -83,6 +78,11 @@
 }
 
 @media (min-width: $tablet-break) {
+  .navigation {
+    @include container;
+    position: absolute;
+  }
+
   .navigation__menu {
     position: absolute;
     z-index: 1;
@@ -101,6 +101,7 @@
   .navigation__menu {
     position: static;
 
+    // Почему float: right не применяется?
     float: right;
 
     width: 700px;
