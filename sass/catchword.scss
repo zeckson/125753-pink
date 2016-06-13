@@ -1,8 +1,14 @@
 .catchword {
-  margin: 0;
-  padding: 25px 25px;
+  padding: 20px 20px;
 
   text-align: center;
 
+  background-color: $white;
   color: $grey;
+
+  p {
+    line-height: 30px;
+    @include regular-text(14);
+    margin: 0;
+  }
 }
