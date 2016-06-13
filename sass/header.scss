@@ -1,13 +1,1 @@
 @import "navigation";
-
-.header {
-  background-color: $grey;
-
-  @include outer-wrapper;
-}
-
-.header__container {
-  position: relative;
-  // Почему этот блок не центруется при таблете и десктопе?
-  @include container;
-}

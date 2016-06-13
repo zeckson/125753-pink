@@ -7,6 +7,13 @@
 @import "main";
 @import "footer";
 
+.container {
+  margin: 0;
+  padding: 0;
+
+  @include container;
+}
+
 body {
   margin: 0;
 

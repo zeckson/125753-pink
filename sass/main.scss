@@ -11,11 +11,3 @@
 @import "submit-photo";
 //form.html
 @import "contest";
-
-.main {
-  @include outer-wrapper;
-}
-
-.main__container {
-  @include container;
-}
