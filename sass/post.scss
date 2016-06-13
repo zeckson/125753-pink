@@ -1,7 +1,6 @@
-
 .post {
   box-sizing: border-box;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .post__photo {
@@ -15,6 +14,10 @@
 }
 
 .post__photo--wide {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
   overflow: visible;
 }
 
@@ -25,8 +28,11 @@
 
   padding: 5px;
 
+  text-transform: uppercase;
+
   color: $white;
   background-color: $red;
+  @include bold-text(12)
 }
 
 .post__author {
@@ -35,24 +41,31 @@
 
     color: $grey;
 
-    font-family: $bold;
+    @include bold-text(14)
   }
   .post__time {
     padding-left: 4px;
 
     color: $grey;
+    text-transform: uppercase;
+    @include light-text(12)
   }
 }
 
 .post__description {
   margin: 0;
   padding: 10px 0;
+
+  line-height: 24px;
+  @include regular-text(14)
 }
 
 .post__like-panel {
   text-transform: uppercase;
 
   color: $red;
+
+  @include regular-text(12);
   span {
     padding-left: 10px;
   }
@@ -81,6 +94,7 @@
     width: 100%;
   }
 }
+
 @media (min-width: $desktop-break) {
   .post {
     width: 33%;
