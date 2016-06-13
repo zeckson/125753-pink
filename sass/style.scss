@@ -3,7 +3,6 @@
 @import "variables";
 @import "mixins";
 @import "container";
-
 @import "header";
 @import "main";
 @import "footer";
@@ -12,9 +11,7 @@ body {
   margin: 0;
 
   color: $white;
-  background-color: grey;
+  background-color: $grey;
 
-  font-family: $regular;
-  font-size: 14pt;
-  line-height: 24pt;;
+  @include regular-text;
 }

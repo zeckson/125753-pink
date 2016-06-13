@@ -1,22 +1,24 @@
 .about {
   color: $white;
-  position: relative;
-  @include container;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background:  {
+    color: $grey;
+
+    image: url("../img/bg-back-mobile@1x.jpg");
+  };
 
   font-family: $light;
 }
 
 .about__title {
   box-sizing: border-box;
-  margin: 0;
-  // Как выровнять текст по центру блока (вертикально)?
-  padding: 150px 10%;
+  padding: 120px 20px 20px;
 
   text-align: center;
 
   font-size: 24pt;
   font-weight: normal;
+
+  @include container;
 }
 
 .about__preview {
@@ -96,11 +98,5 @@
 
   .about__download-section {
     background: none;
-  }
-}
-
-@media (min-width: $desktop-break) {
-  .about__wrapper {
-    padding: 200px 0;
   }
 }

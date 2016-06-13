@@ -21,9 +21,7 @@
   color: $white;
   background-color: $grey;
 
-  font-family: $bold;
-  font-size: 18pt;
-  line-height: 32pt;
+  @include bold-text;
 }
 
 .navigation__button {

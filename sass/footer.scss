@@ -4,11 +4,12 @@
   color: $grey;
   background-color: $white;
 
-  @include outer-wrapper;
-
   h2 {
+    @include light-text;
+
+
     margin: 0;
-    padding: 25px 50px;
+    padding: 50px 20px;
 
     text-align: center;
   }

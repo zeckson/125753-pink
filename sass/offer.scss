@@ -4,43 +4,50 @@
   text-align: center;
 
   color: $grey;
-  background-color: $light-grey;
 
   font-family: $light;
 }
 
-.offer__advantage {
-  text-align: center;
-
-  .offer__advantage-title {
-    margin: 0;
-    padding: 10px;
-
-    font-family: $bold;
-  }
-
-  .offer__advantage-description {
-    margin: 0;
-    padding-bottom: 25px;
-
-    font-family: $regular;
-  }
-}
-
 .offer__motto {
-  padding: 25px 25px;
-
   background-color: $white;
 }
 
-.offer__effect {
+.offer__motto-container {
+  @include container;
+}
+
+.offer__advantages {
+  background-color: $light-grey;
+
+  @include container;
+}
+
+.offer__advantage {
+  text-align: center;
+}
+.offer__advantage-title {
+  margin: 0;
+  padding: 10px;
+
+  font-family: $bold;
+}
+
+.offer__advantage-description {
+  margin: 0;
+  padding-bottom: 25px;
+
+  font-family: $regular;
+}
+
+
+
+
+.offer__effect-content {
   display: none;
   float: right;
 
   box-sizing: content-box;
   width: 320px;
-
-  background-color: $white;
 }
 
 .offer__effect-image {
