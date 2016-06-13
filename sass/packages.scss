@@ -1,6 +1,11 @@
 .packages {
+  padding: 40px 0;
   color: $grey;
   background-color: $light-grey;
+}
+
+.packages__wrapper {
+  @include container;
 }
 
 .packages__table {
@@ -25,6 +30,8 @@
   float: left;
 
   background-image: url("../img/bg-hit.svg");
+
+  @include bold-text(14)
 }
 
 .packages__package-title {
@@ -32,16 +39,20 @@
 
   text-align: center;
 
-  font-family: $bold;
+  @include bold-text(18)
 }
 
 .packages__package-price {
   display: block;
 
   text-align: center;
+
+  @include light-text(24)
 }
 
 .packages__package-option-name {
+
+  @include regular-text(14);
   text-transform: uppercase;
 }
 
