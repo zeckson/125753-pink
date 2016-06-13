@@ -5,8 +5,7 @@
   background-color: $white;
 
   h2 {
-    @include light-text;
-
+    @include light-text(24);
 
     margin: 0;
     padding: 50px 20px;
@@ -33,6 +32,8 @@
 
 .footer__developer {
   text-align: center;
+
+  @include regular-text(14);
 }
 
 @media (min-width: $tablet-break) {

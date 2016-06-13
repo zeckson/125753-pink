@@ -1,23 +1,20 @@
 .contacts {
   text-align: center;
-
+  //reset <address> default style
   font-style: normal;
 
   @include container;
 }
 
 .contacts__item {
+  box-sizing: border-box;
   padding: 10px;
-
-  a, a:hover {
-    text-decoration: none;
-  }
 }
 
 .contacts__type {
   margin: 0;
 
-  font-family: $bold;
+  @include bold-text(18);
 }
 
 .contacts__value {
@@ -25,14 +22,18 @@
 
   color: $red;
 
-  font-family: $light;
+  @include light-text(24);
+
+  &, &:hover {
+    text-decoration: none;
+  }
 }
 
 @media (min-width: $tablet-break) {
   .contacts__item {
+    width: 300px;
     display: inline-block;
   }
   .contacts {
-    @include clear-fix;
   }
 }
