@@ -82,14 +82,16 @@
 }
 
 .about__description {
-  @include light-text(14);
+  margin: 0;
+  padding: 40px 20px;
 
   text-align: center;
 
   color: $grey;
   background: $white;
 
-  font-family: $light;
+  @include light-text(14);
+  line-height: 30px;
 }
 @media (min-width: $tablet-break) {
   .about__wrapper {
