@@ -1,51 +1,32 @@
 .contest {
-  @include container;
+  padding: 0;
+  margin: 0;
   fieldset {
     border: 0;
+    margin: 0;
+    padding: 20px 20px;
   }
 }
 
-.contest__form-legend {
-  display: none;
-
-  text-align: center;
-  text-transform: uppercase;
-
-  color: $red;
-}
-
-.contest__form-label {
-  display: block;
-
-  text-transform: uppercase;
-
-  color: $red;
-
-  line-height: 1.8em;
-  .contest__form-input {
-    display: block;
-
-    min-width: 200px;
-    height: 40px;
-
-    font-size: 14pt;
-  }
+.contest__basic-info {
+  padding: 20px 20px;
+  margin: 0;
+  background-color: $white;
 }
 
 .contest__achievements {
   background-color: $light-grey;
+
   .contest__form-label {
     text-transform: none;
 
     color: $grey;
   }
 
-  .contest__form-checkbox {
-    width: 32px;
-    height: 32px;
+}
 
-    color: $red;
-  }
+.contest__contacts {
+  background-color: $white;
 }
 
 .contest__device {
@@ -68,20 +49,71 @@
 }
 
 .contest__review {
+  background-color: $white;
+  .contest__form-legend {
+    display: block;
+  }
   textarea {
-    min-width: 276px;
+    min-width: 280px;
     min-height: 200px;
 
     font-size: 12pt;
   }
-  button {
+}
+
+.contest__form-submit {
+  width: 280px;
+  display: block;
+  background-color: green;
+  border: 0;
+  padding: 20px;
+
+  text-transform: uppercase;
+  color: $white;
+
+  @include bold-text(18);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.contest__form-legend {
+  display: none;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $red;
+  @include regular-text(14)
+}
+
+.contest__form-label {
+  display: block;
+  padding: 5px;
+
+  text-transform: uppercase;
+
+  color: $red;
+
+  line-height: 30px;
+  @include regular-text(14);
+  .contest__form-input {
     display: block;
 
-    margin-right: auto;
-    margin-left: auto;
 
-    text-align: center;
+    min-width: 280px;
+    height: 40px;
+
+    @include regular-text(18)
   }
+}
+
+.contest__form-checkbox {
+  width: 32px;
+  height: 32px;
+
+  color: $red;
 }
 
 .contest__hint {
