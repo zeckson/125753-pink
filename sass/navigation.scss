@@ -59,11 +59,13 @@
 }
 
 @media (min-width: $desktop-break) {
-  .navigation__wrapper {
+  .navigation {
+    position: relative;
     @include container;
   }
 
-  .navigation {
+  .navigation__wrapper {
+    @include container;
     position: absolute;
     z-index: 1;
   }
