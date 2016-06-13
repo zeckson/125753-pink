@@ -1,22 +1,25 @@
 .about {
+  position: relative;
   color: $white;
   background:  {
     color: $grey;
 
     image: url("../img/bg-back-mobile@1x.jpg");
-  };
-
-  font-family: $light;
+  }
+}
+.about__wrapper {
+  @include container;
 }
 
 .about__title {
+  // Откуда взялся margin?
+  margin: 0;
   box-sizing: border-box;
   padding: 120px 20px 20px;
 
   text-align: center;
 
-  font-size: 24pt;
-  font-weight: normal;
+  @include light-text;
 
   @include container;
 }
@@ -28,32 +31,44 @@
 }
 
 .about__download-section {
-  min-height: 271px;
+  padding: 30px 0;
 
   background-color: $background;
+}
 
-  .about__download-button {
-    display: block;
+.about__download-section-wrapper {
+  min-height: 271px;
 
-    padding: 25px 50px;
+  @include container;
+}
 
-    text-align: center;
-    text-decoration: none;
+.about__download-button {
+  display: block;
+  box-sizing: border-box;
 
+  color: $white;
+  @include bold-text;
+  border: {
     color: $white;
-  }
+    radius: 45px;
+    width: thin;
+    style: solid;
+  };
+  padding: 20px 0;
+
+  text-align: center;
+  text-decoration: none;
 }
 
 
 .about__platforms {
+  padding: 30px 0;
   text-align: center;
 
   .about__platform {
     padding: 0 10px;
 
     text-decoration: none;
-
-    color: $white;
   }
 }
 
@@ -67,8 +82,7 @@
 }
 
 .about__description {
-  margin: 0;
-  padding: 5px;
+  @include light-text(14);
 
   text-align: center;
 
@@ -78,25 +92,36 @@
   font-family: $light;
 }
 @media (min-width: $tablet-break) {
+  .about__wrapper {
+    @include clear-fix;
+    min-height: 530px;
+    position: relative;
+  }
+  .about__title {
+    float: left;
+    width: 300px;
+  }
+  .about__preview {
+    float: right;
+  }
+  .about__download-section {
+    padding: 0;
+
+  }
+
   .about__preview {
     position: absolute;
     right: 0;
+    bottom: 0;
   }
 
-  // Что-то я окончательно запутался с этим блоком...
-  .about__wrapper {
-    position: static;
-
-    box-sizing: border-box;
+  // Так и не придумал как это правильно спозиционировать
+  .about__download-section-wrapper {
+    position: absolute;
+    top: 200px;
+    left: 15%;
+    @include center-block;
     width: 300px;
-    min-height: 619px;
-    margin: 0 0 auto 0;
-    padding: 100px 0;
-
-    background: none;
-  }
-
-  .about__download-section {
     background: none;
   }
 }
