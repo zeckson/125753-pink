@@ -14,9 +14,17 @@
   list-style-type: none;
 }
 
+@mixin center-block {
+  display: block;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @mixin container {
   width: 280px;
-  margin: 0 auto;
+
+  @include center-block;
 
   @media(min-width: $tablet-break) {
     width: 620px;
@@ -29,7 +37,8 @@
 
 @mixin outer-wrapper {
   width: 320px;
-  margin: 0 auto;
+
+  @include center-block;
 
   @media (min-width: $tablet-break) {
     width: 700px;
