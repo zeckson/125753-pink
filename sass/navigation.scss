@@ -1,5 +1,7 @@
 .navigation__controls {
   min-height: 70px;
+
+  @include container;
 }
 
 .navigation__header {
@@ -10,6 +12,10 @@
   min-height: 67px;
 
   background-color: rgba($black, 0.5);
+}
+
+.navigation__header-wrapper {
+  @include container;
 }
 
 .navigation__menu {
@@ -99,9 +105,10 @@
 
     background: none;
 
-    .container {
-      @include clear-fix;
-    }
+  }
+
+  .navigation__header-wrapper {
+    @include clear-fix;
   }
 
   .navigation__button {
