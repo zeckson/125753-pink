@@ -5,12 +5,12 @@
   background-color: $white;
 
   h2 {
-    @include light-text(24);
-
     margin: 0;
     padding: 50px 20px;
 
     text-align: center;
+
+    @include light-text(24);
   }
 }
 

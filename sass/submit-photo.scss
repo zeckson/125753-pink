@@ -1,7 +1,7 @@
 .submit-photo {
-  background-color: $light-grey;
-
   padding: 20px;
+
+  background-color: $light-grey;
 }
 
 .submit-photo__preview {
@@ -27,10 +27,20 @@
 
 
 .submit-photo__button {
-  background-color: transparent;
-  border-radius: 45px;
-  border: 1px solid $red;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  margin: 5px auto;
+  padding: 5px;
+
   cursor: pointer;
+
+  border: 1px solid $red;
+  border-radius: 45px;
+  background-color: transparent;
+
+  @include bold-text(18);
 
   &:hover {
     background-color: transparent;
@@ -43,15 +53,6 @@
     color: $grey;
     border-color: $grey;
   }
-
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  padding: 5px;
-  margin: 5px auto;
-  @include bold-text(18)
 }
 
 .submit-photo__slider {
@@ -71,7 +72,7 @@
   }
 }
 
-@media (min-width: $desktop-break){
+@media (min-width: $desktop-break) {
   .submit-photo__button {
     display: inline-block;
   }

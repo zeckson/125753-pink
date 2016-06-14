@@ -6,13 +6,15 @@
   padding: 30px 0;
 
   text-align: center;
+
   color: $grey;
-  @include light-text(24);
   background-color: $white;
 
+  @include light-text(24);
+
   h2 {
-    padding: 20px;
     margin: 0;
+    padding: 20px;
   }
 }
 
@@ -22,6 +24,7 @@
 
 .offer__advantage {
   text-align: center;
+
   color: $grey;
 
   @include container;
@@ -41,8 +44,9 @@
 }
 
 .offer__preview {
-  background-color: $light-grey;
   text-align: center;
+
+  background-color: $light-grey;
 }
 
 // Begin effect
@@ -60,9 +64,11 @@
 }
 
 .offer__effect-content {
-  color: $black;
-  width: 310px;
   float: right;
+
+  width: 310px;
+
+  color: $black;
 }
 
 .offer__effect-image {
@@ -73,12 +79,13 @@
 }
 
 .offer__effect-title {
-  @include bold-text(30)
+  @include bold-text(30);
 }
 
 .offer__effect-description {
-  @include regular-text(14);
   text-align: left;
+
+  @include regular-text(14);
 }
 
 .offer__effect-more {
@@ -97,6 +104,7 @@
 
   .offer__content {
     position: relative;
+
     background-color: $light-grey;
   }
 
@@ -106,8 +114,9 @@
   }
 
   .offer__advantage {
-    text-align: left;
     width: 310px;
+
+    text-align: left;
   }
 
   .offer__preview {
@@ -145,8 +154,9 @@
   }
 
   .offer__effect {
-    background-color: $light-grey;
     min-height: 250px;
+
+    background-color: $light-grey;
   }
 
   .offer__effect-content {

@@ -3,12 +3,14 @@
 
   text-align: center;
 
-  background-color: $white;
   color: $grey;
+  background-color: $white;
 
   p {
-    line-height: 30px;
-    @include regular-text(14);
     margin: 0;
+
+    line-height: 30px;
+
+    @include regular-text(14);
   }
 }

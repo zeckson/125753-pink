@@ -1,16 +1,18 @@
 .contest {
-  padding: 0;
   margin: 0;
+  padding: 0;
   fieldset {
-    border: 0;
     margin: 0;
     padding: 20px 20px;
+
+    border: 0;
   }
 }
 
 .contest__basic-info {
-  padding: 20px 20px;
   margin: 0;
+  padding: 20px 20px;
+
   background-color: $white;
 }
 
@@ -22,7 +24,6 @@
 
     color: $grey;
   }
-
 }
 
 .contest__contacts {
@@ -62,20 +63,20 @@
 }
 
 .contest__form-submit {
-  width: 280px;
   display: block;
-  background-color: green;
-  border: 0;
+
+  width: 280px;
+  margin: 0 auto;
   padding: 20px;
 
+  text-align: center;
   text-transform: uppercase;
+
   color: $white;
+  border: 0;
+  background-color: green;
 
   @include bold-text(18);
-
-  margin: 0 auto;
-
-  text-align: center;
 }
 
 .contest__form-legend {
@@ -85,11 +86,13 @@
   text-transform: uppercase;
 
   color: $red;
-  @include regular-text(14)
+
+  @include regular-text(14);
 }
 
 .contest__form-label {
   display: block;
+
   padding: 5px;
 
   text-transform: uppercase;
@@ -97,15 +100,15 @@
   color: $red;
 
   line-height: 30px;
+
   @include regular-text(14);
   .contest__form-input {
     display: block;
 
-
     min-width: 280px;
     height: 40px;
 
-    @include regular-text(18)
+    @include regular-text(18);
   }
 }
 

@@ -1,5 +1,6 @@
 .about {
   position: relative;
+
   color: $white;
   background:  {
     color: $grey;
@@ -12,15 +13,14 @@
 }
 
 .about__title {
+  box-sizing: border-box;
   // Откуда взялся margin?
   margin: 0;
-  box-sizing: border-box;
   padding: 120px 20px 20px;
 
   text-align: center;
 
   @include light-text;
-
   @include container;
 }
 
@@ -44,25 +44,30 @@
 
 .about__download-button {
   display: block;
-  box-sizing: border-box;
 
-  color: $white;
-  @include bold-text;
-  border: {
-    color: $white;
-    radius: 45px;
-    width: thin;
-    style: solid;
-  };
+  box-sizing: border-box;
   padding: 20px 0;
 
   text-align: center;
   text-decoration: none;
+
+  color: $white;
+  border:  {
+    width: thin;
+
+    color: $white;
+
+    radius: 45px;
+    style: solid;
+  };
+
+  @include bold-text;
 }
 
 
 .about__platforms {
   padding: 30px 0;
+
   text-align: center;
 
   .about__platform {
@@ -90,17 +95,21 @@
   color: $grey;
   background: $white;
 
-  @include light-text(14);
   line-height: 30px;
+
+  @include light-text(14);
 }
 @media (min-width: $tablet-break) {
   .about__wrapper {
-    @include clear-fix;
-    min-height: 530px;
     position: relative;
+
+    min-height: 530px;
+
+    @include clear-fix;
   }
   .about__title--moved {
     float: left;
+
     width: 300px;
   }
   .about__preview {
@@ -108,7 +117,6 @@
   }
   .about__download-section {
     padding: 0;
-
   }
 
   .about__preview {
@@ -122,8 +130,11 @@
     position: absolute;
     top: 200px;
     left: 15%;
-    @include center-block;
+
     width: 300px;
+
     background: none;
+
+    @include center-block;
   }
 }

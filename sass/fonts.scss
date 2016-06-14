@@ -1,50 +1,50 @@
 @font-face {
   font-family: "OpenSans";
 
-  src: url("/fonts/opensans.woff") format("woff"),
-  url("/fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff") format("woff"),
+  url("../fonts/opensans.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "OpenSans Light";
 
-  src: url("/fonts/opensanslight.woff") format("woff"),
-  url("/fonts/opensanslight.woff2") format("woff2");
+  src: url("../fonts/opensanslight.woff") format("woff"),
+  url("../fonts/opensanslight.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "OpenSans Bold";
 
-  src: url("/fonts/opensansbold.woff") format("woff"),
-  url("/fonts/opensansbold.woff2") format("woff2");
+  src: url("../fonts/opensansbold.woff") format("woff"),
+  url("../fonts/opensansbold.woff2") format("woff2");
 }
 
 $light: "OpenSans Light", sans-serif, Arial;
 $bold: "OpenSans Bold", sans-serif, Arial;
 $regular: "OpenSans", sans-serif, Arial;
 
-@mixin light-text($size:24) {
-  font: {
+@mixin light-text($size: 24) {
+  font:  {
     family: $light;
-    size: $size px;
+    size: ($size)px;
     weight: 100;
   }
   line-height: 1.2em;
 }
 
-@mixin regular-text($size:24) {
-  font: {
+@mixin regular-text($size: 24) {
+  font:  {
     family: $regular;
-    size: $size px;
+    size: ($size)px;
     weight: normal;
   };
   line-height: 1.2em;
 }
 
-@mixin bold-text($size:18) {
-  font: {
+@mixin bold-text($size: 18) {
+  font:  {
     family: $bold;
-    size: $size px;
+    size: ($size)px;
     weight: bold;
   };
   line-height: 1.8em;

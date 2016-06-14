@@ -1,5 +1,4 @@
-.slider {
-}
+
 
 .slider__list {
   margin: 0;
@@ -19,16 +18,20 @@
 .slider__toggles {
   text-align: center;
   .slider__toggle {
+    display: inline-block;
+
     box-sizing: border-box;
-    border: {
+    width: 20px;
+    height: 20px;
+
+    border:  {
       width: thin;
-      style: solid;
+
       color: $black;
+
+      style: solid;
       radius: 50%;
     }
     background: $white;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
   }
 }

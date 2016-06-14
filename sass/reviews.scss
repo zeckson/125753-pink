@@ -10,16 +10,19 @@
 }
 
 .reviews__item-author {
-  @include bold-text(18);
   margin: 0;
   padding: 10px;
+
+  @include bold-text(18);
 }
 
 .reviews__item-text {
-  @include regular-text(14);
-  line-height: 30px;
   margin: 0;
   padding: 10px;
+
+  line-height: 30px;
+
+  @include regular-text(14);
 }
 
 @media (min-width: $tablet-break) {

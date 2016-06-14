@@ -1,5 +1,6 @@
 .packages {
   padding: 40px 0;
+
   color: $grey;
   background-color: $light-grey;
 }
@@ -31,7 +32,7 @@
 
   background-image: url("../img/bg-hit.svg");
 
-  @include bold-text(14)
+  @include bold-text(14);
 }
 
 .packages__package-title {
@@ -39,7 +40,7 @@
 
   text-align: center;
 
-  @include bold-text(18)
+  @include bold-text(18);
 }
 
 .packages__package-price {
@@ -47,13 +48,13 @@
 
   text-align: center;
 
-  @include light-text(24)
+  @include light-text(24);
 }
 
 .packages__package-option-name {
+  text-transform: uppercase;
 
   @include regular-text(14);
-  text-transform: uppercase;
 }
 
 @media (min-width: $tablet-break) {
