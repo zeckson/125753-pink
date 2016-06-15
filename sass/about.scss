@@ -8,9 +8,6 @@
     image: url("../img/bg-back-mobile@1x.jpg");
   }
 }
-.about__wrapper {
-  @include container;
-}
 
 .about__title {
   box-sizing: border-box;
@@ -25,6 +22,7 @@
 }
 
 .about__preview {
+  @include container;
   img {
     vertical-align: bottom;
   }
@@ -104,7 +102,7 @@
     position: relative;
 
     min-height: 530px;
-
+    @include container;
     @include clear-fix;
   }
   .about__title--moved {
@@ -113,6 +111,7 @@
     width: 300px;
   }
   .about__preview {
+    width: auto;
     float: right;
   }
   .about__download-section {
@@ -129,7 +128,6 @@
   .about__download-section-wrapper {
     position: absolute;
     top: 200px;
-    left: 15%;
 
     width: 300px;
 
