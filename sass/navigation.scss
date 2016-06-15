@@ -1,51 +1,58 @@
+.navigation__controls {
+  min-height: 70px;
 
-@mixin clear-fix {
-  &:after {
-    display: table;
-    clear: both;
-
-    content: "";
-  }
+  @include container;
 }
 
-.navigation {
-  color: $white;
-  background-color: $background;
+.navigation__header {
+  position: absolute;
+  z-index: 1;
 
-  font-family: $bold;
+  width: 100%;
+  min-height: 67px;
+
+  background-color: rgba($black, 0.5);
 }
 
-.navigation__button {
-  display: inline-block;
-  float: right;
-
-  padding: 4px;
+.navigation__header-wrapper {
+  @include container;
 }
 
 .navigation__menu {
+  width: 100%;
+  min-height: 328px;
+
   text-transform: uppercase;
 
   color: $white;
+  background-color: $grey;
 
-  font-size: 18pt;
-  line-height: 32pt;
+  @include bold-text;
+}
 
-  .navigation__logo {
-    display: inline-block;
+.navigation__button {
+  float: right;
 
-    padding: 8px;
-  }
+  padding: 14px 0;
+}
+
+.navigation__logo {
+  display: inline-block;
+  float: left;
+
+  padding: 14px 0;
 }
 
 .navigation__list {
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-
   text-align: center;
 
+  @include drop-list;
+
   .navigation__item {
+    box-sizing: border-box;
+    height: 64px;
+    padding: 12px 0;
+
     border-top: solid #485461 thin;
     border-bottom: solid black thin;
 
@@ -57,16 +64,56 @@
   }
 }
 
-.navigation__logo {
-  display: inline-block;
+@media (min-width: $desktop-break) {
+  .navigation {
+    position: relative;
 
-  padding: 8px;
-}
+    @include container;
+  }
 
-.navigation__menu-burger {
-  float: right;
+  .navigation__wrapper {
+    position: absolute;
+    z-index: 1;
 
-  padding: 4px;
+    @include container;
+  }
 
-  @include clear-fix;
+  .navigation__menu {
+    float: right;
+
+    width: auto;
+    min-height: 0;
+
+    background: none;
+
+    .navigation__controls {
+      display: none;
+    }
+  }
+
+  .navigation__item {
+    display: inline-block;
+
+    border: none;
+  }
+
+  .navigation__header {
+    position: static;
+
+    display: inline-block;
+    float: left;
+
+    width: 320px;
+
+    background: none;
+  }
+
+  .navigation__header-wrapper {
+    width: auto;
+    @include clear-fix;
+  }
+
+  .navigation__button {
+    display: none;
+  }
 }

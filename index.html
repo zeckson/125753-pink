@@ -9,64 +9,106 @@
 
 <header class="header">
   <nav class="navigation">
-    <div class="navigation__menu  navigation__menu--hidden">
-      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
-      <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="index.html">Главная</a></li>
-        <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
-        <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-        <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
-      </ul>
+    <div class="navigation__wrapper">
+      <div class="navigation__menu  navigation__menu--hidden">
+        <div class="navigation__controls">
+          <a class="navigation__logo" href="#">
+            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="80" height="22">
+          </a>
+          <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="index.html">Главная</a></li>
+          <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
+          <li class="navigation__item"><a href="form.html">Конкурс</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+        </ul>
+      </div>
+      <section class="navigation__header">
+        <div class="navigation__header-wrapper">
+          <a class="navigation__logo" href="#">
+            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="80" height="22">
+          </a>
+          <a class="navigation__button" href="#">
+            <img src="img/icon-menu-burger.svg" width="52" height="28" alt="Hamburger">
+          </a>
+        </div>
+      </section>
     </div>
-    <section class="navigation__header">
-      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
-      <a class="navigation__menu-burger" href="#"><img src="img/icon-menu-burger.svg" width="32" height="32" alt="Hamburger"></a>
-    </section>
   </nav>
+
 </header>
 
 <main class="main">
   <section class="about">
-    <h2 class="about__title">Взгляните на жизнь иначе!</h2>
-    <div class="about__preview">
-      <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Logo">
+    <div class="about__wrapper">
+      <h2 class="about__title  about__title--moved">Взгляните на жизнь иначе!</h2>
+      <div class="about__preview">
+        <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Logo">
+      </div>
     </div>
     <section class="about__download-section">
-      <a href="#" class="about__download-button">Скачать приложение</a>
-      <div class="about__platforms">
-        <a class="about__platform  about__platform--ios" href="http://appstore"><img src="img/logo-apple.svg" width="56" height="56" alt="IOS"></a>
-        <a class="about__platform  about__platform--android" href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink"><img src="img/logo-android.svg" width="56" height="56" alt="Android"></a>
-        <a class="about__platform  about__platform--windows" href="http://microsoft.com"><img src="img/logo-microsoft.svg" width="56" height="56" alt="Windows Mobile"></a>
+      <div class="about__download-section-wrapper">
+        <a href="#" class="about__download-button">Скачать приложение</a>
+        <div class="about__platforms">
+          <a class="about__platform  about__platform--ios" href="http://appstore">
+            <img src="img/logo-apple.svg" width="56" height="56" alt="IOS">
+          </a>
+          <a class="about__platform  about__platform--android"
+             href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink">
+            <img src="img/logo-android.svg" width="56" height="56" alt="Android">
+          </a>
+          <a class="about__platform  about__platform--windows" href="http://microsoft.com">
+            <img src="img/logo-microsoft.svg" width="56" height="56" alt="Windows Mobile">
+          </a>
+        </div>
+        <p class="about__download-info">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
       </div>
-      <p class="about__download-info">
-        Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-      </p>
     </section>
   </section>
   <section class="offer">
     <div class="offer__motto">
-      <p>Устали от серости мегаполиса?</p>
-      <p>Нам есть, что вам предложить!</p>
+      <h2>Устали от серости мегаполиса?</h2>
+      <h2>Нам есть, что вам предложить!</h2>
     </div>
-    <article class="advantage">
-      <h3 class="advantage__title">Поднимает настроение</h3>
-      <p class="advantage__description">Приложение позволит Вам победить осеннюю хандру и депрессию буквально в
-        несколько
-        кликов</p>
-    </article>
-    <article class="advantage">
-      <h3 class="advantage__title">Меняет мир вокруг</h3>
-      <p class="advantage__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить
-        эффект</p>
-    </article>
-    <article class="advantage">
-      <h3 class="advantage__title">Заводит новых друзей</h3>
-      <p class="advantage__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
-        новых</p>
-    </article>
-    <div class="offer__preview">
-      <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Application Preview">
+    <div class="offer__content">
+      <div class="offer__content-wrapper">
+        <div class="offer__advantages">
+          <article class="offer__advantage">
+            <h3 class="offer__advantage-title">Поднимает настроение</h3>
+            <p class="offer__advantage-description">Приложение позволит Вам победить осеннюю
+              хандру и депрессию буквально в несколько кликов</p>
+          </article>
+          <article class="offer__advantage">
+            <h3 class="offer__advantage-title">Меняет мир вокруг</h3>
+            <p class="offer__advantage-description">Сделайте снимок и украсьте его смайликом
+              или текстовой подписью, чтобы усилить эффект</p>
+          </article>
+          <article class="offer__advantage">
+            <h3 class="offer__advantage-title">Заводит новых друзей</h3>
+            <p class="offer__advantage-description">Ставьте лайки, комментируйте, делитесь
+              фотографиями с друзьями и заводите новых</p>
+          </article>
+        </div>
+        <div class="offer__preview">
+          <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Application Preview">
+        </div>
+      </div>
+    </div>
+    <div class="offer__effect">
+      <div class="offer__effect-wrapper">
+        <div class="offer__effect-image">
+          <img src="http://placehold.it/350x150" alt="Effect" width="250" height="150">
+        </div>
+        <div class="offer__effect-content">
+          <h1 class="offer__effect-title">Эффект на 24 часа!</h1>
+          <p class="offer__effect-description">Британские ученые провели исследования и доказали, что положительный
+            эффект от использования приложения длится целые сутки</p>
+          <a href="http://british-scientists.co.uk" class="offer__effect-more">Узнать больше об исследовании</a>
+        </div>
+      </div>
     </div>
   </section>
   <section class="reviews">
@@ -77,16 +119,18 @@
       <ul class="reviews__list  slider__list">
         <li class="reviews__item  slider__item  slider__item--selected">
           <h3 class="reviews__item-author">Николай Петоров</h3>
-          <p>&quot;Это приложение перевернуло мой мир и позволило по новому взглянуть на привычные вещи! А еще я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!&quot;</p>
+          <p class="reviews__item-text">&laquo;Это приложение перевернуло мой мир и позволило по новому взглянуть на
+            привычные вещи! А еще я
+            познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
         </li>
         <li class="reviews__item  slider__item">
           <h3 class="reviews__item-author">Анна Петрова</h3>
-          <p>Благодаря Вашему приложению я наконец-то смогла выйти замуж</p>
+          <p class="reviews__item-text">Благодаря Вашему приложению я наконец-то смогла выйти замуж</p>
         </li>
         <li class="reviews__item  slider__item">
           <h3 class="reviews__item-author">Иван Иванов</h3>
-          <p>Ваше приложение &ndash; плохо работает и постоянно падает. Срочно исправьте!</p>
+          <p class="reviews__item-text">Ваше приложение &ndash; плохо работает и постоянно падает. Срочно
+            исправьте!</p>
         </li>
       </ul>
       <div class="reviews__toggle-list  slider__toggles">
@@ -101,111 +145,66 @@
       <input type="radio" class="packages__input" id="packages-input-1" name="package" hidden checked>
       <input type="radio" class="packages__input" id="packages-input-2" name="package" hidden>
       <input type="radio" class="packages__input" id="packages-input-3" name="package" hidden>
-      <ul class="packages__list  slider__list">
-        <li class="packages__item  slider__item">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__title">Малый</span>
-                  <span class="package__price">1,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <li class="packages__item  slider__item  slider__item--selected">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__hit">Хит</span>
-                  <span class="package__title">Стандарт</span>
-                  <span class="package__price">3,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--off">
-                  <img src="img/icon-no.svg" width="32" height="32" alt="Off">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-        <li class="packages__item  slider__item">
-          <article class="package">
-            <table>
-              <thead>
-              <tr>
-                <th colspan="2">
-                  <span class="package__title">Большой</span>
-                  <span class="package__price">6,99 USD</span>
-                </th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td class="package__option-name">Розовый фильтр</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Смайлики</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              <tr>
-                <td class="package__option-name">Комментарии</td>
-                <td class="package__option package__option--on">
-                  <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </article>
-        </li>
-      </ul>
+      <article class="packages__table-wrapper">
+        <table class="packages__table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>
+              <span class="packages__package-title">Малый</span>
+              <span class="packages__package-price">1,99 USD</span>
+            </th>
+            <th>
+              <span class="packages__package-hit">Хит</span>
+              <span class="packages__package-title">Стандарт</span>
+              <span class="packages__package-price">3,99 USD</span>
+            </th>
+            <th>
+              <span class="packages__package-title">Большой</span>
+              <span class="packages__package-price">6,99 USD</span>
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="packages__package-option-name">Розовый фильтр</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          <tr>
+            <td class="packages__package-option-name">Смайлики</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          <tr>
+            <td class="packages__package-option-name">Комментарии</td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--off">
+              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            </td>
+            <td class="packages__package-option packages__package-option--on">
+              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </article>
       <div class="packages__toggle-list  slider__toggles">
         <label for="packages-input-1" class="slider__toggle">1</label>
         <label for="packages-input-2" class="slider__toggle">2</label>
@@ -216,7 +215,7 @@
 </main>
 
 <footer class="footer">
-  <p>Остались вопросы? Свяжитесь с нами!</p>
+  <h2>Остались вопросы? Свяжитесь с нами!</h2>
   <address class="contacts">
     <div class="contacts__item">
       <h4 class="contacts__type">Звоните:</h4>
@@ -234,6 +233,23 @@
   </address>
   <div class="footer__map">
     <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
+  </div>
+  <div class="footer__logo">
+    <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
+  </div>
+  <div class="footer__social">
+    <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
+                                                                          width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
+                                                                         width="32" height="32"></a>
+    <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
+                                                                         width="32" height="32"></a>
+  </div>
+  <div class="footer__developer">
+    <span>Разработано</span>
+    <a href="#" class="footer__developer-logo">
+      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
+    </a>
   </div>
 </footer>
 

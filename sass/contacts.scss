@@ -1,26 +1,41 @@
 .contacts {
   text-align: center;
+  //reset <address> default style
 
   font-style: normal;
 
+  @include container;
+}
+
+.contacts__item {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.contacts__type {
+  margin: 0;
+
+  @include bold-text(18);
+}
+
+.contacts__value {
+  margin: 0;
+
+  color: $red;
+
+  @include light-text(24);
+
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: $tablet-break) {
   .contacts__item {
-    padding: 10px;
-    .contacts__type {
-      margin: 0;
+    display: inline-block;
 
-      font-family: $bold;
-    }
-
-    .contacts__value {
-      margin: 0;
-
-      color: $red;
-
-      font-family: $light;
-    }
-
-    a, a:hover {
-      text-decoration: none;
-    }
+    width: 300px;
+  }
+  .contacts {
   }
 }

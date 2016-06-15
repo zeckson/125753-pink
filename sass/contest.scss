@@ -1,90 +1,161 @@
 .contest {
+  margin: 0;
+  padding: 0;
+  background-color: $white;
   fieldset {
+    margin: 0;
+    padding: 20px 20px;
+
     border: 0;
   }
+}
+
+.contest__basic-info {
+  margin: 0;
+  padding: 20px 20px;
+
+  background-color: $white;
+}
+
+.contest__achievements {
+  background-color: $light-grey;
 
   .contest__form-label {
-    display: block;
-
-    text-transform: uppercase;
-
-    color: $red;
-
-    line-height: 30pt;
-    .contest__form-input {
-      display: block;
-
-      min-width: 200px;
-      height: 40px;
-
-      font-size: 14pt;
-    }
-  }
-
-  p {
-    text-align: center;
-    text-transform: uppercase;
-
-    color: $red;
-  }
-
-  .contest__achievements {
-    background-color: $light-grey;
-    .contest__form-label {
-      text-transform: none;
-
-      color: $grey;
-    }
-
-    .contest__form-checkbox {
-      width: 32px;
-      height: 32px;
-
-      color: $red;
-    }
-  }
-
-  .contest__device {
-    background-color: $light-grey;
-    .contest__form-label {
-      text-transform: none;
-
-      color: $grey;
-    }
-    .contest__form-radio {
-      width: 32px;
-      height: 32px;
-
-      color: $red;
-    }
-  }
-
-  .contest__review {
-    textarea {
-      min-width: 276px;
-      min-height: 200px;
-
-      font-size: 12pt;
-    }
-    button {
-      display: block;
-
-      margin-right: auto;
-      margin-left: auto;
-
-      text-align: center;
-    }
-  }
-
-  .contest__hint {
-    display: block;
-
-    text-align: center;
-    text-transform: uppercase;
+    text-transform: none;
 
     color: $grey;
-    sup {
-      color: $red;
+  }
+}
+
+.contest__contacts {
+  background-color: $white;
+}
+
+.contest__device {
+  background-color: $light-grey;
+
+  .contest__form-legend {
+    display: block;
+  }
+  .contest__form-label {
+    text-transform: none;
+
+    color: $grey;
+  }
+  .contest__form-radio {
+    width: 32px;
+    height: 32px;
+
+    color: $red;
+  }
+}
+
+.contest__review {
+  background-color: $white;
+  .contest__form-legend {
+    display: block;
+  }
+  textarea {
+    min-width: 280px;
+    min-height: 200px;
+
+    font-size: 12pt;
+  }
+}
+
+.contest__form-submit {
+  display: block;
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $white;
+  border: 0;
+  background-color: green;
+
+  @include bold-text(18);
+}
+
+.contest__form-legend {
+  display: none;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $red;
+
+  @include regular-text(14);
+}
+
+.contest__form-label {
+  display: block;
+
+  padding: 5px;
+
+  text-transform: uppercase;
+
+  color: $red;
+
+  line-height: 30px;
+
+  @include regular-text(14);
+  .contest__form-input {
+    display: block;
+
+    min-width: 280px;
+    height: 40px;
+
+    @include regular-text(18);
+  }
+}
+
+.contest__form-checkbox {
+  width: 32px;
+  height: 32px;
+
+  color: $red;
+}
+
+.contest__hint {
+  display: block;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $grey;
+  sup {
+    color: $red;
+  }
+}
+
+@media (min-width: $tablet-break) {
+  // Как поменять местами блоки как на макете?
+  .contest__basic-info {
+    .contest__form-input {
+      display: inline-block;
+      // Как растянуть и выровнять по правому краю?
+      // Как сделать отступ слева?
+
+      box-sizing: content-box;
     }
+  }
+
+  .contest fieldset {
+    border: 1px solid red !important;
+    background-color: $white;
+  }
+  .contest__form-legend {
+    display: block;
+  }
+
+  .contest__form-submit {
+    float: left;
+  }
+  .contest__hint {
+    float: right;
   }
 }

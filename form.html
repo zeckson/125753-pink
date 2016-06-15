@@ -9,21 +9,32 @@
 
 <header class="header">
   <nav class="navigation">
-    <div class="navigation__menu  navigation__menu--hidden">
-      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
-      <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="index.html">Главная</a></li>
-        <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
-        <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-        <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
-      </ul>
+    <div class="navigation__wrapper">
+      <div class="navigation__menu  navigation__menu--hidden">
+        <div class="navigation__controls">
+          <a class="navigation__logo" href="#">
+            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="80" height="22">
+          </a>
+          <a class="navigation__button  navigation__button--close"><img src="img/icon-menu-cross.svg" alt="X"></a>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="index.html">Главная</a></li>
+          <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
+          <li class="navigation__item"><a href="form.html">Конкурс</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+        </ul>
+      </div>
+      <section class="navigation__header">
+        <div class="navigation__header-wrapper">
+          <a class="navigation__logo" href="#">
+            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="80" height="22">
+          </a>
+          <a class="navigation__button" href="#">
+            <img src="img/icon-menu-burger.svg" width="52" height="28" alt="Hamburger">
+          </a>
+        </div>
+      </section>
     </div>
-    <section class="navigation__header">
-      <a class="navigation__logo" href="#"><img src="img/logo-pink-white-mobile.svg" alt="Logo" width="75" height="22"></a>
-      <a class="navigation__menu-burger" href="#"><img src="img/icon-menu-burger.svg" width="32" height="32"
-                                                       alt="Hamburger"></a>
-    </section>
   </nav>
 </header>
 
@@ -50,7 +61,7 @@
       </label>
     </fieldset>
     <fieldset class="contest__achievements">
-      <p>ваши безбашенные достижения в путешествии</p>
+      <legend class="contest__form-legend">Ваши безбашенные достижения в путешествии</legend>
 
       <label class="contest__form-label">
         <input type="checkbox" name="achievements" class="contest__form-checkbox" checked>Сделал селфи с акулой
@@ -72,6 +83,7 @@
       </label>
     </fieldset>
     <fieldset class="contest__contacts">
+      <legend class="contest__form-legend">Контактная информация</legend>
       <label class="contest__form-label">
         Номер телефончика<input type="tel" class="contest__form-input" placeholder="Номер, пожалуйста">
       </label>
@@ -81,27 +93,26 @@
       </label>
     </fieldset>
     <fieldset class="contest__device">
-      <p>С каким приложением путешествовали?</p>
+      <legend class="contest__form-legend">С каким приложением путешествовали?</legend>
 
-      <fieldset>
-        <label class="contest__form-label">
-          <input type="radio" class="contest__form-radio" name="device" value="ios" checked>Pink для iOS
-        </label>
-        <label class="contest__form-label">
-          <input type="radio" class="contest__form-radio" name="device" value="android">Pink на Android
-        </label>
-        <label class="contest__form-label">
-          <input type="radio" class="contest__form-radio" name="device" value="windows">Windows Phone
-        </label>
-      </fieldset>
+      <label class="contest__form-label">
+        <input type="radio" class="contest__form-radio" name="device" value="ios" checked>Pink для iOS
+      </label>
+      <label class="contest__form-label">
+        <input type="radio" class="contest__form-radio" name="device" value="android">Pink на Android
+      </label>
+      <label class="contest__form-label">
+        <input type="radio" class="contest__form-radio" name="device" value="windows">Windows Phone
+      </label>
     </fieldset>
     <fieldset class="contest__review">
-      <label class="contest__form-label">опишите свои эмоции
+      <legend class="contest__form-legend">Опишите свои эмоции</legend>
+      <label class="contest__form-label">
         <textarea name="review" id="review" cols="30"
                   rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
       </label>
 
-      <button type="submit">отправить форму</button>
+      <button class="contest__form-submit" type="submit">отправить форму</button>
       <span class="contest__hint"><sup>*</sup> &mdash; обязательное поле</span>
     </fieldset>
   </form>

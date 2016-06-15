@@ -1,25 +1,37 @@
-.slider {
-  .slider__list {
-    margin: 0;
-    padding: 0;
 
-    list-style: none;
 
-    .slider__item {
-      display: none;
-    }
+.slider__list {
+  margin: 0;
+  padding: 0;
 
-    .slider__item--selected {
-      display: block;
-    }
+  list-style: none;
+
+  .slider__item {
+    display: none;
   }
 
-  .slider__toggles {
-    text-align: center;
-    .slider__toggle {
-      border: 2px solid black;
-      border-radius: 50%;
-      background: $white;
+  .slider__item--selected {
+    display: inline-block;
+  }
+}
+
+.slider__toggles {
+  text-align: center;
+  .slider__toggle {
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+
+    border:  {
+      width: thin;
+
+      color: $black;
+
+      style: solid;
+      radius: 50%;
     }
+    background: $white;
   }
 }

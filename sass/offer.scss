@@ -1,15 +1,165 @@
-
 .offer {
+  position: relative;
+}
+
+.offer__motto {
+  padding: 30px 0;
+
   text-align: center;
 
   color: $grey;
+  background-color: $white;
+
+  @include light-text(24);
+
+  h2 {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.offer__advantages {
   background-color: $light-grey;
+}
 
-  font-family: $light;
+.offer__advantage {
+  text-align: center;
 
-  .offer__motto {
-    padding: 25px 25px;
+  color: $grey;
 
-    background-color: $white;
+  @include container;
+}
+.offer__advantage-title {
+  margin: 0;
+  padding: 10px 0;
+
+  @include bold-text(18);
+}
+
+.offer__advantage-description {
+  margin: 0;
+  padding-bottom: 25px;
+
+  @include regular-text(14);
+}
+
+.offer__preview {
+  text-align: center;
+
+  background-color: $light-grey;
+}
+
+// Begin effect
+.offer__effect {
+  display: none;
+
+  background-color: $white;
+}
+
+.offer__effect-wrapper {
+  position: relative;
+
+  @include container;
+  @include clear-fix;
+}
+
+.offer__effect-content {
+  float: right;
+
+  width: 310px;
+
+  color: $black;
+}
+
+.offer__effect-image {
+  position: absolute;
+  left: 0;
+
+  padding: 50px 0;
+}
+
+.offer__effect-title {
+  @include bold-text(30);
+}
+
+.offer__effect-description {
+  text-align: left;
+
+  @include regular-text(14);
+}
+
+.offer__effect-more {
+  color: $red;
+}
+// End effect
+
+@media (min-width: $tablet-break) {
+  .offer__advantages {
+    float: right;
+  }
+
+  .offer__preview {
+    float: left;
+  }
+
+  .offer__content {
+    position: relative;
+
+    background-color: $light-grey;
+  }
+
+  .offer__content-wrapper {
+    @include clear-fix;
+    @include container;
+  }
+
+  .offer__advantage {
+    width: 310px;
+
+    text-align: left;
+  }
+
+  .offer__preview {
+    position: absolute;
+    bottom: 0;
+    left: 22%;
+  }
+
+  .offer__effect {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-break) {
+  .offer__advantages {
+    display: block;
+    float: none;
+
+    width: 100%;
+  }
+
+  .offer__advantage {
+    display: inline-block;
+
+    box-sizing: border-box;
+    width: 300px;
+    min-height: 560px;
+    padding-top: 300px;
+
+    vertical-align: bottom;
+  }
+
+  .offer__preview {
+    display: none;
+  }
+
+  .offer__effect {
+    min-height: 250px;
+
+    background-color: $light-grey;
+  }
+
+  .offer__effect-content {
+    width: 570px;
   }
 }

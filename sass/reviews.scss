@@ -1,20 +1,41 @@
-
 .reviews {
+  padding: 40px 0;
+
   color: $grey;
+  background-color: $white;
 }
 
-.reviews__list {
+.reviews__item {
+  text-align: center;
+}
+
+.reviews__item-author {
+  margin: 0;
+  padding: 10px;
+
+  @include bold-text(18);
+}
+
+.reviews__item-text {
+  margin: 0;
+  padding: 10px;
+
+  line-height: 30px;
+
+  @include regular-text(14);
+}
+
+@media (min-width: $tablet-break) {
   .reviews__item {
-    text-align: center;
+    position: relative;
+  }
+  .reviews__item-author {
+    position: absolute;
+    bottom: 0;
 
-    .reviews__item-author {
-      margin: 0;
-      padding: 10px;
-    }
-
-    p {
-      margin: 0;
-      padding: 10px;
-    }
+    width: 100%;
+  }
+  .reviews__item-text {
+    margin-bottom: 50px;
   }
 }
