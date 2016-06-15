@@ -92,7 +92,7 @@
     min-height: 360px;
   }
 
-  .post:nth-child(1) {
+  .post--first {
     float: none;
     clear: both;
 
@@ -103,5 +103,11 @@
 @media (min-width: $desktop-break) {
   .post {
     width: 33%;
+    max-width: 600px;
+
+    &--first {
+      width: 100%;
+      max-width: initial;
+    }
   }
 }
