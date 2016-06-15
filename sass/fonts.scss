@@ -19,9 +19,9 @@
   url("../fonts/opensansbold.woff2") format("woff2");
 }
 
-$light: "OpenSans Light", sans-serif, Arial;
-$bold: "OpenSans Bold", sans-serif, Arial;
-$regular: "OpenSans", sans-serif, Arial;
+$light: "OpenSans Light", Arial, sans-serif;
+$bold: "OpenSans Bold", Arial, sans-serif;
+$regular: "OpenSans", Arial, sans-serif;
 
 @mixin light-text($size: 24) {
   font:  {
