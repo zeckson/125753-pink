@@ -97,7 +97,7 @@
 
   line-height: 30px;
 
-  @include light-text(14);
+  @include light-text(14px);
 }
 @media (min-width: $tablet-break) {
   .about__wrapper {

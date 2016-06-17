@@ -48,3 +48,8 @@
     width: 1200px;
   }
 }
+
+@mixin highlight($color: red) {
+  outline: 2px solid $color;
+  outline-offset: 3px;
+}

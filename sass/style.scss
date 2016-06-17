@@ -12,5 +12,5 @@ body {
   color: $white;
   background-color: $grey;
 
-  @include regular-text;
+  @include regular-text(24px);
 }

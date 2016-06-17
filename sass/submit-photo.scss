@@ -40,7 +40,7 @@
   border-radius: 45px;
   background-color: transparent;
 
-  @include bold-text(18);
+  @include bold-text;
 
   &:hover {
     background-color: transparent;

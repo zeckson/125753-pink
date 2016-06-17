@@ -13,7 +13,7 @@
   margin: 0;
   padding: 10px;
 
-  @include bold-text(18);
+  @include bold-text;
 }
 
 .reviews__item-text {
@@ -22,7 +22,7 @@
 
   line-height: 30px;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 @media (min-width: $tablet-break) {
