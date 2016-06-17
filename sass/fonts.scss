@@ -23,28 +23,28 @@ $light: "OpenSans Light", sans-serif, Arial;
 $bold: "OpenSans Bold", sans-serif, Arial;
 $regular: "OpenSans", sans-serif, Arial;
 
-@mixin light-text($size: 24) {
+@mixin light-text($size: 24px) {
   font:  {
     family: $light;
-    size: ($size)px;
+    size: $size;
     weight: 100;
   }
   line-height: 1.2em;
 }
 
-@mixin regular-text($size: 24) {
+@mixin regular-text($size: 14px) {
   font:  {
     family: $regular;
-    size: ($size)px;
+    size: $size;
     weight: normal;
   };
   line-height: 1.2em;
 }
 
-@mixin bold-text($size: 18) {
+@mixin bold-text($size: 18px) {
   font:  {
     family: $bold;
-    size: ($size)px;
+    size: $size;
     weight: bold;
   };
   line-height: 1.8em;

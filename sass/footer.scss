@@ -10,7 +10,7 @@
 
     text-align: center;
 
-    @include light-text(24);
+    @include light-text;
   }
 }
 
@@ -33,7 +33,7 @@
 .footer__developer {
   text-align: center;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 @media (min-width: $tablet-break) {

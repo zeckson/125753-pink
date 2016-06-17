@@ -34,7 +34,7 @@
   color: $white;
   background-color: $red;
 
-  @include bold-text(12);
+  @include bold-text(12px);
 }
 
 .post__author {
@@ -43,7 +43,7 @@
 
     color: $grey;
 
-    @include bold-text(14);
+    @include bold-text(14px);
   }
   .post__time {
     padding-left: 4px;
@@ -52,7 +52,7 @@
 
     color: $grey;
 
-    @include light-text(12);
+    @include light-text;
   }
 }
 
@@ -62,7 +62,7 @@
 
   line-height: 24px;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 .post__like-panel {
@@ -70,7 +70,7 @@
 
   color: $red;
 
-  @include regular-text(12);
+  @include regular-text(12px);
   span {
     padding-left: 10px;
   }

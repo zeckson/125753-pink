@@ -15,7 +15,7 @@
 .contacts__type {
   margin: 0;
 
-  @include bold-text(18);
+  @include bold-text;
 }
 
 .contacts__value {
@@ -23,7 +23,7 @@
 
   color: $red;
 
-  @include light-text(24);
+  @include light-text;
 
   &, &:hover {
     text-decoration: none;

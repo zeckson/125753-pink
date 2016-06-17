@@ -1,6 +1,5 @@
 .navigation__controls {
-  min-height: 70px;
-
+  @include clear-fix;
   @include container;
 }
 
@@ -9,9 +8,11 @@
   z-index: 1;
 
   width: 100%;
-  min-height: 67px;
 
   background-color: rgba($black, 0.5);
+  padding-top: 2px;
+
+  @include clear-fix;
 }
 
 .navigation__header-wrapper {
@@ -20,7 +21,6 @@
 
 .navigation__menu {
   width: 100%;
-  min-height: 328px;
 
   text-transform: uppercase;
 
@@ -28,19 +28,20 @@
   background-color: $grey;
 
   @include bold-text;
+
 }
 
 .navigation__button {
   float: right;
 
-  padding: 14px 0;
+  padding: 22px 0 0;
 }
 
 .navigation__logo {
   display: inline-block;
   float: left;
 
-  padding: 14px 0;
+  padding: 22px 0 16px;
 }
 
 .navigation__list {
@@ -48,62 +49,102 @@
 
   @include drop-list;
 
-  .navigation__item {
-    box-sizing: border-box;
-    height: 64px;
-    padding: 12px 0;
+}
 
-    border-top: solid #485461 thin;
-    border-bottom: solid black thin;
+.navigation__item {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 
-    a, a:hover {
-      text-decoration: none;
+  border-top: solid #485461 thin;
+  border-bottom: solid black thin;
 
-      color: $white;
+  a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+      color: $red;
     }
+
+    &:active {
+      color: rgba($white, 0.3);
+    }
+  }
+}
+
+@media (min-width: $tablet-break) {
+  .navigation__header {
+    padding: 22px 0;
+  }
+
+  .navigation__menu--hidden {
+    display: none;
+  }
+
+  .navigation__controls {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-break) {
   .navigation {
-    position: relative;
-
-    @include container;
-  }
-
-  .navigation__wrapper {
+    width: 100%;
     position: absolute;
     z-index: 1;
 
+    background-color: rgba($black, 0.5);
+  }
+
+  .navigation__wrapper {
     @include container;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
   .navigation__menu {
-    float: right;
-
+    display: block;
     width: auto;
     min-height: 0;
 
     background: none;
-
-    .navigation__controls {
-      display: none;
+    &--hidden {
+      display: block;
     }
+
+    text-transform: capitalize;
+    @include regular-text(18px);
+
+  }
+
+  .navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
   }
 
   .navigation__item {
     display: inline-block;
+    border: 0;
 
     border: none;
+    margin-left: 83px;
   }
 
   .navigation__header {
+    display: block;
     position: static;
+    flex-grow: 1;
 
-    display: inline-block;
-    float: left;
-
-    width: 320px;
+    width: auto;
 
     background: none;
   }

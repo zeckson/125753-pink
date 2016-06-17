@@ -77,7 +77,7 @@
   border: 0;
   background-color: green;
 
-  @include bold-text(18);
+  @include bold-text;
 }
 
 .contest__form-legend {
@@ -88,7 +88,7 @@
 
   color: $red;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 .contest__form-label {
@@ -102,14 +102,14 @@
 
   line-height: 30px;
 
-  @include regular-text(14);
+  @include regular-text;
   .contest__form-input {
     display: block;
 
     min-width: 280px;
     height: 40px;
 
-    @include regular-text(18);
+    @include regular-text(18px);
   }
 }
 

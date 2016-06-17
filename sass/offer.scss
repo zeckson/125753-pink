@@ -10,7 +10,7 @@
   color: $grey;
   background-color: $white;
 
-  @include light-text(24);
+  @include light-text;
 
   h2 {
     margin: 0;
@@ -33,14 +33,14 @@
   margin: 0;
   padding: 10px 0;
 
-  @include bold-text(18);
+  @include bold-text;
 }
 
 .offer__advantage-description {
   margin: 0;
   padding-bottom: 25px;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 .offer__preview {
@@ -79,13 +79,13 @@
 }
 
 .offer__effect-title {
-  @include bold-text(30);
+  @include bold-text(30px);
 }
 
 .offer__effect-description {
   text-align: left;
 
-  @include regular-text(14);
+  @include regular-text;
 }
 
 .offer__effect-more {
