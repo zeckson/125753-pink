@@ -82,6 +82,15 @@
     padding: 22px 0;
   }
 
+  .navigation__logo {
+    padding: 2px 0 12px;
+
+    img {
+      width: 148px;
+      height: 46px;
+    }
+  }
+
   .navigation__menu--hidden {
     display: none;
   }
