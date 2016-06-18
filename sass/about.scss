@@ -2,12 +2,13 @@
   position: relative;
 
   color: $white;
-  background:  {
+  background: {
     color: $grey;
 
     image: url("../img/bg-back-mobile@1x.jpg");
   }
 }
+
 .about__wrapper {
   @include container;
 }
@@ -16,7 +17,7 @@
   box-sizing: border-box;
   // Откуда взялся margin?
   margin: 0;
-  padding: 120px 20px 20px;
+  padding: 89px 20px 29px;
 
   text-align: center;
 
@@ -25,6 +26,7 @@
 }
 
 .about__preview {
+  margin: 0 -20px;
   img {
     vertical-align: bottom;
   }
@@ -37,53 +39,36 @@
 }
 
 .about__download-section-wrapper {
-  min-height: 271px;
-
   @include container;
 }
 
 .about__download-button {
   display: block;
 
-  box-sizing: border-box;
-  padding: 20px 0;
-
-  text-align: center;
-  text-decoration: none;
-
-  color: $white;
-  border:  {
-    width: thin;
-
-    color: $white;
-
-    radius: 45px;
-    style: solid;
-  };
+  @include round-button;
 
   @include bold-text;
 }
 
-
 .about__platforms {
-  padding: 30px 0;
+  padding: 30px 0 20px;
 
   text-align: center;
 
-  .about__platform {
-    padding: 0 10px;
+}
 
-    text-decoration: none;
-  }
+.about__platform {
+  padding: 0 15px;
+
+  text-decoration: none;
 }
 
 .about__download-info {
   margin: 0;
-  padding: 5px;
 
   text-align: center;
 
-  font-family: $light;
+  @include light-text(14px, 1.7em);
 }
 
 .about__description {
@@ -99,6 +84,7 @@
 
   @include light-text(14px);
 }
+
 @media (min-width: $tablet-break) {
   .about__wrapper {
     position: relative;

@@ -53,3 +53,30 @@
   outline: 2px solid $color;
   outline-offset: 3px;
 }
+
+@mixin round-button {
+  box-sizing: border-box;
+  padding: 6px 8px 10px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: $white;
+  border:  {
+    width: medium;
+
+    color: $white;
+
+    radius: 45px;
+    style: solid;
+  };
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+  &:active {
+    color: $pink;
+    background-color: $white;
+  }
+}
