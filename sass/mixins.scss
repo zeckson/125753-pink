@@ -26,11 +26,11 @@
 
   @include center-block;
 
-  @media(min-width: $tablet-break) {
+  @media #{$tablet-width} {
     width: 620px;
   }
 
-  @media(min-width: $desktop-break) {
+  @media (min-width: $desktop-width) {
     width: 940px;
   }
 }
@@ -40,11 +40,11 @@
 
   @include center-block;
 
-  @media (min-width: $tablet-break) {
+  @media #{$tablet-width} {
     width: 700px;
   }
 
-  @media (min-width: $desktop-break) {
+  @media (min-width: $desktop-width) {
     width: 1200px;
   }
 }

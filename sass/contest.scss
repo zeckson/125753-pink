@@ -132,7 +132,7 @@
   }
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   // Как поменять местами блоки как на макете?
   .contest__basic-info {
     .contest__form-input {

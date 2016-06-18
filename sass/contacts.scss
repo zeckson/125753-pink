@@ -30,7 +30,7 @@
   }
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .contacts__item {
     display: inline-block;
 

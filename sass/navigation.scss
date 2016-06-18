@@ -77,7 +77,7 @@
   }
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .navigation__header {
     padding: 22px 0;
   }
@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: $desktop-break) {
+@media (min-width: $desktop-width) {
   .navigation {
     width: 100%;
     position: absolute;

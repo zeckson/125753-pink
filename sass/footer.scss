@@ -36,7 +36,7 @@
   @include regular-text;
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .footer__logo {
     display: inline-block;
 

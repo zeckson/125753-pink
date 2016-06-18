@@ -85,7 +85,7 @@
   @include light-text(14px);
 }
 
-@media (min-width: $tablet-width) {
+@media #{$tablet-width} {
   .about__wrapper {
     position: relative;
 

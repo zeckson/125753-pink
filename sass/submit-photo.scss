@@ -59,7 +59,7 @@
   width: 100%;
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .submit-photo__form {
     @include clear-fix;
   }
@@ -72,7 +72,7 @@
   }
 }
 
-@media (min-width: $desktop-break) {
+@media (min-width: $desktop-width) {
   .submit-photo__button {
     display: inline-block;
   }

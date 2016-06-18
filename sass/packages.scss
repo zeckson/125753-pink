@@ -57,13 +57,13 @@
   @include regular-text;
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .packages__table {
     width: 620px;
   }
 }
 
-@media (min-width: $desktop-break) {
+@media (min-width: $desktop-width) {
   .packages__table {
     width: 940px;
   }

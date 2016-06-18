@@ -25,7 +25,7 @@
   @include regular-text;
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .reviews__item {
     position: relative;
   }

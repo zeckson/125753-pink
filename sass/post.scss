@@ -80,7 +80,7 @@
   background-color: $light-grey;
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .photos {
     @include clear-fix;
   }
@@ -100,7 +100,7 @@
   }
 }
 
-@media (min-width: $desktop-break) {
+@media (min-width: $desktop-width) {
   .post {
     width: 33%;
   }
