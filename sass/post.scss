@@ -100,7 +100,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media #{$desktop-width} {
   .post {
     width: 33%;
   }

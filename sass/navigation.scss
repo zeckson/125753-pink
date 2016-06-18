@@ -91,7 +91,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media #{$desktop-width} {
   .navigation {
     width: 100%;
     position: absolute;

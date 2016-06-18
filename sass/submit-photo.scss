@@ -72,7 +72,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media #{$desktop-width} {
   .submit-photo__button {
     display: inline-block;
   }

@@ -30,7 +30,7 @@
     width: 620px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop-width} {
     width: 940px;
   }
 }
@@ -44,7 +44,7 @@
     width: 700px;
   }
 
-  @media (min-width: $desktop-width) {
+  @media #{$desktop-width} {
     width: 1200px;
   }
 }

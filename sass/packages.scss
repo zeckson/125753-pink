@@ -63,7 +63,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media #{$desktop-width} {
   .packages__table {
     width: 940px;
   }

@@ -130,7 +130,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media #{$desktop-width} {
   .offer__advantages {
     display: block;
     float: none;
