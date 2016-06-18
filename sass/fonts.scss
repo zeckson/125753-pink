@@ -41,11 +41,11 @@ $regular: "OpenSans", sans-serif, Arial;
   line-height: 1.2em;
 }
 
-@mixin bold-text($size: 18px) {
+@mixin bold-text($size: 18px, $line-height: 1.8em) {
   font:  {
     family: $bold;
     size: $size;
     weight: bold;
   };
-  line-height: 1.8em;
+  line-height: $line-height;
 }

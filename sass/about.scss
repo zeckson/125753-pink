@@ -168,3 +168,33 @@
 
   }
 }
+
+@media #{$desktop-width} {
+  .about__wrapper {
+    padding-top: 215px;
+  }
+
+  .about__title {
+    @include light-text(50px)
+  }
+
+  .about__preview {
+    right: 44px;
+    img {
+      width: 1050px;
+      height: 645px;
+    }
+  }
+
+  .about__download-section {
+    padding: 50px 0 123px;
+  }
+
+  .about__download-button {
+    @include bold-text(21px, 1.5em)
+  }
+
+  .about__platforms {
+    padding: 67px 0 53px;
+  }
+}
