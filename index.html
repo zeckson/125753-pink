@@ -31,7 +31,7 @@
           <a class="navigation__logo" href="#">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
-              <source media="(min-width: 700px)" bs-width="" srcset="img/logo-pink-white-tablet.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
               <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
             </picture>
           </a>
@@ -50,7 +50,11 @@
     <div class="about__wrapper">
       <h2 class="about__title  about__title--moved">Взгляните на жизнь иначе!</h2>
       <div class="about__preview">
-        <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+          <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286" alt="Mobile App Preview">
+        </picture>
       </div>
     </div>
     <section class="about__download-section">

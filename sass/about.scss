@@ -4,7 +4,7 @@
   color: $white;
   background: {
     color: $grey;
-    position: center -5px;
+    position: center -3px;
     repeat: no-repeat;
     size: 700px auto;
     image: url("../img/bg-back-mobile@1x.jpg");
@@ -19,6 +19,7 @@
   @media #{$tablet-width} {
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-size: 1200px auto;
+    background-position: center center;
 
     @media #{$retina} {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -32,6 +33,7 @@
 }
 
 .about__wrapper {
+  padding-top: 89px;
   @include container;
 }
 
@@ -39,7 +41,7 @@
   box-sizing: border-box;
   // Откуда взялся margin?
   margin: 0;
-  padding: 89px 20px 29px;
+  padding: 0 20px 29px;
 
   text-align: center;
 
@@ -109,40 +111,60 @@
 
 @media #{$tablet-width} {
   .about__wrapper {
-    position: relative;
-
-    min-height: 530px;
+    padding-top: 200px;
 
     @include clear-fix;
   }
-  .about__title--moved {
-    float: left;
 
-    width: 300px;
-  }
-  .about__preview {
-    float: right;
-  }
-  .about__download-section {
-    padding: 0;
+  .about__title {
+    @include light-text(40px);
+
+    // In case of index page
+    &--moved {
+      float: left;
+      padding: 3px 28px 2px;
+
+      width: 300px;
+    }
   }
 
   .about__preview {
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 0;
+    margin: 0;
+
+    img {
+      width: 700px;
+      height: 545px;
+    }
   }
 
-  // Так и не придумал как это правильно спозиционировать
-  .about__download-section-wrapper {
-    position: absolute;
-    top: 200px;
-    left: 15%;
+  .about__download-section {
+    // Used to overlap image
+    position: relative;
+    z-index: 1;
+    background: none;
+    padding-bottom: 110px;
 
+    @include clear-fix;
+    @include container;
+  }
+
+  .about__download-section-wrapper {
     width: 300px;
+    float: left;
 
     background: none;
+  }
 
-    @include center-block;
+  .about__platforms {
+    padding: 46px 0 33px;
+  }
+
+  .about__download-info {
+    @include light-text(18px, 1.3em)
+
   }
 }
