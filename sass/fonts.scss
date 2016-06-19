@@ -32,13 +32,13 @@ $regular: "OpenSans", sans-serif, Arial;
   line-height: $line-height;
 }
 
-@mixin regular-text($size: 14px) {
+@mixin regular-text($size: 14px, $line-height: 1.2em) {
   font:  {
     family: $regular;
     size: $size;
     weight: normal;
   };
-  line-height: 1.2em;
+  line-height: $line-height;
 }
 
 @mixin bold-text($size: 18px, $line-height: 1.8em) {

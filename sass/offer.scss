@@ -3,19 +3,31 @@
 }
 
 .offer__motto {
-  padding: 30px 0;
+  padding: 42px 0 32px;
 
   text-align: center;
 
   color: $grey;
   background-color: $white;
 
-  @include light-text;
 
-  h2 {
-    margin: 0;
-    padding: 20px;
+  h3 {
+    @include light-text;
+    margin: 0 0 30px;
   }
+}
+
+.offer__content {
+  background-color: $light-grey;
+  transform: skew(0deg, -5deg);
+  transform-origin: left;
+}
+
+.offer__content-wrapper {
+  transform: skew(0deg, 5deg);
+  transform-origin: left;
+
+  padding: 36px 0 0;
 }
 
 .offer__advantages {
@@ -31,20 +43,24 @@
 }
 .offer__advantage-title {
   margin: 0;
-  padding: 10px 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
 
   @include bold-text;
 }
 
 .offer__advantage-description {
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 16px;
 
-  @include regular-text;
+  @include regular-text(14px, 1.7em);
 }
 
 .offer__preview {
   text-align: center;
+  padding-top: 26px;
+  height: 277px;
+  overflow: hidden;
 
   background-color: $light-grey;
 }
