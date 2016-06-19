@@ -93,7 +93,7 @@
   };
   flex-grow: 1;
   width: 239px;
-  height: 285px;
+  height: auto;
 
   h1 {
     margin: 64px 25px;
@@ -221,6 +221,18 @@
     padding-top: 252px;
 
     vertical-align: bottom;
+
+    &--first {
+      @include background("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    &--second {
+      @include background("../img/iphone-screen-2-desktop@1x.png");
+    }
+
+    &--third {
+      @include background("../img/iphone-screen-3-desktop@1x.png");
+    }
   }
 
   .offer__advantage-title {

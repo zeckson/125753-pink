@@ -80,3 +80,11 @@
     background-color: $white;
   }
 }
+
+@mixin background($url) {
+  background: {
+    image: url($url);
+    position-y: -95px;
+    repeat: no-repeat;
+  }
+}
