@@ -34,9 +34,7 @@
 
 .about__title {
   box-sizing: border-box;
-  // Откуда взялся margin?
-  margin: 0;
-  padding: 98px 20px 30px;
+  padding: 98px 20px;
   @include container;
 
   h2 {
@@ -45,10 +43,23 @@
 
     @include light-text;
   }
+}
 
-  &--moved {
-    padding-top: 90px;
-  }
+.about__title-index {
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.about__title-photo {
+  padding-bottom: 83px;
+}
+
+.about__title-form {
+  padding-bottom: 55px;
+}
+
+.about__preview {
+  @include container;
 }
 
 .about__download-section {
@@ -113,19 +124,20 @@
       @include light-text(40px);
     }
 
-    // In case of index page
-    &--moved {
-      @include container;
+  }
 
-      h2 {
-        width: 246px;
-        padding-left: 7px;
-        padding-top: 1px;
-      }
+  .about__title-index {
+    @include container;
+
+    h2 {
+      width: 246px;
+      padding-left: 7px;
+      padding-top: 1px;
     }
   }
 
   .about__preview {
+    width: auto;
     position: absolute;
     right: 0;
     bottom: -5px;
