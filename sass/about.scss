@@ -2,13 +2,14 @@
   position: relative;
 
   color: $white;
-  background: {
-    color: $grey;
+  background:  {
     position: center -3px;
+
+    color: $grey;
+
     repeat: no-repeat;
     size: 700px auto;
     image: url("../img/bg-back-mobile@1x.jpg");
-
   }
   @media #{$retina} {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -18,8 +19,8 @@
 
   @media #{$tablet-width} {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: 1200px auto;
     background-position: center center;
+    background-size: 1200px auto;
 
     @media #{$retina} {
       background-image: url("../img/bg-back-tablet@2x.jpg");
@@ -35,10 +36,12 @@
 .about__title {
   box-sizing: border-box;
   padding: 98px 20px;
+
   @include container;
 
   h2 {
     margin: 0;
+
     text-align: center;
 
     @include light-text;
@@ -76,7 +79,6 @@
   display: block;
 
   @include round-button;
-
   @include bold-text;
 }
 
@@ -84,7 +86,6 @@
   padding: 30px 0 20px;
 
   text-align: center;
-
 }
 
 .about__platform {
@@ -120,7 +121,7 @@
     padding-top: 180px;
 
     h2 {
-      @include light-text(50px)
+      @include light-text(50px);
     }
   }
 
@@ -129,6 +130,7 @@
 
     h2 {
       width: 232px;
+
       @include light-text(40px);
     }
   }
@@ -143,9 +145,9 @@
 
   .about__preview {
     position: absolute;
+    z-index: 0;
     right: 0;
     bottom: -5px;
-    z-index: 0;
 
     img {
       width: 700px;
@@ -157,16 +159,19 @@
     // Used to overlap image
     position: relative;
     z-index: 1;
-    background: none;
+
     padding-bottom: 110px;
+
+    background: none;
 
     @include clear-fix;
     @include container;
   }
 
   .about__download-section-wrapper {
-    width: 300px;
     float: left;
+
+    width: 300px;
 
     background: none;
   }
@@ -176,8 +181,7 @@
   }
 
   .about__download-info {
-    @include light-text(18px, 1.3em)
-
+    @include light-text(18px, 1.3em);
   }
 }
 
@@ -187,7 +191,7 @@
     padding-bottom: 101px;
 
     h2 {
-      @include light-text(50px)
+      @include light-text(50px);
     }
   }
 
@@ -196,13 +200,13 @@
   }
 
   .about__title-form {
-    padding-left: 90px;
     padding-right: 90px;
+    padding-left: 90px;
   }
 
   .about__title-photo {
-    padding-left: 145px;
     padding-right: 145px;
+    padding-left: 145px;
   }
 
   .about__preview {
@@ -219,7 +223,7 @@
   }
 
   .about__download-button {
-    @include bold-text(21px, 1.5em)
+    @include bold-text(21px, 1.5em);
   }
 
   .about__platforms {

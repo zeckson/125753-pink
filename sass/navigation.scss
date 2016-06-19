@@ -27,7 +27,6 @@
   background-color: $grey;
 
   @include bold-text;
-
 }
 
 .navigation__button {
@@ -47,26 +46,28 @@
   text-align: center;
 
   @include drop-list;
-
 }
 
 .navigation__item {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   border-top: solid #485461 thin;
   border-bottom: solid black thin;
 
   a {
     display: block;
+
     padding: 15px 0;
+
     text-decoration: none;
 
     color: $white;
 
     &:hover {
       text-decoration: underline;
+
       color: $red;
     }
 
@@ -101,64 +102,70 @@
 
 @media #{$desktop-width} {
   .navigation {
-    width: 100%;
     position: absolute;
     z-index: 1;
+
+    width: 100%;
 
     background-color: rgba($black, 0.5);
   }
 
   .navigation__wrapper {
-    @include container;
-
     display: flex;
     flex-direction: row-reverse;
+
+    @include container;
     flex-wrap: nowrap;
     align-items: center;
   }
 
   .navigation__menu {
     display: block;
+
     width: auto;
     min-height: 0;
 
+    text-transform: capitalize;
+
     background: none;
+
+    @include regular-text(18px);
     &--hidden {
       display: block;
     }
-
-    text-transform: capitalize;
-    @include regular-text(18px);
-
   }
 
   .navigation__list {
     display: flex;
+
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .navigation__item {
     display: inline-block;
-    border: 0;
 
-    border: none;
     margin-left: 80px;
+
+    border: 0;
+    border: none;
   }
 
   .navigation__header {
-    display: block;
     position: static;
-    flex-grow: 1;
+
+    display: block;
 
     width: auto;
 
     background: none;
+
+    flex-grow: 1;
   }
 
   .navigation__header-wrapper {
     width: auto;
+
     @include clear-fix;
   }
 
