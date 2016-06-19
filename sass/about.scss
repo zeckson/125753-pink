@@ -33,7 +33,6 @@
 }
 
 .about__wrapper {
-  padding-top: 89px;
   @include container;
 }
 
@@ -41,12 +40,16 @@
   box-sizing: border-box;
   // Откуда взялся margin?
   margin: 0;
-  padding: 0 20px 29px;
+  padding: 98px 20px 29px;
 
   text-align: center;
 
   @include light-text;
   @include container;
+
+  &--moved {
+    padding-top: 89px;
+  }
 }
 
 .about__preview {
@@ -111,18 +114,19 @@
 
 @media #{$tablet-width} {
   .about__wrapper {
-    padding-top: 200px;
-
     @include clear-fix;
   }
 
   .about__title {
+    padding-top: 202px;
     @include light-text(40px);
 
     // In case of index page
     &--moved {
       float: left;
-      padding: 3px 28px 2px;
+      padding-left: 28px;
+      padding-right: 28px;
+      padding-bottom: 2px;
 
       width: 300px;
     }
@@ -170,11 +174,8 @@
 }
 
 @media #{$desktop-width} {
-  .about__wrapper {
-    padding-top: 215px;
-  }
-
   .about__title {
+    padding-top: 218px;
     @include light-text(50px)
   }
 
