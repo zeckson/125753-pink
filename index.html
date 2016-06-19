@@ -83,7 +83,7 @@
   <section class="offer">
     <div class="offer__motto">
       <h3>Устали от серости мегаполиса?</h3>
-      <h3>Нам есть, что вам предложить!</h3>
+      <h3>Нам есть, что вам<br> предложить!</h3>
     </div>
     <div class="offer__content">
       <div class="offer__content-wrapper">
@@ -105,19 +105,24 @@
           </article>
         </div>
         <div class="offer__preview">
-          <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Application Preview">
+          <picture>
+            <source media="(min-width: 700px)"
+                    srcset="img/iphone-screen-mobile@2x.png 1x">
+            <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x"
+                 width="157" height="320" alt="Application Preview">
+          </picture>
         </div>
       </div>
     </div>
     <div class="offer__effect">
       <div class="offer__effect-wrapper">
-        <div class="offer__effect-image">
-          <img src="http://placehold.it/350x150" alt="Effect" width="250" height="150">
+        <div class="offer__effect-timer">
+          <h1>24</h1>
         </div>
         <div class="offer__effect-content">
-          <h1 class="offer__effect-title">Эффект на 24 часа!</h1>
-          <p class="offer__effect-description">Британские ученые провели исследования и доказали, что положительный
-            эффект от использования приложения длится целые сутки</p>
+          <h1 class="offer__effect-title">Эффект<br> на 24 часа!</h1>
+          <p class="offer__effect-description">Британские ученые провели исследования<br>и доказали, что положительный
+            эффект<br>от использования приложения длится<br>целые сутки!</p>
           <a href="http://british-scientists.co.uk" class="offer__effect-more">Узнать больше об исследовании</a>
         </div>
       </div>

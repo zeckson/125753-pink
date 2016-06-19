@@ -10,7 +10,6 @@
   color: $grey;
   background-color: $white;
 
-
   h3 {
     @include light-text;
     margin: 0 0 30px;
@@ -19,12 +18,12 @@
 
 .offer__content {
   background-color: $light-grey;
-  transform: skew(0deg, -5deg);
+  transform: skew(0deg, -4.4deg);
   transform-origin: left;
 }
 
 .offer__content-wrapper {
-  transform: skew(0deg, 5deg);
+  transform: skew(0deg, 4.4deg);
   transform-origin: left;
 
   padding: 36px 0 0;
@@ -41,6 +40,7 @@
 
   @include container;
 }
+
 .offer__advantage-title {
   margin: 0;
   padding-top: 12px;
@@ -67,49 +67,103 @@
 
 // Begin effect
 .offer__effect {
-  display: none;
+  display: block;
+  margin-top: 17px;
+  position: relative;
 
   background-color: $white;
 }
 
 .offer__effect-wrapper {
   position: relative;
+  padding-top: 60px;
 
   @include container;
-  @include clear-fix;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.offer__effect-timer {
+  background: {
+    image: url(../img/icon-timer.svg);
+    size: 100%;
+    repeat: no-repeat;
+  };
+  width: 239px;
+  height: 285px;
+
+  h1 {
+    margin: 64px 25px;
+    text-align: center;
+
+    border:  {
+      width: 12px;
+
+      color: $red;
+
+      radius: 90%;
+      style: solid;
+    };
+    color: $red;
+    @include bold-text(90px)
+  }
 }
 
 .offer__effect-content {
-  float: right;
-
+  margin-top: 12px;
+  padding-left: 70px;
+  flex-grow: 1;
   width: 310px;
 
   color: $black;
 }
 
-.offer__effect-image {
-  position: absolute;
-  left: 0;
-
-  padding: 50px 0;
-}
 
 .offer__effect-title {
-  @include bold-text(30px);
+  margin: 25px 0 0;
+  @include bold-text(30px, 1.2em);
 }
 
 .offer__effect-description {
+  margin: 11px 0 4px;
   text-align: left;
 
-  @include regular-text;
+  @include regular-text(14px, 1.72em);
 }
 
 .offer__effect-more {
   color: $red;
+
+  @include regular-text(14px)
 }
+
 // End effect
 
 @media #{$tablet-width} {
+  .offer__motto {
+    text-align: center;
+    padding-bottom: 106px;
+    h3 {
+      margin: 7px auto -7px;
+      text-align: center;
+      width: 587px;
+      @include light-text(40px)
+    }
+  }
+  .offer__content {
+    position: relative;
+
+    background-color: $light-grey;
+  }
+
+  .offer__content-wrapper {
+    padding-top: 9px;
+    @include clear-fix;
+    @include container;
+  }
+
   .offer__advantages {
     float: right;
   }
@@ -118,27 +172,25 @@
     float: left;
   }
 
-  .offer__content {
-    position: relative;
-
-    background-color: $light-grey;
-  }
-
-  .offer__content-wrapper {
-    @include clear-fix;
-    @include container;
-  }
 
   .offer__advantage {
     width: 310px;
+    padding-bottom: 4px;
 
     text-align: left;
   }
 
   .offer__preview {
     position: absolute;
-    bottom: 0;
-    left: 22%;
+    z-index: 2;
+    bottom: -88px;
+    width: 268px;
+    height: 548px;
+    background: none;
+    img {
+      width: 314px;
+      height: 640px;
+    }
   }
 
   .offer__effect {

@@ -59,7 +59,7 @@
 }
 
 .about__preview {
-  @include container;
+  margin: 0 auto;
 }
 
 .about__download-section {
@@ -142,7 +142,6 @@
   }
 
   .about__preview {
-    width: auto;
     position: absolute;
     right: 0;
     bottom: -5px;
