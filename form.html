@@ -23,13 +23,17 @@
           <li class="navigation__item"><a href="index.html">Главная</a></li>
           <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
           <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </div>
       <section class="navigation__header">
         <div class="navigation__header-wrapper">
           <a class="navigation__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="74" height="23">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
+            </picture>
           </a>
           <a class="navigation__button" href="#">
             <img src="img/icon-menu-burger.svg" width="50" height="24" alt="Hamburger">
@@ -43,7 +47,7 @@
 <main class="main">
   <section class="about">
     <div class="about__title  about__title-form">
-      <h2>Конкурс на самое безбашеное путешествие с Пинк</h2>
+      <h2>Конкурс на самое безбашенное путешествие с Пинк</h2>
     </div>
     <div class="about__description">
       <p>Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на
