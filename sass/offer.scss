@@ -18,6 +18,8 @@
 }
 
 .offer__content {
+  padding-bottom: 100px;
+
   transform: skew(0deg, -4.4deg);
   transform-origin: left;
 
@@ -77,9 +79,9 @@
 .offer__effect {
   position: relative;
 
-  display: block;
+  display: none;
 
-  margin-top: 17px;
+  margin-top: -82px;
 
   background-color: $white;
 }
@@ -146,7 +148,7 @@
 .offer__effect-description {
   @include regular-text(14px, 1.72em);
 
-  margin: 11px 0 4px;
+  margin: 10px 0 4px;
 
   text-align: left;
 }
@@ -281,6 +283,8 @@
     display: none;
   }
   .offer__effect {
+    margin-top: -100px;
+
     background-color: $light-grey;
   }
 

@@ -1,4 +1,7 @@
 .reviews {
+  position: relative;
+
+  margin-top: -100px;
   padding: 40px 0;
 
   color: $grey;
@@ -26,6 +29,10 @@
 }
 
 @media #{$tablet-width} {
+  .reviews {
+    margin-top: 0;
+  }
+
   .reviews__item {
     position: relative;
   }
