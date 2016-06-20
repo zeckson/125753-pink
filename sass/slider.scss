@@ -9,7 +9,8 @@
   }
 
   .slider__item--selected {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
