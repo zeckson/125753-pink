@@ -2,10 +2,14 @@
   position: relative;
 
   margin-top: -100px;
-  padding: 40px 0;
+  padding: 31px 0;
 
   color: $grey;
   background-color: $white;
+}
+
+.reviews__wrapper {
+  @include container;
 }
 
 .reviews__item {
@@ -16,14 +20,14 @@
   @include bold-text;
 
   margin: 0;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .reviews__item-text {
   @include regular-text;
 
   margin: 0;
-  padding: 10px;
+  padding: 2px 0;
 
   line-height: 30px;
 }

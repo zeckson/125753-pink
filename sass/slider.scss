@@ -1,5 +1,3 @@
-
-
 .slider__list {
   margin: 0;
   padding: 0;
@@ -17,21 +15,30 @@
 
 .slider__toggles {
   text-align: center;
-  .slider__toggle {
-    display: inline-block;
+  padding: 21px 0;
+}
 
-    box-sizing: border-box;
-    width: 20px;
-    height: 20px;
+.slider__toggle {
+  display: inline-block;
 
-    border:  {
-      width: thin;
+  box-sizing: border-box;
+  width: 6px;
+  height: 6px;
 
-      color: $black;
+  border: {
+    width: medium;
 
-      radius: 50%;
-      style: solid;
-    }
-    background: $white;
+    color: $black;
+
+    radius: 50%;
+    style: solid;
+  }
+  margin: 6px;
+  background: $white;
+  vertical-align: middle;
+
+  &--active {
+    width: 12px;
+    height: 12px;
   }
 }
