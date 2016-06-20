@@ -4,14 +4,14 @@
 }
 
 .navigation__header {
+  @include clear-fix;
+
   position: absolute;
   z-index: 1;
 
   width: 100%;
 
   background-color: rgba($black, 0.5);
-
-  @include clear-fix;
 }
 
 .navigation__header-wrapper {
@@ -19,14 +19,14 @@
 }
 
 .navigation__menu {
+  @include bold-text;
+
   width: 100%;
 
   text-transform: uppercase;
 
   color: $white;
   background-color: $grey;
-
-  @include bold-text;
 }
 
 .navigation__button {
@@ -43,9 +43,9 @@
 }
 
 .navigation__list {
-  text-align: center;
-
   @include drop-list;
+
+  text-align: center;
 }
 
 .navigation__item {
@@ -111,15 +111,17 @@
   }
 
   .navigation__wrapper {
+    @include container;
+
     display: flex;
     flex-direction: row-reverse;
-
-    @include container;
     flex-wrap: nowrap;
     align-items: center;
   }
 
   .navigation__menu {
+    @include regular-text(18px);
+
     display: block;
 
     width: auto;
@@ -128,8 +130,6 @@
     text-transform: capitalize;
 
     background: none;
-
-    @include regular-text(18px);
     &--hidden {
       display: block;
     }
@@ -137,7 +137,6 @@
 
   .navigation__list {
     display: flex;
-
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -164,9 +163,9 @@
   }
 
   .navigation__header-wrapper {
-    width: auto;
-
     @include clear-fix;
+
+    width: auto;
   }
 
   .navigation__button {

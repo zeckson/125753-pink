@@ -28,33 +28,33 @@
 }
 
 .packages__package-hit {
+  @include bold-text(14px);
+
   float: left;
 
   background-image: url("../img/bg-hit.svg");
-
-  @include bold-text(14px);
 }
 
 .packages__package-title {
+  @include bold-text;
+
   display: block;
 
   text-align: center;
-
-  @include bold-text;
 }
 
 .packages__package-price {
+  @include light-text;
+
   display: block;
 
   text-align: center;
-
-  @include light-text;
 }
 
 .packages__package-option-name {
-  text-transform: uppercase;
-
   @include regular-text;
+
+  text-transform: uppercase;
 }
 
 @media #{$tablet-width} {

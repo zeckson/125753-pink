@@ -22,9 +22,9 @@
 }
 
 @mixin container {
-  width: 280px;
-
   @include center-block;
+
+  width: 280px;
 
   @media #{$tablet-width} {
     width: 620px;
@@ -36,9 +36,9 @@
 }
 
 @mixin outer-wrapper {
-  width: 320px;
-
   @include center-block;
+
+  width: 320px;
 
   @media #{$tablet-width} {
     width: 700px;

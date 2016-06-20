@@ -65,6 +65,8 @@
 }
 
 .contest__form-submit {
+  @include bold-text;
+
   display: block;
 
   width: 280px;
@@ -77,22 +79,22 @@
   color: $white;
   border: 0;
   background-color: green;
-
-  @include bold-text;
 }
 
 .contest__form-legend {
+  @include regular-text;
+
   display: none;
 
   text-align: center;
   text-transform: uppercase;
 
   color: $red;
-
-  @include regular-text;
 }
 
 .contest__form-label {
+  @include regular-text;
+
   display: block;
 
   padding: 5px;
@@ -102,15 +104,13 @@
   color: $red;
 
   line-height: 30px;
-
-  @include regular-text;
   .contest__form-input {
+    @include regular-text(18px);
+
     display: block;
 
     min-width: 280px;
     height: 40px;
-
-    @include regular-text(18px);
   }
 }
 

@@ -27,7 +27,11 @@
     "node_modules/**",
     "bower_components/**"
   ],
+  "sort-order-fallback": "abc",
   "sort-order": [
+    [
+      "$include"
+    ],
     [
       "position",
       "z-index",
@@ -52,7 +56,10 @@
       "flex-direction",
       "flex-order",
       "flex-pack",
-      "flex-align"
+      "flex-align",
+      "flex-wrap",
+      "align-items",
+      "justify-content"
     ],
     [
       "-webkit-box-sizing",

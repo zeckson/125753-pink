@@ -11,9 +11,9 @@
   background-color: $white;
 
   h3 {
-    margin: 0 0 30px;
-
     @include light-text;
+
+    margin: 0 0 30px;
   }
 }
 
@@ -36,26 +36,26 @@
 }
 
 .offer__advantage {
+  @include container;
+
   text-align: center;
 
   color: $grey;
-
-  @include container;
 }
 
 .offer__advantage-title {
+  @include bold-text;
+
   margin: 0;
   padding-top: 12px;
   padding-bottom: 10px;
-
-  @include bold-text;
 }
 
 .offer__advantage-description {
+  @include regular-text(14px, 1.7em);
+
   margin: 0;
   padding-bottom: 16px;
-
-  @include regular-text(14px, 1.7em);
 
   br {
     display: none;
@@ -85,16 +85,16 @@
 }
 
 .offer__effect-wrapper {
+  @include container;
+
   position: relative;
 
   display: flex;
   flex-direction: row;
-
-  padding-top: 60px;
-
-  @include container;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  padding-top: 60px;
 }
 
 .offer__effect-timer {
@@ -103,13 +103,15 @@
 
   background:  {
     image: url(../img/icon-timer.svg);
-    size: 100%;
     repeat: no-repeat;
+    size: 100%;
   };
 
   flex-grow: 1;
 
   h1 {
+    @include bold-text(90px);
+
     margin: 64px 25px;
 
     text-align: center;
@@ -123,8 +125,6 @@
       radius: 90%;
       style: solid;
     };
-
-    @include bold-text(90px);
   }
 }
 
@@ -138,23 +138,23 @@
 
 
 .offer__effect-title {
-  margin: 25px 0 0;
-
   @include bold-text(30px, 1.2em);
+
+  margin: 25px 0 0;
 }
 
 .offer__effect-description {
+  @include regular-text(14px, 1.72em);
+
   margin: 11px 0 4px;
 
   text-align: left;
-
-  @include regular-text(14px, 1.72em);
 }
 
 .offer__effect-more {
-  color: $red;
-
   @include regular-text(14px);
+
+  color: $red;
 }
 
 // End effect
@@ -165,11 +165,11 @@
 
     text-align: center;
     h3 {
+      @include light-text(40px);
+
       margin: 7px auto -7px;
 
       text-align: center;
-
-      @include light-text(40px);
     }
   }
   .offer__content {
@@ -179,10 +179,10 @@
   }
 
   .offer__content-wrapper {
-    padding-top: 9px;
-
     @include clear-fix;
     @include container;
+
+    padding-top: 9px;
   }
 
   .offer__advantages {
@@ -233,10 +233,9 @@
   .offer__advantages {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
     width: 100%;
-
-    justify-content: space-between;
   }
 
   .offer__advantage {
@@ -262,17 +261,17 @@
   }
 
   .offer__advantage-title {
-    text-align: center;
-
     @include bold-text(30px, 1em);
+
+    text-align: center;
   }
 
   .offer__advantage-description {
+    @include regular-text(18px, 1.7em);
+
     padding-top: 12px;
 
     text-align: center;
-
-    @include regular-text(18px, 1.7em);
     br {
       display: block;
     }
@@ -300,27 +299,27 @@
   }
 
   .offer__effect-title {
-    margin-left: -4px;
-
     @include bold-text(30px);
+
+    margin-left: -4px;
     br {
       display: none;
     }
   }
 
   .offer__effect-description {
+    @include regular-text(18px, 1.8em);
+
     margin-bottom: 25px;
     margin-left: -4px;
-
-    @include regular-text(18px, 1.8em);
     br {
       display: none;
     }
   }
 
   .offer__effect-more {
-    margin-left: -4px;
-
     @include regular-text(18px);
+
+    margin-left: -4px;
   }
 }

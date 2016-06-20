@@ -23,6 +23,8 @@
 }
 
 .post__photo-of-the-day {
+  @include bold-text(12px);
+
   position: absolute;
   top: 0;
   right: 0;
@@ -33,44 +35,42 @@
 
   color: $white;
   background-color: $red;
-
-  @include bold-text(12px);
 }
 
 .post__author {
   a, a:hover {
+    @include bold-text(14px);
+
     text-decoration: none;
 
     color: $grey;
-
-    @include bold-text(14px);
   }
   .post__time {
+    @include light-text;
+
     padding-left: 4px;
 
     text-transform: uppercase;
 
     color: $grey;
-
-    @include light-text;
   }
 }
 
 .post__description {
+  @include regular-text;
+
   margin: 0;
   padding: 10px 0;
 
   line-height: 24px;
-
-  @include regular-text;
 }
 
 .post__like-panel {
+  @include regular-text(12px);
+
   text-transform: uppercase;
 
   color: $red;
-
-  @include regular-text(12px);
   span {
     padding-left: 10px;
   }

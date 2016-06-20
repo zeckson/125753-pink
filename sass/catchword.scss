@@ -7,10 +7,10 @@
   background-color: $white;
 
   p {
+    @include regular-text;
+
     margin: 0;
 
     line-height: 30px;
-
-    @include regular-text;
   }
 }

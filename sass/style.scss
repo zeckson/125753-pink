@@ -7,12 +7,12 @@
 @import "footer";
 
 body {
+  @include regular-text(24px);
+
   margin: 0;
 
   color: $white;
   background-color: $grey;
-
-  @include regular-text(24px);
 }
 
 img {

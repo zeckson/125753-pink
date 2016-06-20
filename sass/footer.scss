@@ -5,12 +5,12 @@
   background-color: $white;
 
   h2 {
+    @include light-text;
+
     margin: 0;
     padding: 50px 20px;
 
     text-align: center;
-
-    @include light-text;
   }
 }
 
@@ -31,9 +31,9 @@
 }
 
 .footer__developer {
-  text-align: center;
-
   @include regular-text;
+
+  text-align: center;
 }
 
 @media #{$tablet-width} {

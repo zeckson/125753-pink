@@ -7,9 +7,9 @@
 
     color: $grey;
 
+    image: url("../img/bg-back-mobile@1x.jpg");
     repeat: no-repeat;
     size: 700px auto;
-    image: url("../img/bg-back-mobile@1x.jpg");
   }
   @media #{$retina} {
     background-image: url("../img/bg-back-mobile@2x.jpg");
@@ -34,17 +34,17 @@
 }
 
 .about__title {
+  @include container;
+
   box-sizing: border-box;
   padding: 98px 20px;
 
-  @include container;
-
   h2 {
+    @include light-text;
+
     margin: 0;
 
     text-align: center;
-
-    @include light-text;
   }
 }
 
@@ -76,10 +76,10 @@
 }
 
 .about__download-button {
-  display: block;
-
   @include round-button;
   @include bold-text;
+
+  display: block;
 }
 
 .about__platforms {
@@ -95,14 +95,16 @@
 }
 
 .about__download-info {
+  @include light-text(14px, 1.7em);
+
   margin: 0;
 
   text-align: center;
-
-  @include light-text(14px, 1.7em);
 }
 
 .about__description {
+  @include light-text(14px);
+
   margin: 0;
   padding: 40px 20px;
 
@@ -112,8 +114,6 @@
   background: $white;
 
   line-height: 30px;
-
-  @include light-text(14px);
 }
 
 @media #{$tablet-width} {
@@ -129,9 +129,9 @@
     padding: 203px 34px 8px;
 
     h2 {
-      width: 232px;
-
       @include light-text(40px);
+
+      width: 232px;
     }
   }
 
@@ -156,16 +156,16 @@
   }
 
   .about__download-section {
+    @include clear-fix;
+    @include container;
     // Used to overlap image
+
     position: relative;
     z-index: 1;
 
     padding-bottom: 110px;
 
     background: none;
-
-    @include clear-fix;
-    @include container;
   }
 
   .about__download-section-wrapper {

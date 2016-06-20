@@ -1,10 +1,10 @@
 .contacts {
+  @include container;
+
   text-align: center;
   //reset <address> default style
 
   font-style: normal;
-
-  @include container;
 }
 
 .contacts__item {
@@ -13,17 +13,17 @@
 }
 
 .contacts__type {
-  margin: 0;
-
   @include bold-text;
+
+  margin: 0;
 }
 
 .contacts__value {
+  @include light-text;
+
   margin: 0;
 
   color: $red;
-
-  @include light-text;
 
   &, &:hover {
     text-decoration: none;
