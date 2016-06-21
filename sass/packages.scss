@@ -1,11 +1,16 @@
 .packages {
-  padding: 40px 0;
+  padding: 65px 0;
 
+  transform: skew(0deg, -4.4deg);
+  transform-origin: left;
   color: $grey;
   background-color: $light-grey;
 }
 
 .packages__wrapper {
+  position: relative;
+  transform: skew(0deg, 4.4deg);
+  transform-origin: left;
   @include container;
 }
 
@@ -17,10 +22,17 @@
     border: 1px solid #e5e5e5;
   }
 
+  th {
+    position: relative;
+    padding: 19px 42px;
+    overflow: hidden;
+  }
+
   thead {
     color: $white;
     background-color: $grey;
   }
+
 }
 
 .packages__table-wrapper {
@@ -28,11 +40,18 @@
 }
 
 .packages__package-hit {
+  position: absolute;
+  left: -47px;
+  top: 13px;
+  width: 146px;
+  height: 28px;
   @include bold-text(14px);
+  font-weight: 100;
 
-  float: left;
-
-  background-image: url("../img/bg-hit.svg");
+  text-transform: uppercase;
+  transform: rotate(-45deg);
+  background-repeat: no-repeat;
+  background-color: $red;
 }
 
 .packages__package-title {
@@ -41,6 +60,8 @@
   display: block;
 
   text-align: center;
+
+  text-transform: uppercase;
 }
 
 .packages__package-price {
