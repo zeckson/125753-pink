@@ -1,6 +1,8 @@
 @import "contacts";
 
 .footer {
+  position: relative;
+  margin-top: -90px;
   color: $grey;
   background-color: $white;
 
@@ -8,7 +10,7 @@
     @include light-text;
 
     margin: 0;
-    padding: 50px 20px;
+    padding: 44px 20px;
 
     text-align: center;
   }

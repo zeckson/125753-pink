@@ -1,5 +1,5 @@
 .packages {
-  padding: 65px 0;
+  padding: 65px 0 100px;
 
   transform: skew(0deg, -4.4deg);
   transform-origin: left;
@@ -14,8 +14,12 @@
   @include container;
 }
 
+.packages__table-wrapper {
+  overflow: scroll;
+}
+
 .packages__table {
-  width: 940px;
+  width: 1064px;
   th, td, thead, tbody {
     border-spacing: 0;
 
@@ -24,7 +28,7 @@
 
   th {
     position: relative;
-    padding: 19px 42px;
+    padding: 15px 42px 23px;
     overflow: hidden;
   }
 
@@ -35,8 +39,18 @@
 
 }
 
-.packages__table-wrapper {
-  overflow: scroll;
+.packages__package-option {
+  text-align: right;
+  padding: 10px 18px 9px;
+}
+
+.packages__package-option--off {
+  img svg {
+    fill: $red;
+  }
+  img {
+    fill: $red;
+  }
 }
 
 .packages__package-hit {
@@ -76,6 +90,10 @@
   @include regular-text;
 
   text-transform: uppercase;
+}
+
+.packages__toggle-list {
+  padding: 29px;
 }
 
 @media #{$tablet-width} {
