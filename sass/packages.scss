@@ -49,14 +49,14 @@
   text-align: right;
 }
 
-.packages__package-option--off {
-  img svg {
-    fill: $red;
-  }
-  img {
-    fill: $red;
-  }
+.packages__package-option--off svg {
+  fill: $red;
 }
+
+.packages__package-option--on svg {
+    fill: $green;
+  }
+
 
 .packages__package-hit {
   @include bold-text(14px);
