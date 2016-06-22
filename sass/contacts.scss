@@ -3,7 +3,7 @@
 
   text-align: center;
   font-style: normal;
-  padding-top: 9px;
+  padding-top: 14px;
 }
 
 .contacts__item {
@@ -12,13 +12,13 @@
 }
 
 .contacts__type {
-  @include bold-text;
+  @include bold-text(18px, 1.4em);
 
   margin: 0;
 }
 
 .contacts__value {
-  @include light-text;
+  @include light-text(24px, 1.5em);
 
   margin: 0;
 
@@ -30,11 +30,16 @@
 }
 
 @media #{$tablet-width} {
+  .contacts {
+    padding-top: 25px;
+  }
   .contacts__item {
     display: inline-block;
+    margin-right: 6px;
+    padding-bottom: 44px;
+    padding-left: 8px;
+    padding-right: 8px;
 
     width: 300px;
-  }
-  .contacts {
   }
 }
