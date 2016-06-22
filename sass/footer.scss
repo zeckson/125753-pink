@@ -32,6 +32,8 @@
 
 .footer__social {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__social-link {
@@ -40,9 +42,9 @@
     color: $grey;
     style: solid;
     width: medium;
-  };
+  }
   padding: 5px 10px;
-  margin-right: 2px;
+  margin-right: 15px;
   img {
     width: 20px;
     height: 20px;
@@ -56,6 +58,7 @@
 }
 
 .footer__end {
+  @include container;
   display: none;
 }
 
@@ -68,7 +71,7 @@
   }
 
   .footer__map {
-    margin-top: -30px;
+    margin-top: -22px;
     padding-top: 0;
     height: 378px;
     img {
@@ -78,19 +81,39 @@
   }
 
   .footer__end {
-    text-align: center;
-    padding-top: 36px;
-    padding-bottom: 48px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 36px 0;
+  }
+}
 
-    width: 226px;
-    vertical-align: middle;
+@media #{$desktop-width} {
+  .footer {
+    margin-top: -106px;
+    padding-top: 19px;
+    h2 {
+      @include light-text(50px)
+    }
   }
 
-  .footer__logo {
+  .footer__map {
+    height: 500px;
+    @include container;
+
+    img {
+      width: 1200px;
+      height: auto;
+    }
   }
-  .footer__social {
-  }
+
   .footer__developer {
+    @include regular-text(18px)
   }
+
+  .footer__end {
+    padding: 70px 0;
+  }
+
 }
