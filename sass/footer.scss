@@ -12,21 +12,24 @@
     @include light-text;
 
     margin: 0;
-    padding: 44px 20px;
+    padding: 44px 20px 20px;
 
     text-align: center;
   }
 }
 
-.footer__logo {
-  img {
-    display: block;
+.footer__map {
+  height: 200px;
+  overflow: hidden;
+  padding-top: 28px;
+}
 
-    margin: 0 auto;
-  }
+.footer__logo {
+  display: none;
 }
 
 .footer__social {
+  display: none;
   text-align: center;
 }
 
@@ -35,6 +38,7 @@
 }
 
 .footer__developer {
+  display: none;
   @include regular-text;
 
   text-align: center;

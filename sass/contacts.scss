@@ -2,14 +2,13 @@
   @include container;
 
   text-align: center;
-  //reset <address> default style
-
   font-style: normal;
+  padding-top: 9px;
 }
 
 .contacts__item {
   box-sizing: border-box;
-  padding: 10px;
+  padding-bottom: 16px;
 }
 
 .contacts__type {

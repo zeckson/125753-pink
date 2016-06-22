@@ -272,20 +272,24 @@
   <address class="contacts">
     <div class="contacts__item">
       <h4 class="contacts__type">Звоните:</h4>
-      <a href="tel:78125556666" class="contacts__value">+7(812)555-66-66</a>
+      <a href="tel:78125556666" class="contacts__value">+7 (812) 555-66-66</a>
     </div>
     <div class="contacts__item">
       <h4 class="contacts__type">Пишите:</h4>
       <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
     </div>
     <div class="contacts__item">
-      <h4 class="contacts__type">Приходите в гости:</h4>
+      <h4 class="contacts__type">Приезжайте в гости:</h4>
       <a href="http://maps.google.com/?q=ул.Большая Конюшенная, 19/8" class="contacts__value">ул.Большая Конюшенная,
         19/8</a>
     </div>
   </address>
   <div class="footer__map">
-    <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.png">
+      <source media="(min-width: 700px)" srcset="img/bg-map-tablet@1x.png">
+      <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
+    </picture>
   </div>
   <div class="footer__logo">
     <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
