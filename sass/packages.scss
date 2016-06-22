@@ -20,7 +20,7 @@
 
 .packages__table {
   width: 1064px;
-  th, td, thead, tbody {
+  th, thead, tbody {
     border-spacing: 0;
 
     border: 1px solid #e5e5e5;
@@ -97,8 +97,37 @@
 }
 
 @media #{$tablet-width} {
+  .packages {
+    padding-top: 36px;
+    padding-bottom: 67px;
+  }
   .packages__table {
     width: 620px;
+  }
+
+  .packages__table th {
+    padding: 15px 21px;
+    text-align: center;
+    width: 100px;
+  }
+
+  .packages__package-option-name {
+    text-align: start;
+    text-transform: capitalize;
+    padding-left: 14px;
+  }
+
+  .packages__package-option {
+    padding: 5px;
+    text-align: center;
+  }
+
+  .packages__package-title {
+    @include bold-text(16px)
+  }
+
+  .packages__package-price {
+    @include light-text(18px)
   }
 }
 
