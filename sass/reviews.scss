@@ -24,11 +24,11 @@
 }
 
 .reviews__item-author-description {
-  display: none;
-  color: $grey;
-
   @include regular-text(14px);
 
+  display: none;
+
+  color: $grey;
 }
 
 .reviews__item-text {
@@ -50,42 +50,52 @@
   .reviews__item {
     display: flex;
     flex-direction: column;
+
     padding-bottom: 9px;
   }
   .reviews__item-text {
-    order: 1;
-    padding: 0;
+    @include regular-text(18px, 1.7em);
+
     margin-bottom: 22px;
-    @include regular-text(18px, 1.7em)
+    padding: 0;
+
+    order: 1;
   }
   .reviews__item-author {
-    order: 2;
     @include bold-text(20px);
+
     padding-bottom: 6px;
+
+    order: 2;
   }
   .reviews__item-author-description {
     display: block;
+
     order: 3;
   }
 }
 
 @media #{$desktop-width} {
   .reviews {
+    padding-bottom: 62px;
+
     background: $white url("../img/icon-quotes.svg") no-repeat;
     background-position-x: 50%;
     background-position-y: 70px;
   }
   .reviews__wrapper {
-    background-color: rgba($white, 0.9);
     width: 678px;
     padding-top: 126px;
+
     quotes: none;
+
+    background-color: rgba($white, 0.9);
   }
 
   .reviews__item-author {
-    @include bold-text(24px, 1.6em)
+    @include bold-text(24px, 1.6em);
   }
   .reviews__item-author-description {
-    @include regular-text(18px, 0.8em)
+    @include regular-text(18px, 0.8em);
   }
 }

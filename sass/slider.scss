@@ -15,8 +15,9 @@
 }
 
 .slider__toggles {
-  text-align: center;
   padding: 21px 0;
+
+  text-align: center;
 }
 
 .slider__toggle {
@@ -25,8 +26,11 @@
   box-sizing: border-box;
   width: 6px;
   height: 6px;
+  margin: 6px;
 
-  border: {
+  vertical-align: middle;
+
+  border:  {
     width: medium;
 
     color: $black;
@@ -34,9 +38,7 @@
     radius: 50%;
     style: solid;
   }
-  margin: 6px;
   background: $white;
-  vertical-align: middle;
 
   &--active {
     width: 12px;
