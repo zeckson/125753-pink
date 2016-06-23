@@ -155,7 +155,37 @@
 }
 
 @media #{$desktop-width} {
+  .submit-photo {
+    @include container;
+  }
+
+  .submit-photo__form {
+    padding: 37px 10px 14px;
+    width: 800px;
+  }
+
+  .submit-photo__controls {
+    width: 410px;
+  }
+
+  .submit-photo__control {
+    margin-bottom: 22px;
+    padding-left: 10px;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .submit-photo__actions {
+    width: 410px;
+    padding: 0;
+    margin: 0;
+    padding-top: 130px;
+  }
+
   .submit-photo__button {
     display: inline-block;
+    width: 200px;
   }
 }

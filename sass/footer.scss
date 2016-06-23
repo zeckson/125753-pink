@@ -103,11 +103,14 @@
 
 @media #{$desktop-width} {
   .footer {
-    margin-top: -106px;
     padding-top: 19px;
     h2 {
       @include light-text(50px);
     }
+  }
+
+  .footer-index {
+    margin-top: -106px;
   }
 
   .footer__map {
