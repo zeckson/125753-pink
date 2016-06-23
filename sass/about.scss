@@ -2,7 +2,7 @@
   position: relative;
 
   color: $white;
-  background:  {
+  background: {
     position: center -3px;
 
     color: $grey;
@@ -113,11 +113,15 @@
   color: $grey;
   background: $white;
 
+  br {
+    display: none
+  }
+
   p {
     margin: 0;
   }
 
-  p:nth-child(2) {
+  p span {
     display: none;
   }
 }
@@ -195,9 +199,10 @@
 
     padding: 91px 100px 93px;
 
-    p:nth-child(2) {
+    p span {
       display: inline;
     }
+
   }
 }
 
@@ -247,6 +252,10 @@
   }
 
   .about__description {
-    padding: 72px 350px;
+    padding: 92px 250px;
+
+    br {
+      display: block
+    }
   }
 }
