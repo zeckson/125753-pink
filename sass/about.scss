@@ -103,17 +103,15 @@
 }
 
 .about__description {
-  @include light-text(14px);
+  @include light-text(14px, 2.2em);
 
   margin: 0;
-  padding: 40px 20px;
+  padding: 31px 40px 25px;
 
   text-align: center;
 
   color: $grey;
   background: $white;
-
-  line-height: 30px;
 }
 
 @media #{$tablet-width} {
