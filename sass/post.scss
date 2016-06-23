@@ -1,8 +1,12 @@
+.posts {
+  @include container
+}
+
 .post {
+  position: relative;
   box-sizing: border-box;
   margin-bottom: 20px;
   background-color: $light-grey;
-  @include container;
 }
 
 .post__wrapper {
@@ -10,8 +14,6 @@
 }
 
 .post__photo {
-  position: relative;
-
   overflow: hidden;
 
   margin: 0 auto;
@@ -84,24 +86,76 @@
   }
 }
 
-
 @media #{$tablet-width} {
-  .photos {
-    @include clear-fix;
+  .posts {
+    padding-top: 31px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .post {
-    float: right;
 
-    width: 50%;
+  .post {
+    width: 300px;
     // Как это сделать без задания высоты?
-    min-height: 360px;
+    min-height: 455px;
+    margin-bottom: 20px;
   }
 
   .post:nth-child(1) {
-    float: none;
-    clear: both;
-
     width: 100%;
+    margin-bottom: 50px;
+    min-height: 573px;
+
+    .post__like-panel {
+      position: absolute;
+      right: 29px;
+      top: -5px;
+      width: 120px;
+      img {
+        float: right;
+      }
+      span {
+        padding-right: 18px;
+      }
+    }
+
+    .post__wrapper {
+      position: relative;
+    }
+  }
+  .post__wrapper {
+    padding-left: 27px;
+  }
+
+  .post__photo {
+    padding-bottom: 13px;
+    img {
+      width: 300px;
+    }
+  }
+
+  .post__photo--wide {
+    height: 457px;
+    img {
+      width: 700px;
+      height: 509px;
+      left: -40px;
+      top: -57px;
+    }
+  }
+
+  .post__like-panel {
+    position: absolute;
+    bottom: 3px;
+    width: 241px;
+
+    img {
+      float: right;
+    }
+    span {
+      padding-left: 0;
+    }
   }
 }
 
