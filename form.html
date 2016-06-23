@@ -23,13 +23,17 @@
           <li class="navigation__item"><a href="index.html">Главная</a></li>
           <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
           <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </div>
       <section class="navigation__header">
         <div class="navigation__header-wrapper">
           <a class="navigation__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="74" height="23">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
+            </picture>
           </a>
           <a class="navigation__button" href="#">
             <img src="img/icon-menu-burger.svg" width="50" height="24" alt="Hamburger">
@@ -42,7 +46,9 @@
 
 <main class="main">
   <section class="about">
-    <h2 class="about__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
+    <div class="about__title  about__title-form">
+      <h2>Конкурс на самое безбашенное путешествие с Пинк</h2>
+    </div>
     <div class="about__description">
       <p>Поделитесь своей историей и получите шанс выиграть ценный приз &mdash; 1000 миль на
         Вашу бонусную карту</p>
@@ -121,22 +127,27 @@
 </main>
 
 <footer class="footer">
-  <div class="footer__logo">
-    <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
-  </div>
-  <div class="footer__social">
-    <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
-                                                                          width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
-                                                                         width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
-                                                                         width="32" height="32"></a>
-  </div>
-  <div class="footer__developer">
-    <span>Разработано</span>
-    <a href="#" class="footer__developer-logo">
-      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
-    </a>
+  <div class="footer__end">
+    <div class="footer__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
+      </picture>
+    </div>
+    <div class="footer__social">
+      <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
+                                                                            width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
+                                                                           width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
+                                                                           width="32" height="32"></a>
+    </div>
+    <div class="footer__developer">
+      <span>Разработано</span>
+      <a href="#" class="footer__developer-logo">
+        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
+      </a>
+    </div>
   </div>
 </footer>
 

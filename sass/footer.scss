@@ -1,61 +1,134 @@
 @import "contacts";
 
 .footer {
+  position: relative;
+
   color: $grey;
   background-color: $white;
 
   h2 {
+    @include light-text;
+
     margin: 0;
-    padding: 50px 20px;
+    padding: 44px 0 20px;
 
     text-align: center;
-
-    @include light-text;
   }
 }
 
-.footer__logo {
-  img {
-    display: block;
+.footer-index {
+  margin-top: -111px;
 
-    margin: 0 auto;
+  .footer__end {
+    display: none;
   }
+}
+
+.footer__map {
+  @include center-block;
+
+  overflow: hidden;
+
+  height: 200px;
+  padding-top: 28px;
+}
+
+.footer__logo img {
+  display: inline;
 }
 
 .footer__social {
+  display: flex;
+  justify-content: space-between;
+
   text-align: center;
 }
 
 .footer__social-link {
-  padding: 5px;
+  margin-right: 15px;
+  padding: 5px 10px;
+
+  border: {
+    width: medium;
+
+    color: $grey;
+
+    radius: 90%;
+    style: solid;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .footer__developer {
-  text-align: center;
-
   @include regular-text;
+
+  text-align: center;
 }
 
-@media (min-width: $tablet-break) {
-  .footer__logo {
-    display: inline-block;
+.footer__end {
+  @include container;
+}
 
-    width: 32%;
-
-    vertical-align: middle;
+@media #{$tablet-width} {
+  .footer h2 {
+    @include light-text(40px);
   }
-  .footer__social {
-    display: inline-block;
 
-    width: 32%;
-
-    vertical-align: middle;
+  .footer-index {
+    margin-top: -119px;
   }
+
+  .footer__map {
+    height: 378px;
+    margin-top: -22px;
+    padding-top: 0;
+    img {
+      width: 700px;
+      height: 848px;
+    }
+  }
+
+  .footer__end {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+
+    padding: 36px 0;
+  }
+}
+
+@media #{$desktop-width} {
+  .footer {
+    padding-top: 19px;
+    h2 {
+      @include light-text(50px);
+    }
+  }
+
+  .footer-index {
+    margin-top: -106px;
+  }
+
+  .footer__map {
+    @include container;
+
+    height: 500px;
+
+    img {
+      width: 1200px;
+      height: auto;
+    }
+  }
+
   .footer__developer {
-    display: inline-block;
+    @include regular-text(18px);
+  }
 
-    width: 32%;
-
-    vertical-align: middle;
+  .footer__end {
+    padding: 70px 0;
   }
 }

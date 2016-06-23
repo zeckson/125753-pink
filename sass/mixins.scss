@@ -22,34 +22,76 @@
 }
 
 @mixin container {
-  width: 280px;
-
   @include center-block;
 
-  @media(min-width: $tablet-break) {
+  width: 280px;
+
+  @media #{$tablet-width} {
     width: 620px;
   }
 
-  @media(min-width: $desktop-break) {
+  @media #{$desktop-width} {
     width: 940px;
   }
 }
 
 @mixin outer-wrapper {
-  width: 320px;
-
   @include center-block;
 
-  @media (min-width: $tablet-break) {
+  width: 320px;
+
+  @media #{$tablet-width} {
     width: 700px;
   }
 
-  @media (min-width: $desktop-break) {
+  @media #{$desktop-width} {
     width: 1200px;
   }
 }
 
-@mixin highlight($color: red) {
+@mixin outline($color: red) {
   outline: 2px solid $color;
   outline-offset: 3px;
+}
+
+@mixin round-button {
+  box-sizing: border-box;
+  padding: 6px 8px 10px;
+
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  color: $white;
+  border:  {
+    width: medium;
+
+    color: $white;
+
+    radius: 45px;
+    style: solid;
+  };
+
+  &:hover {
+    color: $red;
+    background-color: $white;
+  }
+  &:active {
+    color: $pink;
+    background-color: $white;
+  }
+
+  &:disabled{
+    color: $grey;
+    border-color: $grey;
+  }
+}
+
+@mixin background($url) {
+  background:  {
+    image: url($url);
+    position-x: 5px;
+    position-y: 0;
+    repeat: no-repeat;
+  }
 }

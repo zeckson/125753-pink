@@ -3,19 +3,34 @@
 }
 
 .offer__motto {
-  padding: 30px 0;
+  padding: 42px 0 32px;
 
   text-align: center;
 
   color: $grey;
   background-color: $white;
 
-  @include light-text;
+  h3 {
+    @include light-text;
 
-  h2 {
-    margin: 0;
-    padding: 20px;
+    margin: 0 0 30px;
   }
+}
+
+.offer__content {
+  padding-bottom: 100px;
+
+  transform: skew(0deg, -4.4deg);
+  transform-origin: left;
+
+  background-color: $light-grey;
+}
+
+.offer__content-wrapper {
+  padding: 36px 0 0;
+
+  transform: skew(0deg, 4.4deg);
+  transform-origin: left;
 }
 
 .offer__advantages {
@@ -23,27 +38,38 @@
 }
 
 .offer__advantage {
+  @include container;
+
   text-align: center;
 
   color: $grey;
-
-  @include container;
 }
-.offer__advantage-title {
-  margin: 0;
-  padding: 10px 0;
 
+.offer__advantage-title {
   @include bold-text;
+
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 10px;
 }
 
 .offer__advantage-description {
-  margin: 0;
-  padding-bottom: 25px;
+  @include regular-text(14px, 1.7em);
 
-  @include regular-text;
+  margin: 0;
+  padding-bottom: 16px;
+
+  br {
+    display: none;
+  }
 }
 
 .offer__preview {
+  overflow: hidden;
+
+  height: 277px;
+  padding-top: 26px;
+
   text-align: center;
 
   background-color: $light-grey;
@@ -51,57 +77,103 @@
 
 // Begin effect
 .offer__effect {
+  position: relative;
+
   display: none;
+
+  margin-top: -82px;
 
   background-color: $white;
 }
 
 .offer__effect-wrapper {
+  @include container;
+
   position: relative;
 
-  @include container;
-  @include clear-fix;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  padding-top: 60px;
+}
+
+.offer__effect-timer {
+  width: 239px;
+  height: auto;
+
+  background:  {
+    image: url(../img/icon-timer.svg);
+    repeat: no-repeat;
+    size: 100%;
+  };
+
+  flex-grow: 1;
+
+  h1 {
+    @include bold-text(90px);
+
+    margin: 64px 25px;
+
+    text-align: center;
+
+    color: $red;
+    border:  {
+      width: 12px;
+
+      color: $red;
+
+      radius: 90%;
+      style: solid;
+    };
+  }
 }
 
 .offer__effect-content {
-  float: right;
-
   width: 310px;
+  margin-top: 12px;
+  padding-left: 70px;
 
   color: $black;
 }
 
-.offer__effect-image {
-  position: absolute;
-  left: 0;
-
-  padding: 50px 0;
-}
 
 .offer__effect-title {
-  @include bold-text(30px);
+  @include bold-text(30px, 1.2em);
+
+  margin: 25px 0 0;
 }
 
 .offer__effect-description {
-  text-align: left;
+  @include regular-text(14px, 1.72em);
 
-  @include regular-text;
+  margin: 10px 0 4px;
+
+  text-align: left;
 }
 
 .offer__effect-more {
+  @include regular-text(14px);
+
   color: $red;
 }
+
 // End effect
 
-@media (min-width: $tablet-break) {
-  .offer__advantages {
-    float: right;
-  }
+@media #{$tablet-width} {
+  .offer__motto {
+    padding-bottom: 106px;
 
-  .offer__preview {
-    float: left;
-  }
+    text-align: center;
+    h3 {
+      @include light-text(40px);
 
+      margin: 7px auto -7px;
+
+      text-align: center;
+    }
+  }
   .offer__content {
     position: relative;
 
@@ -111,18 +183,39 @@
   .offer__content-wrapper {
     @include clear-fix;
     @include container;
+
+    padding-top: 9px;
   }
+
+  .offer__advantages {
+    float: right;
+  }
+
+  .offer__preview {
+    float: left;
+  }
+
 
   .offer__advantage {
     width: 310px;
+    padding-bottom: 4px;
 
     text-align: left;
   }
 
   .offer__preview {
     position: absolute;
-    bottom: 0;
-    left: 22%;
+    z-index: 2;
+    bottom: -88px;
+
+    width: 268px;
+    height: 548px;
+
+    background: none;
+    img {
+      width: 314px;
+      height: 640px;
+    }
   }
 
   .offer__effect {
@@ -130,36 +223,116 @@
   }
 }
 
-@media (min-width: $desktop-break) {
+@media #{$desktop-width} {
+  .offer__motto {
+    padding-top: 62px;
+    padding-bottom: 180px;
+    h3 {
+      @include light-text(50px);
+    }
+  }
+
   .offer__advantages {
-    display: block;
-    float: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     width: 100%;
+    height: 486px;
   }
 
   .offer__advantage {
-    display: inline-block;
+    position: absolute;
+    top: -85px;
+
+    display: block;
 
     box-sizing: border-box;
     width: 300px;
-    min-height: 560px;
-    padding-top: 300px;
+    padding-top: 345px;
 
     vertical-align: bottom;
+
+    &--first {
+      @include background("../img/iphone-screen-1-desktop@1x.png");
+    }
+
+    &--second {
+      @include background("../img/iphone-screen-2-desktop@1x.png");
+
+      left: 34%;
+    }
+
+    &--third {
+      @include background("../img/iphone-screen-3-desktop@1x.png");
+
+      left: 68%;
+    }
+  }
+
+  .offer__advantage-title {
+    @include bold-text(30px, 1em);
+
+    text-align: center;
+  }
+
+  .offer__advantage-description {
+    @include regular-text(18px, 1.7em);
+
+    padding-top: 12px;
+
+    text-align: center;
+    br {
+      display: block;
+    }
   }
 
   .offer__preview {
     display: none;
   }
-
   .offer__effect {
-    min-height: 250px;
+    margin-top: -100px;
 
     background-color: $light-grey;
   }
 
+  .offer__effect-wrapper {
+    padding-top: 34px;
+    padding-bottom: 21px;
+  }
+
+  .offer__effect-timer h1 {
+    @include bold-text(120px);
+    margin: 76px 25px;
+  }
+
   .offer__effect-content {
     width: 570px;
+    padding-top: 44px;
+  }
+
+  .offer__effect-title {
+    @include bold-text(30px);
+
+    margin-left: -4px;
+    br {
+      display: none;
+    }
+  }
+
+  .offer__effect-description {
+    @include regular-text(18px, 1.8em);
+
+    margin-bottom: 25px;
+    margin-left: -4px;
+    br {
+      display: none;
+    }
+  }
+
+  .offer__effect-more {
+    @include regular-text(18px);
+
+    margin-left: -4px;
   }
 }

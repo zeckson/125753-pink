@@ -1,107 +1,186 @@
+.posts {
+  @include container
+}
+
 .post {
+  position: relative;
   box-sizing: border-box;
-  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: $light-grey;
+}
+
+.post__wrapper {
+  padding-left: 18px;
 }
 
 .post__photo {
-  position: relative;
-
   overflow: hidden;
 
   margin: 0 auto;
 
   text-align: center;
+  padding-bottom: 8px;
 }
 
 .post__photo--wide {
   overflow: visible;
+  height: 140px;
   img {
-    display: block;
-
-    margin: 0 auto;
+    position: absolute;
+    left: -20px;
+    max-width: none;
   }
 }
 
 .post__photo-of-the-day {
+  @include bold-text(12px);
+
   position: absolute;
   top: 0;
   right: 0;
 
-  padding: 5px;
+  padding: 7px 20px;
 
   text-transform: uppercase;
 
   color: $white;
   background-color: $red;
-
-  @include bold-text(12px);
 }
 
 .post__author {
   a, a:hover {
+    @include bold-text(14px);
+
     text-decoration: none;
 
     color: $grey;
-
-    @include bold-text(14px);
   }
   .post__time {
-    padding-left: 4px;
+    @include light-text(12px);
 
     text-transform: uppercase;
 
     color: $grey;
-
-    @include light-text;
   }
 }
 
 .post__description {
+  @include regular-text;
+
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
 
   line-height: 24px;
-
-  @include regular-text;
 }
 
 .post__like-panel {
+  padding-top: 16px;
+  padding-bottom: 24px;
+  @include regular-text(12px);
+
   text-transform: uppercase;
 
   color: $red;
-
-  @include regular-text(12px);
   span {
-    padding-left: 10px;
+    padding-left: 19px;
   }
 }
 
-.post__wrapper {
-  background-color: $light-grey;
-}
-
-@media (min-width: $tablet-break) {
-  .photos {
-    @include clear-fix;
+@media #{$tablet-width} {
+  .posts {
+    padding-top: 31px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+
   .post {
-    float: right;
-
-    width: 50%;
+    width: 300px;
     // Как это сделать без задания высоты?
-    min-height: 360px;
+    min-height: 455px;
+    margin-bottom: 20px;
   }
 
   .post:nth-child(1) {
-    float: none;
-    clear: both;
-
     width: 100%;
+    margin-bottom: 50px;
+    min-height: 573px;
+
+    .post__like-panel {
+      position: absolute;
+      right: 29px;
+      top: -5px;
+      width: 120px;
+      img {
+        float: right;
+      }
+      span {
+        padding-right: 18px;
+      }
+    }
+
+    .post__wrapper {
+      position: relative;
+    }
+  }
+  .post__wrapper {
+    padding-left: 27px;
+  }
+
+  .post__photo {
+    padding-bottom: 13px;
+    img {
+      width: 300px;
+    }
+  }
+
+  .post__photo--wide {
+    height: 457px;
+    img {
+      width: 700px;
+      height: 509px;
+      left: -40px;
+      top: -57px;
+    }
+  }
+
+  .post__like-panel {
+    position: absolute;
+    bottom: 3px;
+    width: 241px;
+
+    img {
+      float: right;
+    }
+    span {
+      padding-left: 0;
+    }
   }
 }
 
-@media (min-width: $desktop-break) {
+@media #{$desktop-width} {
+  .posts {
+    padding-top: 40px;
+  }
+
   .post {
-    width: 33%;
+    min-height: 554px;
+    margin-bottom: 55px;
+  }
+
+  .post:nth-child(1) {
+    min-height: 548px;
+  }
+
+  .post__photo--wide {
+
+    height: 457px;
+    img {
+      width: 1200px;
+      height: 506px;
+      left: -130px;
+      top: -54px;
+    }
   }
 }

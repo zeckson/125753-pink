@@ -2,139 +2,238 @@
   position: relative;
 
   color: $white;
-  background:  {
+  background: {
+    position: center -3px;
+
     color: $grey;
 
     image: url("../img/bg-back-mobile@1x.jpg");
+    repeat: no-repeat;
+    size: 700px auto;
   }
-}
-.about__wrapper {
-  @include container;
+  @media #{$retina} {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    //Нужен ли нам тут size?
+    //background-size: 1400px auto;
+  }
+
+  @media #{$tablet-width} {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: center center;
+    background-size: 1200px auto;
+
+    @media #{$retina} {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+    }
+  }
+
+  @media #{$desktop-width} {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: cover;
+  }
 }
 
 .about__title {
-  box-sizing: border-box;
-  // Откуда взялся margin?
-  margin: 0;
-  padding: 120px 20px 20px;
-
-  text-align: center;
-
-  @include light-text;
   @include container;
-}
 
-.about__preview {
-  img {
-    vertical-align: bottom;
+  box-sizing: border-box;
+  padding: 98px 20px;
+
+  h2 {
+    @include light-text;
+
+    margin: 0;
+
+    text-align: center;
   }
 }
 
+.about__title-index {
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.about__title-photo {
+  padding-bottom: 83px;
+}
+
+.about__title-form {
+  padding-bottom: 55px;
+}
+
+.about__preview {
+  margin: 0 auto;
+}
+
 .about__download-section {
-  padding: 30px 0;
+  padding: 24px 0 31px;
 
   background-color: $background;
 }
 
 .about__download-section-wrapper {
-  min-height: 271px;
-
   @include container;
 }
 
 .about__download-button {
-  display: block;
-
-  box-sizing: border-box;
-  padding: 20px 0;
-
-  text-align: center;
-  text-decoration: none;
-
-  color: $white;
-  border:  {
-    width: thin;
-
-    color: $white;
-
-    radius: 45px;
-    style: solid;
-  };
-
+  @include round-button;
   @include bold-text;
+
+  display: block;
 }
 
-
 .about__platforms {
-  padding: 30px 0;
+  padding: 30px 0 20px;
 
   text-align: center;
+}
 
-  .about__platform {
-    padding: 0 10px;
+.about__platform {
+  padding: 0 15px;
 
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 .about__download-info {
+  @include light-text(14px, 1.7em);
+
   margin: 0;
-  padding: 5px;
 
   text-align: center;
-
-  font-family: $light;
 }
 
 .about__description {
+  @include regular-text(14px, 2.2em);
+
   margin: 0;
-  padding: 40px 20px;
+  padding: 31px 35px 25px;
 
   text-align: center;
 
   color: $grey;
   background: $white;
-
-  line-height: 30px;
-
-  @include light-text(14px);
 }
-@media (min-width: $tablet-break) {
-  .about__wrapper {
-    position: relative;
 
-    min-height: 530px;
+@media #{$tablet-width} {
+  .about__title {
+    padding-top: 180px;
 
-    @include clear-fix;
+    h2 {
+      @include light-text(50px);
+    }
   }
-  .about__title--moved {
-    float: left;
 
-    width: 300px;
+  .about__title-index {
+    padding: 203px 34px 8px;
+
+    h2 {
+      @include light-text(40px);
+
+      width: 232px;
+    }
   }
-  .about__preview {
-    float: right;
+
+  .about__title-photo {
+    padding-bottom: 140px;
   }
-  .about__download-section {
-    padding: 0;
+
+  .about__title-form {
+    padding-bottom: 80px;
   }
 
   .about__preview {
     position: absolute;
+    z-index: 0;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
+
+    img {
+      width: 700px;
+      height: 545px;
+    }
   }
 
-  // Так и не придумал как это правильно спозиционировать
+  .about__download-section {
+    @include clear-fix;
+    @include container;
+    // Used to overlap image
+
+    position: relative;
+    z-index: 1;
+
+    padding-bottom: 110px;
+
+    background: none;
+  }
+
   .about__download-section-wrapper {
-    position: absolute;
-    top: 200px;
-    left: 15%;
+    float: left;
 
     width: 300px;
 
     background: none;
+  }
 
-    @include center-block;
+  .about__platforms {
+    padding: 46px 0 33px;
+  }
+
+  .about__download-info {
+    @include light-text(18px, 1.3em);
+  }
+
+  .about__description {
+    padding: 72px;
+    @include regular-text(18px, 1.8em)
+  }
+}
+
+@media #{$desktop-width} {
+  .about__title {
+    padding-top: 173px;
+    padding-bottom: 101px;
+
+    h2 {
+      @include light-text(50px);
+    }
+  }
+
+  .about__title-index {
+    padding: 218px 32px 8px;
+  }
+
+  .about__title-form {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+
+  .about__title-photo {
+    padding-right: 145px;
+    padding-left: 145px;
+  }
+
+  .about__preview {
+    right: 44px;
+    bottom: -6px;
+    img {
+      width: 1050px;
+      height: 645px;
+    }
+  }
+
+  .about__download-section {
+    padding: 45px 0 121px;
+  }
+
+  .about__download-button {
+    @include bold-text(21px, 1.5em);
+  }
+
+  .about__platforms {
+    padding: 67px 0 53px;
+  }
+
+  .about__description {
+    padding: 72px 350px;
   }
 }

@@ -4,8 +4,13 @@ $grey: #283645;
 $light-grey: #f2f2f2;
 $background: #1d242c;
 $red: #d22856;
+$green: #3dc644;
+$pink: #f1becc;
 $black: black;
 
 // Sizes
-$tablet-break: 700px;
-$desktop-break: 1200px;
+$tablet-width: "(min-width: 700px)";
+$desktop-width: "(min-width: 1200px)";
+
+// Retina
+$retina: "(min-resolution: 144dpi), (min-resolution: 1.5dppx)";

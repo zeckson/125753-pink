@@ -23,13 +23,17 @@
           <li class="navigation__item"><a href="index.html">Главная</a></li>
           <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
           <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </div>
       <section class="navigation__header">
         <div class="navigation__header-wrapper">
           <a class="navigation__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="74" height="23">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
+            </picture>
           </a>
           <a class="navigation__button" href="#">
             <img src="img/icon-menu-burger.svg" width="50" height="24" alt="Hamburger">
@@ -42,129 +46,207 @@
 
 <main class="main">
   <section class="about">
-    <h2 class="about__title">Фотографии пользователей</h2>
-    <div class="about__description"><p>Взгляните на фото, которые выкладывают пользователи! Видите, как не хватает
-      ваших?</p></div>
+    <div class="about__title  about__title-photo">
+      <h2>Фотографии пользователей</h2>
+    </div>
+    <div class="about__description">
+      <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+    </div>
   </section>
   <section class="photos">
-    <article class="post">
-      <div class="post__wrapper">
+    <div class="posts">
+      <article class="post">
         <div class="post__photo post__photo--wide">
-          <img src="img/panorama-mobile@1x.jpg" alt="User photo" height="137" width="320">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x,
+                                                      img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x,
+                                                     img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x"
+                 width="320" height="137" alt="User Panorama">
+          </picture>
           <span class="post__photo-of-the-day">Панорама дня</span>
         </div>
-      <span class="post__author">
-        <a href="#">Анна</a><time class="post__time" datetime="10-10-2014T13:23">(5 минут назад)</time>
-      </span>
-        <p class="post__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
-          персикопе, задавайте свои вопросы!</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:215</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
-        <div class="post__photo">
-          <img src="img/photo-1-mobile@1x.jpg" alt="User photo" height="180" width="280">
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Анна</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(5 минут назад)</time>
+          </div>
+          <p class="post__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
+            перископе, задавайте свои вопросы!</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 215</span>
+          </div>
         </div>
-      <span class="post__author">
-        <a href="#">Левон</a><time class="post__time" datetime="10-10-2014T13:23">(5 часов назад)</time>
-      </span>
-        <p class="post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:356</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
+      </article>
+      <article class="post">
         <div class="post__photo">
-          <img src="img/photo-2-mobile@1x.jpg" alt="User photo" height="180" width="280">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x,
+                                                              img/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-1-tablet@1x.jpg 1x,
+                                                             img/photo-1-tablet@2x.jpg 2x">
+            <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
         </div>
-      <span class="post__author">
-        <a href="#">Антон</a><time class="post__time" datetime="10-10-2014T13:23">(12 часов назад)</time>
-      </span>
-        <p class="post__description">Соседи будут рады!</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:666</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Левон</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(5 часов назад)</time>
+          </div>
+          <p class="post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 356</span>
+          </div>
+        </div>
+      </article>
+      <article class="post">
         <div class="post__photo">
-          <img src="img/photo-3-mobile@1x.jpg" alt="User photo" height="180" width="280">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x,
+                                                              img/photo-2-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-2-tablet@1x.jpg 1x,
+                                                             img/photo-2-tablet@2x.jpg 2x">
+            <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
         </div>
-      <span class="post__author">
-        <a href="#">Борис</a><time class="post__time" datetime="10-10-2014T13:23">(20 часов назад)</time>
-      </span>
-        <p class="post__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:215</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Антон</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(12 часов назад)</time>
+          </div>
+          <p class="post__description">Соседи будут рады!</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 666</span>
+          </div>
+        </div>
+      </article>
+      <article class="post">
         <div class="post__photo">
-          <img src="img/photo-4-mobile@1x.jpg" alt="User photo" height="180" width="280">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x,
+                                                                img/photo-3-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-3-tablet@1x.jpg 1x,
+                                                               img/photo-3-tablet@2x.jpg 2x">
+            <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
         </div>
-      <span class="post__author">
-        <a href="#">Сергей</a><time class="post__time" datetime="10-10-2014T13:23">(25 часов назад)</time>
-      </span>
-        <p class="post__description">Самая кубанская в мире!</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:4</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Борис</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(20 часов назад)</time>
+          </div>
+          <p class="post__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 215</span>
+          </div>
+        </div>
+      </article>
+      <article class="post">
         <div class="post__photo">
-          <img src="img/photo-5-mobile@1x.jpg" alt="User photo" height="180" width="280">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x,
+                                                                img/photo-4-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-4-tablet@1x.jpg 1x,
+                                                               img/photo-4-tablet@2x.jpg 2x">
+            <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
         </div>
-      <span class="post__author">
-        <a href="#">Максим</a><time class="post__time" datetime="10-10-2014T13:23">(40 часов назад)</time>
-      </span>
-        <p class="post__description">Где снег-то?</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:150</span>
-      </span>
-      </div>
-    </article>
-    <article class="post">
-      <div class="post__wrapper">
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Сергей</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(25 часов назад)</time>
+          </div>
+          <p class="post__description">Самая кубанская в мире!</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 4</span>
+          </div>
+        </div>
+      </article>
+      <article class="post">
         <div class="post__photo">
-          <img src="img/photo-6-mobile@1x.jpg" alt="User photo" height="180" width="280">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-5-desktop@1x.jpg 1x,
+                                                                img/photo-5-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-5-tablet@1x.jpg 1x,
+                                                               img/photo-5-tablet@2x.jpg 2x">
+            <img src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
         </div>
-      <span class="post__author">
-        <a href="#">Надежда</a><time class="post__time" datetime="10-10-2014T13:23">(45 часов назад)</time>
-      </span>
-        <p class="post__description">Всем GM и взаимные лайки!</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:2560</span>
-      </span>
-      </div>
-    </article>
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Максим</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(40 часов назад)</time>
+          </div>
+          <p class="post__description">Где снег-то?</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 150</span>
+          </div>
+        </div>
+      </article>
+      <article class="post">
+        <div class="post__photo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-6-desktop@1x.jpg 1x,
+                                                                img/photo-6-desktop@2x.jpg 2x">
+            <source media="(min-width: 700px)" srcset="img/photo-6-tablet@1x.jpg 1x,
+                                                               img/photo-6-tablet@2x.jpg 2x">
+            <img src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@2x.jpg 2x"
+                 alt="User photo" height="180" width="280">
+          </picture>
+        </div>
+        <div class="post__wrapper">
+          <div class="post__author">
+            <a href="#">Надежда</a>
+            <time class="post__time" datetime="10-10-2014T13:23">(45 часов назад)</time>
+          </div>
+          <p class="post__description">Всем GM и взаимные лайки!</p>
+          <div class="post__like-panel">
+            <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 2560</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </section>
   <section class="catchword">
-    <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+    <p>Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
   </section>
   <section class="submit-photo">
     <form class="submit-photo__form" action="http://dev.null">
-      <img class="submit-photo__preview" src="img/photo-7-mobile@1x.jpg" alt="Photo Preview" width="280" height="374">
+      <div class="submit-photo__preview">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x,
+                                                              img/photo-7-desktop@2x.jpg 2x">
+          <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x,
+                                                             img/photo-7-tablet@2x.jpg 2x">
+          <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x"
+               alt="User photo" height="374" width="280">
+        </picture>
+      </div>
       <div class="submit-photo__controls">
-        <a href="#" class="submit-photo__control  submit-photo__control--active"><img
-          src="img/icon-editor-crop.svg" alt="crop" width="48" height="48"></a>
-        <a href="#" class="submit-photo__control"><img
-          src="img/icon-editor-fill.svg" alt="fill" width="48" height="48"></a>
-        <a href="#" class="submit-photo__control submit-photo__control--active"><img
-          src="img/icon-editor-contrast.svg" alt="contrast" width="48" height="48"></a>
-        <label>
-          <input class="submit-photo__slider  submit-photo__slider--active" type="range" name="control-value"
+        <label for="crop" class="submit-photo__control  submit-photo__control--active">
+          <img src="img/icon-editor-crop.svg" alt="crop" width="48" height="48">
+          <input id="crop" class="submit-photo__slider  submit-photo__slider--active"
+                 type="range" name="control-value" min="0" max="100" step="5" value="70">
+        </label>
+        <label for="fill" class="submit-photo__control">
+          <img src="img/icon-editor-fill.svg" alt="fill" width="48" height="48">
+          <input id="fill" class="submit-photo__slider" type="range" name="control-value"
                  min="0" max="100" step="5" value="70">
         </label>
+        <label for="contrast" class="submit-photo__control">
+          <img src="img/icon-editor-contrast.svg" alt="contrast" width="48" height="48">
+          <input id="contrast" class="submit-photo__slider" type="range"
+                 name="control-value" min="0" max="100" step="5" value="70">
+        </label>
+      </div>
+      <div class="submit-photo__actions">
         <button class="submit-photo__button" type="submit">Запостить</button>
         <button class="submit-photo__button" type="reset" disabled>Отмена</button>
       </div>
@@ -174,22 +256,27 @@
 </main>
 
 <footer class="footer">
-  <div class="footer__logo">
-    <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
-  </div>
-  <div class="footer__social">
-    <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
-                                                                          width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
-                                                                         width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
-                                                                         width="32" height="32"></a>
-  </div>
-  <div class="footer__developer">
-    <span>Разработано</span>
-    <a href="#" class="footer__developer-logo">
-      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
-    </a>
+  <div class="footer__end">
+    <div class="footer__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
+      </picture>
+    </div>
+    <div class="footer__social">
+      <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
+                                                                            width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
+                                                                           width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
+                                                                           width="32" height="32"></a>
+    </div>
+    <div class="footer__developer">
+      <span>Разработано</span>
+      <a href="#" class="footer__developer-logo">
+        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
+      </a>
+    </div>
   </div>
 </footer>
 

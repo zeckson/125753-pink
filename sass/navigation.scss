@@ -4,15 +4,14 @@
 }
 
 .navigation__header {
+  @include clear-fix;
+
   position: absolute;
   z-index: 1;
 
   width: 100%;
 
   background-color: rgba($black, 0.5);
-  padding-top: 2px;
-
-  @include clear-fix;
 }
 
 .navigation__header-wrapper {
@@ -20,15 +19,14 @@
 }
 
 .navigation__menu {
+  @include bold-text;
+
   width: 100%;
 
   text-transform: uppercase;
 
   color: $white;
   background-color: $grey;
-
-  @include bold-text;
-
 }
 
 .navigation__button {
@@ -41,33 +39,35 @@
   display: inline-block;
   float: left;
 
-  padding: 22px 0 16px;
+  padding: 22px 0 15px;
 }
 
 .navigation__list {
-  text-align: center;
-
   @include drop-list;
 
+  text-align: center;
 }
 
 .navigation__item {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   border-top: solid #485461 thin;
   border-bottom: solid black thin;
 
   a {
     display: block;
+
     padding: 15px 0;
+
     text-decoration: none;
 
     color: $white;
 
     &:hover {
       text-decoration: underline;
+
       color: $red;
     }
 
@@ -77,9 +77,18 @@
   }
 }
 
-@media (min-width: $tablet-break) {
+@media #{$tablet-width} {
   .navigation__header {
     padding: 22px 0;
+  }
+
+  .navigation__logo {
+    padding: 2px 0 12px;
+
+    img {
+      width: 148px;
+      height: 46px;
+    }
   }
 
   .navigation__menu--hidden {
@@ -91,11 +100,12 @@
   }
 }
 
-@media (min-width: $desktop-break) {
+@media #{$desktop-width} {
   .navigation {
-    width: 100%;
     position: absolute;
     z-index: 1;
+
+    width: 100%;
 
     background-color: rgba($black, 0.5);
   }
@@ -110,48 +120,52 @@
   }
 
   .navigation__menu {
+    @include regular-text(18px);
+
     display: block;
+
     width: auto;
     min-height: 0;
+
+    text-transform: capitalize;
 
     background: none;
     &--hidden {
       display: block;
     }
-
-    text-transform: capitalize;
-    @include regular-text(18px);
-
   }
 
   .navigation__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .navigation__item {
     display: inline-block;
-    border: 0;
 
+    margin-left: 80px;
+
+    border: 0;
     border: none;
-    margin-left: 83px;
   }
 
   .navigation__header {
-    display: block;
     position: static;
-    flex-grow: 1;
+
+    display: block;
 
     width: auto;
 
     background: none;
+
+    flex-grow: 1;
   }
 
   .navigation__header-wrapper {
-    width: auto;
     @include clear-fix;
+
+    width: auto;
   }
 
   .navigation__button {

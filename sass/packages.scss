@@ -1,5 +1,8 @@
 .packages {
-  padding: 40px 0;
+  padding: 65px 0 100px;
+
+  transform: skew(0deg, -4.4deg);
+  transform-origin: left;
 
   color: $grey;
   background-color: $light-grey;
@@ -7,14 +10,31 @@
 
 .packages__wrapper {
   @include container;
+
+  position: relative;
+
+  transform: skew(0deg, 4.4deg);
+  transform-origin: left;
+}
+
+.packages__table-wrapper {
+  overflow: scroll;
 }
 
 .packages__table {
-  width: 940px;
-  th, td, thead, tbody {
+  width: 1064px;
+  th, thead, tbody {
     border-spacing: 0;
 
     border: 1px solid #e5e5e5;
+  }
+
+  th {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 15px 42px 23px;
   }
 
   thead {
@@ -23,48 +43,137 @@
   }
 }
 
-.packages__table-wrapper {
-  overflow: scroll;
+.packages__package-option {
+  padding: 14px 21px 9px;
+
+  text-align: right;
 }
 
+.packages__package-option--off svg {
+  fill: $red;
+}
+
+.packages__package-option--on svg {
+  fill: $green;
+}
+
+
 .packages__package-hit {
-  float: left;
-
-  background-image: url("../img/bg-hit.svg");
-
   @include bold-text(14px);
+
+  position: absolute;
+  top: 13px;
+  left: -47px;
+
+  width: 146px;
+  height: 28px;
+
+  transform: rotate(-45deg);
+  text-transform: uppercase;
+
+  background-color: $red;
+  background-repeat: no-repeat;
+
+  font-weight: 100;
 }
 
 .packages__package-title {
+  @include bold-text;
+
   display: block;
 
   text-align: center;
-
-  @include bold-text;
+  text-transform: uppercase;
 }
 
 .packages__package-price {
+  @include light-text;
+
   display: block;
 
   text-align: center;
-
-  @include light-text;
 }
 
 .packages__package-option-name {
-  text-transform: uppercase;
-
   @include regular-text;
+
+  text-transform: uppercase;
 }
 
-@media (min-width: $tablet-break) {
+.packages__toggle-list {
+  padding: 23px 0 50px;
+}
+
+@media #{$tablet-width} {
+  .packages {
+    padding-top: 36px;
+    padding-bottom: 175px;
+  }
   .packages__table {
     width: 620px;
   }
+
+  .packages__table th {
+    width: 100px;
+    padding: 15px 21px;
+
+    text-align: center;
+  }
+
+  .packages__package-option-name {
+    padding-left: 14px;
+
+    text-align: start;
+    text-transform: capitalize;
+  }
+
+  .packages__package-option {
+    padding: 5px;
+
+    text-align: center;
+  }
+
+  .packages__package-title {
+    @include bold-text(16px);
+  }
+
+  .packages__package-price {
+    @include light-text(18px);
+  }
+  .packages__toggle-list {
+    display: none;
+  }
 }
 
-@media (min-width: $desktop-break) {
+@media #{$desktop-width} {
+  .packages {
+    margin-top: -3px;
+    padding-top: 68px;
+  }
   .packages__table {
     width: 940px;
+  }
+  .packages__table th {
+    width: 120px;
+    padding: 14px 22px 22px;
+  }
+
+  .packages__table td {
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .packages__package-title {
+    @include bold-text(18px);
+  }
+
+  .packages__package-price {
+    @include light-text(24px);
+  }
+
+  .packages__package-option-name {
+    @include regular-text(18px);
+
+    padding-left: 20px;
   }
 }

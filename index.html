@@ -5,7 +5,24 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Пинк</title>
 </head>
+
 <body>
+<svg style="display:none">
+  <!--suppress HtmlUnknownAttribute -->
+  <symbol viewBox="0 0 32 32" id="icon-yes">
+    <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
+	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
+	C-60.562,6.191-60.562,5.558-60.953,5.167z"></path>
+  </symbol>
+  <!--suppress HtmlUnknownAttribute -->
+  <symbol viewBox="0 0 32 32" id="icon-no">
+    <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
+	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
+	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
+	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"></path>
+  </symbol>
+</svg>
+
 
 <header class="header">
   <nav class="navigation">
@@ -23,13 +40,17 @@
           <li class="navigation__item"><a href="index.html">Главная</a></li>
           <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
           <li class="navigation__item"><a href="form.html">Конкурс</a></li>
-          <li class="navigation__item"><a href="http://htmlacademy.ru">Html academy</a></li>
+          <li class="navigation__item"><a href="http://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </div>
       <section class="navigation__header">
         <div class="navigation__header-wrapper">
           <a class="navigation__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="74" height="23">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
+            </picture>
           </a>
           <a class="navigation__button" href="#">
             <img src="img/icon-menu-burger.svg" width="50" height="24" alt="Hamburger">
@@ -43,25 +64,31 @@
 
 <main class="main">
   <section class="about">
-    <div class="about__wrapper">
-      <h2 class="about__title  about__title--moved">Взгляните на жизнь иначе!</h2>
-      <div class="about__preview">
-        <img src="img/iphone-hand-mobile@1x.png" width="258" height="286" alt="Logo">
-      </div>
+    <div class="about__title  about__title-index">
+      <h2>Взгляните на жизнь иначе!</h2>
+    </div>
+    <div class="about__preview">
+      <picture>
+        <source media="(min-width: 1200px)"
+                srcset="img/iphone-hand-desktop@1x.png 1x, img/iphone-hand-desktop@2x.png 2x">
+        <source media="(min-width: 700px)" srcset="img/iphone-hand-tablet@1x.png 1x, img/iphone-hand-tablet@2x.png 2x">
+        <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="258" height="286"
+             alt="Mobile App Preview">
+      </picture>
     </div>
     <section class="about__download-section">
       <div class="about__download-section-wrapper">
         <a href="#" class="about__download-button">Скачать приложение</a>
         <div class="about__platforms">
           <a class="about__platform  about__platform--ios" href="http://appstore">
-            <img src="img/logo-apple.svg" width="56" height="56" alt="IOS">
+            <img src="img/logo-apple.svg" width="46" height="57" alt="IOS">
           </a>
           <a class="about__platform  about__platform--android"
              href="https://play.google.com/store/apps/details?id=ru.htmlacademy.pink">
-            <img src="img/logo-android.svg" width="56" height="56" alt="Android">
+            <img src="img/logo-android.svg" width="42" height="47" alt="Android">
           </a>
           <a class="about__platform  about__platform--windows" href="http://microsoft.com">
-            <img src="img/logo-microsoft.svg" width="56" height="56" alt="Windows Mobile">
+            <img src="img/logo-microsoft.svg" width="44" height="42" alt="Windows Mobile">
           </a>
         </div>
         <p class="about__download-info">
@@ -72,42 +99,47 @@
   </section>
   <section class="offer">
     <div class="offer__motto">
-      <h2>Устали от серости мегаполиса?</h2>
-      <h2>Нам есть, что вам предложить!</h2>
+      <h3>Устали от серости мегаполиса?</h3>
+      <h3>Нам есть, что вам<br> предложить!</h3>
     </div>
     <div class="offer__content">
       <div class="offer__content-wrapper">
         <div class="offer__advantages">
-          <article class="offer__advantage">
+          <article class="offer__advantage  offer__advantage--first">
             <h3 class="offer__advantage-title">Поднимает настроение</h3>
-            <p class="offer__advantage-description">Приложение позволит Вам победить осеннюю
-              хандру и депрессию буквально в несколько кликов</p>
+            <p class="offer__advantage-description">Приложение позволит вам<br>победить осеннюю
+              хандру и<br>депрессию буквально в<br>несколько кликов!</p>
           </article>
-          <article class="offer__advantage">
+          <article class="offer__advantage  offer__advantage--second">
             <h3 class="offer__advantage-title">Меняет мир вокруг</h3>
-            <p class="offer__advantage-description">Сделайте снимок и украсьте его смайликом
-              или текстовой подписью, чтобы усилить эффект</p>
+            <p class="offer__advantage-description">Сделайте снимок и<br>украсьте его смайликом<br>
+              или текстовой подписью,<br>чтобы усилить эффект</p>
           </article>
-          <article class="offer__advantage">
+          <article class="offer__advantage  offer__advantage--third">
             <h3 class="offer__advantage-title">Заводит новых друзей</h3>
-            <p class="offer__advantage-description">Ставьте лайки, комментируйте, делитесь
-              фотографиями с друзьями и заводите новых</p>
+            <p class="offer__advantage-description">Ставьте лайки,<br>комментируйте, делитесь<br>
+              фотографиями с друзьями<br>и заводите новых</p>
           </article>
         </div>
         <div class="offer__preview">
-          <img src="img/iphone-screen-mobile@1x.png" width="157" height="320" alt="Application Preview">
+          <picture>
+            <source media="(min-width: 700px)"
+                    srcset="img/iphone-screen-mobile@2x.png 1x">
+            <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x"
+                 width="157" height="320" alt="Application Preview">
+          </picture>
         </div>
       </div>
     </div>
     <div class="offer__effect">
       <div class="offer__effect-wrapper">
-        <div class="offer__effect-image">
-          <img src="http://placehold.it/350x150" alt="Effect" width="250" height="150">
+        <div class="offer__effect-timer">
+          <h1>24</h1>
         </div>
         <div class="offer__effect-content">
-          <h1 class="offer__effect-title">Эффект на 24 часа!</h1>
-          <p class="offer__effect-description">Британские ученые провели исследования и доказали, что положительный
-            эффект от использования приложения длится целые сутки</p>
+          <h1 class="offer__effect-title">Эффект<br> на 24 часа!</h1>
+          <p class="offer__effect-description">Британские ученые провели исследования<br>и доказали, что положительный
+            эффект<br>от использования приложения длится<br>целые сутки!</p>
           <a href="http://british-scientists.co.uk" class="offer__effect-more">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -120,10 +152,11 @@
       <input type="radio" class="reviews__input" id="reviews-input-3" name="review" hidden>
       <ul class="reviews__list  slider__list">
         <li class="reviews__item  slider__item  slider__item--selected">
-          <h3 class="reviews__item-author">Николай Петоров</h3>
-          <p class="reviews__item-text">&laquo;Это приложение перевернуло мой мир и позволило по новому взглянуть на
-            привычные вещи! А еще я
-            познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+          <h3 class="reviews__item-author">Николай Петров</h3>
+          <span class="reviews__item-author-description">25 лет, водитель трамвая</span>
+          <q class="reviews__item-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+            привычные серые вещи! А еще я
+            познакомился со своей будущей женой в комментариях к выложенной фотографии!</q>
         </li>
         <li class="reviews__item  slider__item">
           <h3 class="reviews__item-author">Анна Петрова</h3>
@@ -136,9 +169,9 @@
         </li>
       </ul>
       <div class="reviews__toggle-list  slider__toggles">
-        <label for="reviews-input-1" class="slider__toggle">1</label>
-        <label for="reviews-input-2" class="slider__toggle">2</label>
-        <label for="reviews-input-3" class="slider__toggle">3</label>
+        <label for="reviews-input-1" class="slider__toggle  slider__toggle--active"></label>
+        <label for="reviews-input-2" class="slider__toggle"></label>
+        <label for="reviews-input-3" class="slider__toggle"></label>
       </div>
     </div>
   </section>
@@ -153,105 +186,132 @@
           <tr>
             <th></th>
             <th>
-              <span class="packages__package-title">Малый</span>
+              <span class="packages__package-title">База</span>
               <span class="packages__package-price">1,99 USD</span>
             </th>
-            <th>
+            <th class="packages__package--selected">
               <span class="packages__package-hit">Хит</span>
               <span class="packages__package-title">Стандарт</span>
               <span class="packages__package-price">3,99 USD</span>
             </th>
             <th>
-              <span class="packages__package-title">Большой</span>
-              <span class="packages__package-price">6,99 USD</span>
+              <span class="packages__package-title">Анлим</span>
+              <span class="packages__package-price">9,99 USD</span>
             </th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td class="packages__package-option-name">Розовый фильтр</td>
-            <td class="packages__package-option packages__package-option--off">
-              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            <td class="packages__package-option packages__package-option--on">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
+            </td>
+            <td class="packages__package-option  packages__package-option--on  packages__package--selected">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
-              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-            </td>
-            <td class="packages__package-option packages__package-option--on">
-              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
           <tr>
             <td class="packages__package-option-name">Смайлики</td>
             <td class="packages__package-option packages__package-option--off">
-              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+              </svg>
+            </td>
+            <td class="packages__package-option  packages__package-option--on  packages__package--selected">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
-              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
-            </td>
-            <td class="packages__package-option packages__package-option--on">
-              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
           <tr>
             <td class="packages__package-option-name">Комментарии</td>
             <td class="packages__package-option packages__package-option--off">
-              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+              </svg>
             </td>
-            <td class="packages__package-option packages__package-option--off">
-              <img src="img/icon-no.svg" width="32" height="32" alt="Off">
+            <td class="packages__package-option packages__package-option--off  packages__package--selected">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+              </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
-              <img src="img/icon-yes.svg" width="32" height="32" alt="On">
+              <svg width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              </svg>
             </td>
           </tr>
           </tbody>
         </table>
       </article>
       <div class="packages__toggle-list  slider__toggles">
-        <label for="packages-input-1" class="slider__toggle">1</label>
-        <label for="packages-input-2" class="slider__toggle">2</label>
-        <label for="packages-input-3" class="slider__toggle">3</label>
+        <label for="packages-input-1" class="slider__toggle"></label>
+        <label for="packages-input-2" class="slider__toggle  slider__toggle--active"></label>
+        <label for="packages-input-3" class="slider__toggle"></label>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <h2>Остались вопросы? Свяжитесь с нами!</h2>
+<footer class="footer  footer-index">
+  <h2>Остались вопросы?<br>Свяжитесь с нами!</h2>
   <address class="contacts">
     <div class="contacts__item">
       <h4 class="contacts__type">Звоните:</h4>
-      <a href="tel:78125556666" class="contacts__value">+7(812)555-66-66</a>
+      <a href="tel:78125556666" class="contacts__value">+7 (812) 555-66-66</a>
     </div>
     <div class="contacts__item">
       <h4 class="contacts__type">Пишите:</h4>
       <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
     </div>
     <div class="contacts__item">
-      <h4 class="contacts__type">Приходите в гости:</h4>
+      <h4 class="contacts__type">Приезжайте в гости:</h4>
       <a href="http://maps.google.com/?q=ул.Большая Конюшенная, 19/8" class="contacts__value">ул.Большая Конюшенная,
         19/8</a>
     </div>
   </address>
   <div class="footer__map">
-    <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg">
+      <source media="(min-width: 700px)" srcset="img/bg-map-tablet@1x.jpg">
+      <img src="img/bg-map-mobile@1x.png" alt="Our Office Map" width="320" height="421">
+    </picture>
   </div>
-  <div class="footer__logo">
-    <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
-  </div>
-  <div class="footer__social">
-    <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
-                                                                          width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
-                                                                         width="32" height="32"></a>
-    <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
-                                                                         width="32" height="32"></a>
-  </div>
-  <div class="footer__developer">
-    <span>Разработано</span>
-    <a href="#" class="footer__developer-logo">
-      <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
-    </a>
+  <div class="footer__end">
+    <div class="footer__logo">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Logo" width="144" height="96">
+      </picture>
+    </div>
+    <div class="footer__social">
+      <a href="#" class="footer__social-link footer__social-link--twi"><img src="img/icon-twitter.svg" alt="Twitter"
+                                                                            width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--fb"><img src="img/icon-facebook.svg" alt="Facebook"
+                                                                           width="32" height="32"></a>
+      <a href="#" class="footer__social-link footer__social-link--yt"><img src="img/icon-youtube.svg" alt="YouTube"
+                                                                           width="32" height="32"></a>
+    </div>
+    <div class="footer__developer">
+      <span>Разработано</span>
+      <a href="#" class="footer__developer-logo">
+        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
+      </a>
+    </div>
   </div>
 </footer>
 
