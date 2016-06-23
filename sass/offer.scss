@@ -298,11 +298,12 @@
 
   .offer__effect-wrapper {
     padding-top: 34px;
-    padding-bottom: 45px;
+    padding-bottom: 21px;
   }
 
   .offer__effect-timer h1 {
     @include bold-text(120px);
+    margin: 76px 25px;
   }
 
   .offer__effect-content {
