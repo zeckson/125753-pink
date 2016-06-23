@@ -219,18 +219,31 @@
   </section>
   <section class="submit-photo">
     <form class="submit-photo__form" action="http://dev.null">
-      <img class="submit-photo__preview" src="img/photo-7-mobile@1x.jpg" alt="Photo Preview" width="280" height="374">
+      <div class="submit-photo__preview">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x,
+                                                              img/photo-7-desktop@2x.jpg 2x">
+          <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x,
+                                                             img/photo-7-tablet@2x.jpg 2x">
+          <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x"
+               alt="User photo" height="374" width="280">
+        </picture>
+      </div>
       <div class="submit-photo__controls">
-        <a href="#" class="submit-photo__control  submit-photo__control--active"><img
-          src="img/icon-editor-crop.svg" alt="crop" width="48" height="48"></a>
-        <a href="#" class="submit-photo__control"><img
-          src="img/icon-editor-fill.svg" alt="fill" width="48" height="48"></a>
-        <a href="#" class="submit-photo__control submit-photo__control--active"><img
-          src="img/icon-editor-contrast.svg" alt="contrast" width="48" height="48"></a>
-        <label>
-          <input class="submit-photo__slider  submit-photo__slider--active" type="range" name="control-value"
-                 min="0" max="100" step="5" value="70">
-        </label>
+        <label for="crop" class="submit-photo__control  submit-photo__control--active"><img
+          src="img/icon-editor-crop.svg" alt="crop" width="48" height="48"></label>
+        <input id="crop" class="submit-photo__slider  submit-photo__slider--active" type="range" name="control-value"
+               min="0" max="100" step="5" value="70">
+        <label for="fill" class="submit-photo__control"><img
+          src="img/icon-editor-fill.svg" alt="fill" width="48" height="48"></label>
+        <input id="fill" class="submit-photo__slider" type="range" name="control-value"
+               min="0" max="100" step="5" value="70">
+        <label for="contrast" class="submit-photo__control"><img
+          src="img/icon-editor-contrast.svg" alt="contrast" width="48" height="48"></label>
+        <input id="contrast" class="submit-photo__slider" type="range"
+               name="control-value" min="0" max="100" step="5" value="70">
+      </div>
+      <div class="submit-photo__actions">
         <button class="submit-photo__button" type="submit">Запостить</button>
         <button class="submit-photo__button" type="reset" disabled>Отмена</button>
       </div>

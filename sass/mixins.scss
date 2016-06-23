@@ -61,6 +61,7 @@
   text-align: center;
   text-decoration: none;
 
+  cursor: pointer;
   color: $white;
   border:  {
     width: medium;
@@ -78,6 +79,11 @@
   &:active {
     color: $pink;
     background-color: $white;
+  }
+
+  &:disabled{
+    color: $grey;
+    border-color: $grey;
   }
 }
 
