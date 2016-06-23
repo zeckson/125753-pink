@@ -17,12 +17,12 @@
   margin: 0 auto;
 
   text-align: center;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .post__photo--wide {
   overflow: visible;
-  height: 137px;
+  height: 140px;
   img {
     position: absolute;
     left: -20px;
@@ -55,8 +55,6 @@
   }
   .post__time {
     @include light-text(12px);
-
-    padding-left: 4px;
 
     text-transform: uppercase;
 
