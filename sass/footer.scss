@@ -116,6 +116,14 @@
 
     padding: 36px 0;
   }
+
+  .footer__social {
+    padding: 0;
+  }
+
+  .footer__logo {
+    padding: 0;
+  }
 }
 
 @media #{$desktop-width} {

@@ -93,6 +93,10 @@
 }
 
 @media #{$tablet-width} {
+  .submit-photo {
+    padding: 20px 0;
+  }
+
   .submit-photo__form {
     box-sizing: border-box;
     padding-top: 37px;
