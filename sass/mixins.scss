@@ -84,7 +84,8 @@
 @mixin background($url) {
   background:  {
     image: url($url);
-    position-y: -95px;
+    position-y: 0;
+    position-x: 5px;
     repeat: no-repeat;
   }
 }

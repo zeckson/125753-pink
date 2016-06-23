@@ -236,29 +236,35 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 486px;
 
     width: 100%;
   }
 
   .offer__advantage {
-    display: inline-block;
+    top: -85px;
+    position: absolute;
+    display: block;
 
     box-sizing: border-box;
     width: 300px;
-    padding-top: 252px;
+    padding-top: 345px;
 
     vertical-align: bottom;
 
     &--first {
+
       @include background("../img/iphone-screen-1-desktop@1x.png");
     }
 
     &--second {
       @include background("../img/iphone-screen-2-desktop@1x.png");
+      left: 34%;
     }
 
     &--third {
       @include background("../img/iphone-screen-3-desktop@1x.png");
+      left: 68%;
     }
   }
 
