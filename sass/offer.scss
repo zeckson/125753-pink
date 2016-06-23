@@ -236,14 +236,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 486px;
 
     width: 100%;
+    height: 486px;
   }
 
   .offer__advantage {
-    top: -85px;
     position: absolute;
+    top: -85px;
+
     display: block;
 
     box-sizing: border-box;
@@ -253,17 +254,18 @@
     vertical-align: bottom;
 
     &--first {
-
       @include background("../img/iphone-screen-1-desktop@1x.png");
     }
 
     &--second {
       @include background("../img/iphone-screen-2-desktop@1x.png");
+
       left: 34%;
     }
 
     &--third {
       @include background("../img/iphone-screen-3-desktop@1x.png");
+
       left: 68%;
     }
   }
