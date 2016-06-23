@@ -56,7 +56,7 @@
 .submit-photo__button {
   @include bold-text;
   width: 100%;
-  margin-bottom: 13px;
+
   box-sizing: border-box;
   padding: 6px 8px 10px;
 
@@ -86,19 +86,72 @@
     color: $grey;
     border-color: $grey;
   }
+
+  &:first-child {
+    margin-bottom: 13px;
+  }
 }
 
 @media #{$tablet-width} {
   .submit-photo__form {
+    box-sizing: border-box;
+    padding-top: 37px;
+    padding-bottom: 34px;
     @include clear-fix;
   }
   .submit-photo__preview {
+    width: 300px;
+    height: 400px;
     float: left;
+    overflow: hidden;
+
+    img {
+      width: 300px;
+      height: 488px;
+    }
   }
 
   .submit-photo__controls {
+    padding: 0;
+    float: right;
+
+    border-bottom: none;
+    min-height: 214px;
+  }
+
+  .submit-photo__control {
+    display: block;
+    padding: 0;
+    width: 300px;
+    margin: 0;
+    margin-bottom: 45px;
+
+    img {
+      vertical-align: middle;
+      margin-right: 25px;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .submit-photo__slider {
+    display: inline;
+    width: 200px;
+    position: static;
+  }
+  .submit-photo__actions {
+    box-sizing: border-box;
+    padding-top: 45px;
+    padding-left: 27px;
+    padding-right: 12px;
+    width: 300px;
     float: right;
   }
+
+  .submit-photo__button:first-child {
+    margin-bottom: 25px;
+  }
+
 }
 
 @media #{$desktop-width} {

@@ -3,8 +3,6 @@
 .footer {
   position: relative;
 
-  margin-top: -111px;
-
   color: $grey;
   background-color: $white;
 
@@ -15,6 +13,14 @@
     padding: 44px 0 20px;
 
     text-align: center;
+  }
+}
+
+.footer-index {
+  margin-top: -111px;
+
+  .footer__end {
+    display: none;
   }
 }
 
@@ -42,7 +48,7 @@
   margin-right: 15px;
   padding: 5px 10px;
 
-  border:  {
+  border: {
     width: medium;
 
     color: $grey;
@@ -64,16 +70,15 @@
 
 .footer__end {
   @include container;
-
-  display: none;
 }
 
 @media #{$tablet-width} {
-  .footer {
+  .footer h2 {
+    @include light-text(40px);
+  }
+
+  .footer-index {
     margin-top: -119px;
-    h2 {
-      @include light-text(40px);
-    }
   }
 
   .footer__map {
