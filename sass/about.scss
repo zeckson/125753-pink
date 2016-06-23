@@ -2,7 +2,7 @@
   position: relative;
 
   color: $white;
-  background:  {
+  background: {
     position: center -3px;
 
     color: $grey;
@@ -103,10 +103,10 @@
 }
 
 .about__description {
-  @include light-text(14px, 2.2em);
+  @include regular-text(14px, 2.2em);
 
   margin: 0;
-  padding: 31px 40px 25px;
+  padding: 31px 35px 25px;
 
   text-align: center;
 
@@ -181,6 +181,11 @@
   .about__download-info {
     @include light-text(18px, 1.3em);
   }
+
+  .about__description {
+    padding: 72px;
+    @include regular-text(18px, 1.8em)
+  }
 }
 
 @media #{$desktop-width} {
@@ -226,5 +231,9 @@
 
   .about__platforms {
     padding: 67px 0 53px;
+  }
+
+  .about__description {
+    padding: 72px 350px;
   }
 }
