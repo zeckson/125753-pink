@@ -19,9 +19,10 @@
 .footer-index {
   margin-top: -111px;
 
-  .footer__end {
-    display: none;
-  }
+}
+
+.footer-index .footer__end {
+  display: none;
 }
 
 .footer__map {
@@ -79,6 +80,10 @@
 
   .footer-index {
     margin-top: -119px;
+  }
+
+  .footer-index .footer__end {
+    display: flex;
   }
 
   .footer__map {
