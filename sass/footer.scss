@@ -34,20 +34,25 @@
   padding-top: 28px;
 }
 
-.footer__logo img {
-  display: inline;
+.footer__logo {
+  padding-top: 40px;
+  text-align: center;
+  img {
+    display: inline;
+  }
 }
 
 .footer__social {
+  padding: 36px 0 37px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 
   text-align: center;
 }
 
 .footer__social-link {
-  margin-right: 15px;
-  padding: 5px 10px;
+  margin-right: 11px;
+  padding: 7px 12px;
 
   border: {
     width: medium;
@@ -67,6 +72,13 @@
   @include regular-text;
 
   text-align: center;
+}
+
+.footer__developer-logo {
+  margin-left: 10px;
+  img {
+    vertical-align: middle;
+  }
 }
 
 .footer__end {
