@@ -54,20 +54,28 @@
     </div>
   </section>
   <section class="photos">
+
     <article class="post">
+      <div class="post__photo post__photo--wide">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x,
+                                                      img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 700px)" srcset="img/panorama-tablet@1x.jpg 1x,
+                                                     img/panorama-tablet@2x.jpg 2x">
+          <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x"
+               width="320" height="137" alt="User Panorama">
+        </picture>
+        <span class="post__photo-of-the-day">Панорама дня</span>
+      </div>
       <div class="post__wrapper">
-        <div class="post__photo post__photo--wide">
-          <img src="img/panorama-mobile@1x.jpg" alt="User photo" height="137" width="320">
-          <span class="post__photo-of-the-day">Панорама дня</span>
+        <div class="post__author">
+          <a href="#">Анна</a><time class="post__time" datetime="10-10-2014T13:23">(5 минут назад)</time>
         </div>
-      <span class="post__author">
-        <a href="#">Анна</a><time class="post__time" datetime="10-10-2014T13:23">(5 минут назад)</time>
-      </span>
         <p class="post__description">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в
-          персикопе, задавайте свои вопросы!</p>
-      <span class="post__like-panel">
-        <img src="img/icon-heart.svg" alt="Like" width="16" height="16"><span>нравится:215</span>
-      </span>
+          перископе, задавайте свои вопросы!</p>
+        <div class="post__like-panel">
+          <img src="img/icon-heart.svg" alt="Like" width="12" height="12"><span>нравится: 215</span>
+        </div>
       </div>
     </article>
     <article class="post">
@@ -154,6 +162,7 @@
       </span>
       </div>
     </article>
+
   </section>
   <section class="catchword">
     <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>

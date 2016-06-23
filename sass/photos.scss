@@ -1,6 +1,11 @@
 @import "post";
 
 .photos {
+  padding-top: 10px;
   color: $grey;
   background-color: $white;
+}
+
+.photos__wrapper {
+  //@include container;
 }

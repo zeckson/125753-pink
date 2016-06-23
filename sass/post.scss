@@ -1,6 +1,12 @@
 .post {
   box-sizing: border-box;
-  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: $light-grey;
+  @include container;
+}
+
+.post__wrapper {
+  padding-left: 18px;
 }
 
 .post__photo {
@@ -11,14 +17,16 @@
   margin: 0 auto;
 
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .post__photo--wide {
   overflow: visible;
+  height: 137px;
   img {
-    display: block;
-
-    margin: 0 auto;
+    position: absolute;
+    left: -20px;
+    max-width: none;
   }
 }
 
@@ -29,7 +37,7 @@
   top: 0;
   right: 0;
 
-  padding: 5px;
+  padding: 7px 20px;
 
   text-transform: uppercase;
 
@@ -46,7 +54,7 @@
     color: $grey;
   }
   .post__time {
-    @include light-text;
+    @include light-text(12px);
 
     padding-left: 4px;
 
@@ -60,25 +68,24 @@
   @include regular-text;
 
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
 
   line-height: 24px;
 }
 
 .post__like-panel {
+  padding-top: 16px;
+  padding-bottom: 24px;
   @include regular-text(12px);
 
   text-transform: uppercase;
 
   color: $red;
   span {
-    padding-left: 10px;
+    padding-left: 19px;
   }
 }
 
-.post__wrapper {
-  background-color: $light-grey;
-}
 
 @media #{$tablet-width} {
   .photos {
