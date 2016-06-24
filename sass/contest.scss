@@ -215,8 +215,8 @@
   border: 1px solid $grey;
   background-color: $white;
 }
-
 @media #{$tablet-width} {
+
   .contest__basic-info {
     padding-bottom: 0;
 
@@ -300,7 +300,7 @@
       width: 100%;
       margin: 0;
 
-      background:  {
+      background: {
         color: $grey;
 
         position-x: 96%;
@@ -381,5 +381,52 @@
     float: right;
 
     padding-top: 21px;
+  }
+}
+
+@media #{$desktop-width} {
+  .contest {
+    @include container;
+    flex-flow: row-reverse wrap;
+    justify-content: space-between;
+  }
+  .contest__form-panel {
+    width: 100%;
+  }
+
+  .contest__basic-info {
+    margin: 0;
+    order: 0;
+    width: 435px;
+  }
+
+  .contest__device {
+    margin: 0;
+    order: 1;
+    width: 435px;
+
+    .contest__form-panel {
+      width: 100%;
+    }
+  }
+
+  .contest__contacts {
+    margin: 0;
+    order: 2;
+  }
+
+  .contest__achievements {
+    margin: 0;
+    order: 3;
+  }
+
+  .contest__review {
+    margin: 0;
+    order: 4;
+  }
+
+  .contest__submit {
+    margin: 0;
+    order:5;
   }
 }
