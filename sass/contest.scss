@@ -8,11 +8,13 @@
 .contest__basic-info {
   margin: 0;
   padding-bottom: 39px;
+
   background-color: $white;
 }
 
 .contest__form-panel {
   @include container;
+
   padding-bottom: 8px;
 }
 
@@ -32,22 +34,23 @@
 
 .contest__form-input {
   @include regular-text(18px);
-  box-sizing: border-box;
 
   display: block;
 
+  box-sizing: border-box;
   min-width: 280px;
   height: 62px;
   padding-left: 20px;
-
 }
 
 .contest__achievements {
   position: relative;
+
+  box-sizing: border-box;
   padding-top: 104px;
   padding-bottom: 12px;
+
   background-color: $light-grey;
-  box-sizing: border-box;
 
   .contest__form-legend {
     display: block;
@@ -58,11 +61,15 @@
   }
 
   .contest__form-label {
-    display: inline;
-    text-transform: none;
     @include regular-text(18px);
+
+    display: inline;
+
     padding: 0;
     padding-left: 25px;
+
+    text-transform: none;
+
     color: $grey;
   }
 }
@@ -70,14 +77,15 @@
 .contest__form-legend {
   @include regular-text(14px, 1.3em);
 
-  display: none;
   position: absolute;
+  top: 36px;
+  right: 10%;
+  left: 10%;
+
+  display: none;
 
   text-align: center;
   text-transform: uppercase;
-  left: 10%;
-  right: 10%;
-  top: 36px;
 
   color: $red;
 }
@@ -87,32 +95,34 @@
   width: 32px;
   height: 32px;
 
+  color: $red;
   background-color: $white;
 
   &:checked {
     background-image: url("../img/icon-yes.svg");
+
     fill: $red;
   }
-
-  color: $red;
 }
 
 .contest__contacts {
   padding-top: 21px;
   padding-bottom: 46px;
+
   background-color: $white;
 }
 
 .contest__device {
   position: relative;
+
   box-sizing: border-box;
-  background-color: $light-grey;
   padding-top: 102px;
   padding-bottom: 12px;
 
+  background-color: $light-grey;
+
   .contest__form-legend {
     display: block;
-
   }
 
   .contest__form-panel {
@@ -120,11 +130,15 @@
   }
 
   .contest__form-label {
-    display: inline;
-    text-transform: none;
     @include regular-text(18px);
+
+    display: inline;
+
     padding: 0;
     padding-left: 25px;
+
+    text-transform: none;
+
     color: $grey;
   }
 }
@@ -138,23 +152,25 @@
 
 .contest__review {
   position: relative;
-  background-color: $white;
+
   padding-top: 79px;
   padding-bottom: 22px;
 
+  background-color: $white;
+
   .contest__form-legend {
-    display: block;
     top: 57px;
+
+    display: block;
   }
   textarea {
+    @include regular-text(18px, 1.6em);
+
     box-sizing: border-box;
     min-width: 280px;
     min-height: 200px;
-
-    padding-left: 20px;
     padding-top: 16px;
-
-    @include regular-text(18px, 1.6em)
+    padding-left: 20px;
   }
 
   .contest__form-panel {
@@ -164,8 +180,8 @@
 
 .contest__form-submit {
   @include bold-text;
-
   @include container;
+
   padding: 15px;
 
   text-align: center;
@@ -177,10 +193,11 @@
 }
 
 .contest__hint {
-  padding-top: 39px;
+  @include regular-text(14px);
+
   display: block;
 
-  @include regular-text(14px);
+  padding-top: 39px;
 
   text-align: center;
   text-transform: uppercase;
@@ -197,14 +214,16 @@
 
 @media #{$tablet-width} {
   .contest__basic-info {
-    order: 0;
     padding-bottom: 0;
+
+    order: 0;
   }
 
   .contest__form-panel {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+
     padding-bottom: 54px;
   }
 
@@ -213,28 +232,36 @@
   }
 
   .contest__form-input {
-    flex-grow: 1;
     margin-left: 18px;
+
+    flex-grow: 1;
   }
 
   .contest__form-legend {
-    display: block;
     position: static;
+
+    display: block;
+
     padding: 3px 26px;
   }
 
   .contest__device {
-    border: 1px solid $grey;
     @include container;
-    order: 1;
+
     padding-top: 33px;
     padding-bottom: 27px;
+
+    border: 1px solid $grey;
     background-color: $white;
+
+    order: 1;
 
     .contest__form-panel {
       @include inner-container;
-      padding-bottom: 36px;
+
       justify-content: flex-start;
+
+      padding-bottom: 36px;
     }
 
     .contest__form-label {
@@ -243,27 +270,34 @@
   }
 
   .contest__contacts {
-    border: 1px solid $grey;
     @include container;
+
     margin-top: 54px;
     padding-top: 20px;
     padding-bottom: 10px;
+
+    border: 1px solid $grey;
+
     order: 2;
 
     .contest__form-panel {
       @include inner-container;
+
       flex-direction: column-reverse;
-      padding-bottom: 15px;
+
       padding-top: 15px;
+      padding-bottom: 15px;
     }
     .contest__form-input {
-      margin: 0;
       width: 100%;
-      background: {
-        repeat: no-repeat;
+      margin: 0;
+
+      background:  {
         color: $grey;
+
         position-x: 96%;
         position-y: 50%;
+        repeat: no-repeat;
       }
       &:first-child {
         background-image: url("../img/icon-phone.svg");

@@ -2,7 +2,7 @@
   position: relative;
 
   color: $white;
-  background: {
+  background:  {
     position: center -3px;
 
     color: $grey;
@@ -114,7 +114,7 @@
   background: $white;
 
   br {
-    display: none
+    display: none;
   }
 
   p {
@@ -202,7 +202,6 @@
     p span {
       display: inline;
     }
-
   }
 }
 
@@ -255,7 +254,7 @@
     padding: 92px 250px;
 
     br {
-      display: block
+      display: block;
     }
   }
 }
