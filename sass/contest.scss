@@ -191,30 +191,96 @@
   }
 }
 
-@media #{$tablet-width} {
-  // Как поменять местами блоки как на макете?
-  .contest__basic-info {
-    .contest__form-input {
-      display: inline-block;
-      // Как растянуть и выровнять по правому краю?
-      // Как сделать отступ слева?
+@mixin inner-container {
+  width: 500px;
+}
 
-      box-sizing: content-box;
+@media #{$tablet-width} {
+  .contest__basic-info {
+    order: 0;
+    padding-bottom: 0;
+  }
+
+  .contest__form-panel {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 54px;
+  }
+
+  .contest__form-label {
+    padding: 0;
+  }
+
+  .contest__form-input {
+    flex-grow: 1;
+    margin-left: 18px;
+  }
+
+  .contest__form-legend {
+    display: block;
+    position: static;
+    padding: 3px 26px;
+  }
+
+  .contest__device {
+    border: 1px solid $grey;
+    @include container;
+    order: 1;
+    padding-top: 33px;
+    padding-bottom: 27px;
+    background-color: $white;
+
+    .contest__form-panel {
+      @include inner-container;
+      padding-bottom: 36px;
+      justify-content: flex-start;
+    }
+
+    .contest__form-label {
+      padding-left: 22px;
     }
   }
 
-  .contest fieldset {
-    border: 1px solid red !important;
-    background-color: $white;
-  }
-  .contest__form-legend {
-    display: block;
-  }
+  .contest__contacts {
+    border: 1px solid $grey;
+    @include container;
+    margin-top: 54px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    order: 2;
 
-  .contest__form-submit {
-    float: left;
+    .contest__form-panel {
+      @include inner-container;
+      flex-direction: column-reverse;
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+    .contest__form-input {
+      margin: 0;
+      width: 100%;
+      background: {
+        repeat: no-repeat;
+        color: $grey;
+        position-x: 96%;
+        position-y: 50%;
+      }
+      &:first-child {
+        background-image: url("../img/icon-phone.svg");
+      }
+      &:last-child {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
+    .contest__form-label {
+      margin-top: 10px;
+      padding-left: 19px;
+    }
   }
-  .contest__hint {
-    float: right;
+  .contest__achievements {
+    order: 3;
+  }
+  .contest__review {
+    order: 4;
   }
 }
