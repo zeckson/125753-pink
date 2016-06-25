@@ -7,22 +7,6 @@
 </head>
 
 <body>
-<svg style="display:none">
-  <!--suppress HtmlUnknownAttribute -->
-  <symbol viewBox="0 0 32 32" id="icon-yes">
-    <path d="M-60.953,5.167c-0.391-0.391-1.023-0.391-1.414,0L-75.75,18.551l-4.9-4.9c-0.391-0.391-1.023-0.391-1.414,0
-	s-0.391,1.023,0,1.414l5.607,5.607c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293l14.09-14.09
-	C-60.562,6.191-60.562,5.558-60.953,5.167z"></path>
-  </symbol>
-  <!--suppress HtmlUnknownAttribute -->
-  <symbol viewBox="0 0 32 32" id="icon-no">
-    <path d="M15.497,13.376L26.312,2.562c0.586-0.585,0.586-1.535,0-2.121s-1.535-0.586-2.121,0L13.376,11.255L2.562,0.439
-	c-0.586-0.586-1.535-0.586-2.121,0c-0.586,0.585-0.586,1.535,0,2.121l10.814,10.815L0.439,24.19c-0.586,0.586-0.586,1.535,0,2.121
-	c0.293,0.293,0.677,0.439,1.061,0.439s0.768-0.146,1.061-0.439l10.815-10.814L24.19,26.312c0.293,0.293,0.677,0.439,1.061,0.439
-	s0.768-0.146,1.061-0.439c0.586-0.586,0.586-1.535,0-2.121L15.497,13.376z"></path>
-  </symbol>
-</svg>
-
 
 <header class="header">
   <nav class="navigation">
@@ -53,7 +37,9 @@
             </picture>
           </a>
           <a class="navigation__button" href="#">
-            <img src="img/icons/icon-menu-burger.svg" width="50" height="24" alt="Hamburger">
+            <svg width="50" height="24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-menu-burger"></use>
+            </svg>
           </a>
         </div>
       </section>
@@ -205,17 +191,17 @@
             <td class="packages__package-option-name">Розовый фильтр</td>
             <td class="packages__package-option packages__package-option--on">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
             <td class="packages__package-option  packages__package-option--on  packages__package--selected">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
           </tr>
@@ -223,17 +209,17 @@
             <td class="packages__package-option-name">Смайлики</td>
             <td class="packages__package-option packages__package-option--off">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-no"></use>
               </svg>
             </td>
             <td class="packages__package-option  packages__package-option--on  packages__package--selected">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
           </tr>
@@ -241,17 +227,17 @@
             <td class="packages__package-option-name">Комментарии</td>
             <td class="packages__package-option packages__package-option--off">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-no"></use>
               </svg>
             </td>
             <td class="packages__package-option packages__package-option--off  packages__package--selected">
               <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-no"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-no"></use>
               </svg>
             </td>
             <td class="packages__package-option packages__package-option--on">
-              <svg width="32" height="32">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-yes"></use>
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-yes"></use>
               </svg>
             </td>
           </tr>
