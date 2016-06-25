@@ -387,46 +387,87 @@
 @media #{$desktop-width} {
   .contest {
     @include container;
-    flex-flow: row-reverse wrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
   }
   .contest__form-panel {
     width: 100%;
   }
 
   .contest__basic-info {
-    margin: 0;
-    order: 0;
     width: 435px;
   }
 
   .contest__device {
     margin: 0;
-    order: 1;
+    margin-top: -72px;
     width: 435px;
 
     .contest__form-panel {
-      width: 100%;
+      width: 285px;
     }
   }
 
   .contest__contacts {
     margin: 0;
     order: 2;
+    padding-top: 32px;
+    padding-bottom: 14px;
+    @include clear-fix;
+
+    .contest__form-panel {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      width: 376px;
+      &:nth-child(2) {
+        float: left;
+        margin-left: 59px;
+      }
+      &:last-child {
+        float: right;
+        margin-right: 59px;
+      }
+    }
   }
 
   .contest__achievements {
-    margin: 0;
+    margin-top: 54px;
+    padding-bottom: 21px;
     order: 3;
+
+    .contest__form-panel {
+      width: 260px;
+      margin: 0;
+    }
+  }
+
+  //Chrome bug workaround =( see html.
+  .contest__achievements-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: 58px;
   }
 
   .contest__review {
-    margin: 0;
     order: 4;
+    padding-bottom: 4px;
+
+    .contest__form-panel {
+      width: 820px;
+
+      textarea {
+        min-height: 125px;
+      }
+    }
   }
 
   .contest__submit {
-    margin: 0;
+    margin-top: 65px;
+    padding-bottom: 0;
     order:5;
   }
 }

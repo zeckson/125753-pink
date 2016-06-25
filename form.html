@@ -72,30 +72,32 @@
     </fieldset>
     <fieldset class="contest__achievements">
       <legend class="contest__form-legend">Ваши безбашенные<br>достижения в путешествии</legend>
-
-      <div class="contest__form-panel">
-        <input type="checkbox" name="achievements" id="selfie" class="contest__form-checkbox" checked>
-        <label for="selfie" class="contest__form-label">Сделал селфи с акулой</label>
-      </div>
-      <div class="contest__form-panel">
-        <input id="sunburn" type="checkbox" name="achievements" class="contest__form-checkbox" checked>
-        <label for="sunburn" class="contest__form-label">Обгорел на пляже</label>
-      </div>
-      <div class="contest__form-panel">
-        <input id="unreal" type="checkbox" name="achievements" class="contest__form-checkbox">
-        <label for="unreal" class="contest__form-label">Видел Чака Норриса</label>
-      </div>
-      <div class="contest__form-panel">
-        <input id="souvenirs" type="checkbox" name="achievements" class="contest__form-checkbox">
-        <label for="souvenirs" class="contest__form-label">Накупил сувениров</label>
-      </div>
-      <div class="contest__form-panel">
-        <input id="tower" type="checkbox" name="achievements" class="contest__form-checkbox" checked>
-        <label for="tower" class="contest__form-label">Удержал башню</label>
-      </div>
-      <div class="contest__form-panel">
-        <input id="destroy" type="checkbox" name="achievements" class="contest__form-checkbox">
-        <label for="destroy" class="contest__form-label">Разгромил отель</label>
+      <!--Chrome bug https://bugzilla.mozilla.org/show_bug.cgi?id=1230207-->
+      <div class="contest__achievements-wrapper">
+        <div class="contest__form-panel">
+          <input type="checkbox" name="achievements" id="selfie" class="contest__form-checkbox" checked>
+          <label for="selfie" class="contest__form-label">Сделал селфи с акулой</label>
+        </div>
+        <div class="contest__form-panel">
+          <input id="sunburn" type="checkbox" name="achievements" class="contest__form-checkbox" checked>
+          <label for="sunburn" class="contest__form-label">Обгорел на пляже</label>
+        </div>
+        <div class="contest__form-panel">
+          <input id="unreal" type="checkbox" name="achievements" class="contest__form-checkbox">
+          <label for="unreal" class="contest__form-label">Видел Чака Норриса</label>
+        </div>
+        <div class="contest__form-panel">
+          <input id="souvenirs" type="checkbox" name="achievements" class="contest__form-checkbox">
+          <label for="souvenirs" class="contest__form-label">Накупил сувениров</label>
+        </div>
+        <div class="contest__form-panel">
+          <input id="tower" type="checkbox" name="achievements" class="contest__form-checkbox" checked>
+          <label for="tower" class="contest__form-label">Удержал башню</label>
+        </div>
+        <div class="contest__form-panel">
+          <input id="destroy" type="checkbox" name="achievements" class="contest__form-checkbox">
+          <label for="destroy" class="contest__form-label">Разгромил отель</label>
+        </div>
       </div>
     </fieldset>
     <fieldset class="contest__contacts">
