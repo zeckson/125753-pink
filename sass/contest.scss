@@ -1,88 +1,90 @@
 .contest {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
 
   background-color: $white;
-  fieldset {
-    margin: 0;
-    padding: 20px 20px;
-
-    border: 0;
-  }
 }
 
 .contest__basic-info {
   margin: 0;
-  padding: 20px 20px;
+  padding-bottom: 39px;
 
   background-color: $white;
 }
 
-.contest__achievements {
-  background-color: $light-grey;
+.contest__form-panel {
+  @include container;
 
-  .contest__form-label {
-    text-transform: none;
-
-    color: $grey;
-  }
+  padding-bottom: 8px;
 }
 
-.contest__contacts {
-  background-color: $white;
-}
-
-.contest__device {
-  background-color: $light-grey;
-
-  .contest__form-legend {
-    display: block;
-  }
-  .contest__form-label {
-    text-transform: none;
-
-    color: $grey;
-  }
-  .contest__form-radio {
-    width: 32px;
-    height: 32px;
-
-    color: $red;
-  }
-}
-
-.contest__review {
-  background-color: $white;
-  .contest__form-legend {
-    display: block;
-  }
-  textarea {
-    min-width: 280px;
-    min-height: 200px;
-
-    font-size: 12pt;
-  }
-}
-
-.contest__form-submit {
-  @include bold-text;
+.contest__form-label {
+  @include regular-text;
 
   display: block;
 
-  width: 280px;
-  margin: 0 auto;
-  padding: 20px;
+  padding: 9px 23px 5px;
 
-  text-align: center;
   text-transform: uppercase;
 
-  color: $white;
-  border: 0;
-  background-color: green;
+  color: $red;
+
+  line-height: 30px;
+}
+
+@mixin label-right {
+  @include regular-text(18px);
+
+  display: inline;
+
+  padding: 0;
+  padding-left: 25px;
+
+  text-transform: none;
+
+  color: $grey;
+}
+
+.contest__form-input {
+  @include regular-text(18px);
+
+  display: block;
+
+  box-sizing: border-box;
+  min-width: 280px;
+  height: 62px;
+  padding-left: 20px;
+}
+
+.contest__achievements {
+  position: relative;
+
+  box-sizing: border-box;
+  padding-top: 104px;
+  padding-bottom: 12px;
+
+  background-color: $light-grey;
+
+  .contest__form-legend {
+    display: block;
+  }
+
+  .contest__form-panel {
+    padding-bottom: 44px;
+  }
+
+  .contest__form-label {
+    @include label-right;
+  }
 }
 
 .contest__form-legend {
-  @include regular-text;
+  @include regular-text(14px, 1.3em);
+
+  position: absolute;
+  top: 36px;
+  right: 10%;
+  left: 10%;
 
   display: none;
 
@@ -92,37 +94,109 @@
   color: $red;
 }
 
-.contest__form-label {
-  @include regular-text;
-
-  display: block;
-
-  padding: 5px;
-
-  text-transform: uppercase;
+// How to do a custom checkbox?
+.contest__form-checkbox {
+  width: 32px;
+  height: 32px;
 
   color: $red;
+  background-color: $white;
 
-  line-height: 30px;
-  .contest__form-input {
-    @include regular-text(18px);
+  &:checked {
+    background-image: url("../img/icon-yes.svg");
 
-    display: block;
-
-    min-width: 280px;
-    height: 40px;
+    fill: $red;
   }
 }
 
-.contest__form-checkbox {
+.contest__contacts {
+  padding-top: 21px;
+  padding-bottom: 46px;
+
+  background-color: $white;
+}
+
+.contest__device {
+  position: relative;
+
+  box-sizing: border-box;
+  padding-top: 102px;
+  padding-bottom: 12px;
+
+  background-color: $light-grey;
+
+  .contest__form-legend {
+    display: block;
+  }
+
+  .contest__form-panel {
+    padding-bottom: 37px;
+  }
+
+  .contest__form-label {
+    @include label-right;
+  }
+}
+
+.contest__form-radio {
   width: 32px;
   height: 32px;
 
   color: $red;
 }
 
+.contest__review {
+  position: relative;
+
+  padding-top: 79px;
+  padding-bottom: 0;
+
+  background-color: $white;
+
+  .contest__form-legend {
+    top: 57px;
+
+    display: block;
+  }
+  textarea {
+    @include regular-text(18px, 1.6em);
+
+    box-sizing: border-box;
+    min-width: 280px;
+    min-height: 200px;
+    padding-top: 16px;
+    padding-left: 20px;
+  }
+
+  .contest__form-panel {
+    padding-bottom: 42px;
+  }
+}
+
+.contest__submit {
+  padding-bottom: 22px;
+}
+
+.contest__form-submit {
+  @include bold-text;
+  @include container;
+
+  padding: 15px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $white;
+  border: 0;
+  background-color: $light-green;
+}
+
 .contest__hint {
+  @include regular-text(14px);
+
   display: block;
+
+  padding-top: 39px;
 
   text-align: center;
   text-transform: uppercase;
@@ -133,30 +207,267 @@
   }
 }
 
-@media #{$tablet-width} {
-  // Как поменять местами блоки как на макете?
-  .contest__basic-info {
-    .contest__form-input {
-      display: inline-block;
-      // Как растянуть и выровнять по правому краю?
-      // Как сделать отступ слева?
+@mixin inner-container {
+  width: 500px;
+}
 
-      box-sizing: content-box;
+@mixin outline {
+  border: 1px solid $grey;
+  background-color: $white;
+}
+@media #{$tablet-width} {
+
+  .contest__basic-info {
+    padding-bottom: 0;
+
+    order: 0;
+  }
+
+  .contest__form-panel {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    padding-bottom: 54px;
+  }
+
+  .contest__form-label {
+    padding: 0;
+  }
+
+  .contest__form-input {
+    margin-left: 18px;
+
+    flex-grow: 1;
+  }
+
+  .contest__form-legend {
+    position: static;
+
+    display: block;
+
+    padding: 3px 26px;
+
+    br {
+      display: none;
+      :after {
+        content: " ";
+      }
     }
   }
 
-  .contest fieldset {
-    border: 1px solid red !important;
-    background-color: $white;
+  .contest__device {
+    @include container;
+    @include outline;
+
+    padding-top: 33px;
+    padding-bottom: 27px;
+
+    order: 1;
+
+    .contest__form-panel {
+      @include inner-container;
+
+      justify-content: flex-start;
+
+      padding-bottom: 36px;
+    }
+
+    .contest__form-label {
+      padding-left: 22px;
+    }
   }
-  .contest__form-legend {
-    display: block;
+
+  .contest__contacts {
+    @include container;
+    @include outline;
+
+    margin-top: 54px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    order: 2;
+
+    .contest__form-panel {
+      @include inner-container;
+
+      flex-direction: column-reverse;
+
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .contest__form-input {
+      width: 100%;
+      margin: 0;
+
+      background: {
+        color: $grey;
+
+        position-x: 96%;
+        position-y: 50%;
+        repeat: no-repeat;
+      }
+      &:first-child {
+        background-image: url("../img/icon-phone.svg");
+      }
+      &:last-child {
+        background-image: url("../img/icon-mail.svg");
+      }
+    }
+    .contest__form-label {
+      margin-top: 10px;
+      padding-left: 19px;
+    }
+  }
+  .contest__achievements {
+    @include container;
+    @include outline;
+
+    margin-top: 56px;
+    padding-top: 32px;
+    padding-bottom: 15px;
+
+    order: 3;
+
+    .contest__form-panel {
+      @include inner-container;
+
+      justify-content: flex-start;
+
+      padding-bottom: 43px;
+    }
+
+    .contest__form-label {
+      padding-left: 22px;
+    }
+  }
+  .contest__review {
+    @include container;
+    @include outline;
+
+    margin-top: 54px;
+    padding-top: 34px;
+    padding-bottom: 10px;
+
+    order: 4;
+
+    .contest__form-panel {
+      @include inner-container;
+
+      textarea {
+        width: 100%;
+        min-width: 100%;
+        min-height: 193px;
+      }
+    }
+  }
+
+  .contest__submit {
+    @include container;
+
+    margin-top: 67px;
+    padding-bottom: 51px;
+
+    order: 5;
   }
 
   .contest__form-submit {
     float: left;
+
+    width: 300px;
   }
+
   .contest__hint {
     float: right;
+
+    padding-top: 21px;
+  }
+}
+
+@media #{$desktop-width} {
+  .contest {
+    @include container;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contest__form-panel {
+    width: 100%;
+  }
+
+  .contest__basic-info {
+    width: 435px;
+  }
+
+  .contest__device {
+    margin: 0;
+    margin-top: -72px;
+    width: 435px;
+
+    .contest__form-panel {
+      width: 285px;
+    }
+  }
+
+  .contest__contacts {
+    margin: 0;
+    order: 2;
+    padding-top: 32px;
+    padding-bottom: 14px;
+    @include clear-fix;
+
+    .contest__form-panel {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      width: 376px;
+      &:nth-child(2) {
+        float: left;
+        margin-left: 59px;
+      }
+      &:last-child {
+        float: right;
+        margin-right: 59px;
+      }
+    }
+  }
+
+  .contest__achievements {
+    margin-top: 54px;
+    padding-bottom: 21px;
+    order: 3;
+
+    .contest__form-panel {
+      width: 260px;
+      margin: 0;
+    }
+  }
+
+  //Chrome bug workaround =( see html.
+  .contest__achievements-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: 58px;
+  }
+
+  .contest__review {
+    order: 4;
+    padding-bottom: 4px;
+
+    .contest__form-panel {
+      width: 820px;
+
+      textarea {
+        min-height: 125px;
+      }
+    }
+  }
+
+  .contest__submit {
+    margin-top: 65px;
+    padding-bottom: 0;
+    order:5;
   }
 }

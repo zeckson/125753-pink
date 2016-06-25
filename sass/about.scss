@@ -2,7 +2,7 @@
   position: relative;
 
   color: $white;
-  background: {
+  background:  {
     position: center -3px;
 
     color: $grey;
@@ -106,12 +106,24 @@
   @include regular-text(14px, 2.2em);
 
   margin: 0;
-  padding: 31px 35px 25px;
+  padding: 45px 10px 25px;
 
   text-align: center;
 
   color: $grey;
   background: $white;
+
+  br {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p span {
+    display: none;
+  }
 }
 
 @media #{$tablet-width} {
@@ -183,8 +195,13 @@
   }
 
   .about__description {
-    padding: 72px;
-    @include regular-text(18px, 1.8em)
+    @include regular-text(18px, 1.7em);
+
+    padding: 91px 100px 72px;
+
+    p span {
+      display: inline;
+    }
   }
 }
 
@@ -234,6 +251,10 @@
   }
 
   .about__description {
-    padding: 72px 350px;
+    padding: 92px 250px 85px;
+
+    br {
+      display: block;
+    }
   }
 }
