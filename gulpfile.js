@@ -30,8 +30,7 @@ var style = function () {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.reload({stream: true}));
+    .pipe(gulp.dest("build/css"));
 };
 
 gulp.task("style", style);
@@ -87,7 +86,9 @@ gulp.task("serve", ["build"], function () {
     ui: false
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("sass/**/*.{scss,sass}", ["style"]).on("change", function () {
+    server.reload({stream: true});
+  });
   gulp.watch("*.html", ["copy-html"]).on("change", server.reload);
 });
 
