@@ -37,8 +37,8 @@ gulp.task("style", style);
 gulp.task("style:clean", ["clean"], style);
 
 var scripts = function () {
-  return gulp.src("js/**")
-    .pipe(gulp.dest("build"));
+  return gulp.src("js/*.*")
+    .pipe(gulp.dest("build/js"));
 };
 gulp.task("scripts", scripts);
 gulp.task("scripts:clean", ["clean"], scripts);
