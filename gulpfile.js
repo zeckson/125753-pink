@@ -30,8 +30,8 @@ var style = function () {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("build/css"))
-        .pipe(server.reload({stream: true}));
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.reload({stream: true}));
 };
 
 gulp.task("style", style);
@@ -53,19 +53,26 @@ gulp.task("symbols", ["clean"], function () {
   return gulp.src("img/icons/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({inlineSvg: true}))
-    .pipe(rename("icons.svg"))
+    .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("copy", ["clean"], function () {
+var copyHTML = function () {
+  return gulp.src("*.html")
+    .pipe(gulp.dest("build"));
+};
+gulp.task("copy-html", copyHTML);
+gulp.task("copy-html:clean", ["clean"], copyHTML);
+
+gulp.task("copy", ["copy-html:clean"], function () {
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
     "img/*.*",
-    "js/**",
-    "*.html"
+    "js/**"
   ], {base: "."})
     .pipe(gulp.dest("build"));
 });
+
 
 var del = require("del");
 gulp.task("clean", function () {
@@ -81,7 +88,7 @@ gulp.task("serve", ["build"], function () {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html", ["copy-html"]).on("change", server.reload);
 });
 
-gulp.task("build", ["clean", "copy", "style:clean", "images", "symbols"]);
+gulp.task("build", ["copy", "style:clean", "images", "symbols"]);
