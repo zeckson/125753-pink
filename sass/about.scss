@@ -242,6 +242,10 @@
     padding: 45px 0 121px;
   }
 
+  .about__download-section-wrapper {
+    width: 300px;
+  }
+
   .about__download-button {
     @include bold-text(21px, 1.5em);
   }
