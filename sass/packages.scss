@@ -18,15 +18,24 @@
 }
 
 .packages__table-wrapper {
-  overflow: scroll;
+  overflow: visible;
+  position: relative;
+  min-height: 284px;
 }
 
 .packages__table {
   width: 1064px;
-  th, thead, tbody {
+
+  position: absolute;
+  left: -463px;
+  th {
     border-spacing: 0;
 
     border: 1px solid #e5e5e5;
+  }
+
+  tbody {
+    background-color: $white;
   }
 
   th {
@@ -44,7 +53,7 @@
 }
 
 .packages__package-option {
-  padding: 14px 21px 9px;
+  padding: 14px 21px 7px;
 
   text-align: right;
 }
@@ -98,18 +107,41 @@
   @include regular-text;
 
   text-transform: uppercase;
+
+  display: block;
+  position: absolute;
+  left: 470px;
+
+  $padding: 23px;
+  $gap: 60;
+  &--first {
+    bottom: (2 * $gap) + $padding;
+  }
+  &--second {
+    bottom: (1 * $gap) + $padding;
+  }
+  &--third {
+    bottom: $padding;
+  }
 }
 
 .packages__toggle-list {
-  padding: 23px 0 50px;
+  padding: 28px 0 50px;
 }
 
 @media #{$tablet-width} {
   .packages {
     padding-top: 36px;
-    padding-bottom: 175px;
+    padding-bottom: 182px;
   }
+
+  .packages__table-wrapper {
+    min-height: 0;
+  }
+
   .packages__table {
+    position: static;
+    left: 0;
     width: 620px;
   }
 
@@ -125,10 +157,13 @@
 
     text-align: start;
     text-transform: capitalize;
+
+    display: table-cell;
+    position: static;
   }
 
   .packages__package-option {
-    padding: 5px;
+    padding: 4px;
 
     text-align: center;
   }
@@ -149,6 +184,7 @@
   .packages {
     margin-top: -3px;
     padding-top: 68px;
+    padding-bottom: 186px;
   }
   .packages__table {
     width: 940px;
@@ -159,8 +195,8 @@
   }
 
   .packages__table td {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 12px;
   }
 
   .packages__package-title {
