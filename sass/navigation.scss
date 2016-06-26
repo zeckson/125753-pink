@@ -27,10 +27,16 @@
 
   color: $white;
   background-color: $grey;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .navigation__button {
   float: right;
+
+  cursor: hand;
 
   padding: 22px 0 0;
 }
@@ -91,8 +97,10 @@
     }
   }
 
-  .navigation__menu--hidden {
-    display: none;
+  .navigation__menu {
+    position: absolute;
+    z-index: 1;
+    top: 109px;
   }
 
   .navigation__controls {
@@ -130,6 +138,7 @@
     text-transform: capitalize;
 
     background: none;
+    position: static;
     &--hidden {
       display: block;
     }

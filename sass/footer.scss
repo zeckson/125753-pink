@@ -17,7 +17,7 @@
 }
 
 .footer-index {
-  margin-top: -111px;
+  margin-top: -510px;
 }
 
 .footer-index .footer__end {
@@ -25,12 +25,28 @@
 }
 
 .footer__map {
-  @include center-block;
-
   overflow: hidden;
 
   height: 200px;
+  width: 100%;
   padding-top: 28px;
+  iframe {
+    height: 200px;
+    width: 100%;
+  }
+  background:  {
+    image: url("../img/bg-map-mobile@1x.png");
+    repeat: no-repeat;
+    size: 100% auto;
+  }
+
+  @media #{$tablet-width} {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+  }
+
+  @media #{$desktop-width} {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+  }
 }
 
 .footer__logo {
@@ -58,14 +74,13 @@
   border:  {
     width: medium;
 
-    color: $grey;
+    color: $light-grey;
 
     radius: 90%;
     style: solid;
   }
-  img {
-    width: 20px;
-    height: 20px;
+  svg {
+    fill: $red;
   }
 }
 
@@ -92,7 +107,7 @@
   }
 
   .footer-index {
-    margin-top: -119px;
+    margin-top: -436px;
   }
 
   .footer-index .footer__end {
@@ -103,8 +118,7 @@
     height: 378px;
     margin-top: -22px;
     padding-top: 0;
-    img {
-      width: 700px;
+    iframe {
       height: 848px;
     }
   }
@@ -136,17 +150,14 @@
   }
 
   .footer-index {
-    margin-top: -106px;
+    margin-top: -420px;
   }
 
   .footer__map {
-    @include container;
-
     height: 500px;
 
     img {
-      width: 1200px;
-      height: auto;
+      height: 500px;
     }
   }
 

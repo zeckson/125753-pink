@@ -103,7 +103,7 @@
   background-color: $white;
 
   &:checked {
-    background-image: url("../img/icon-yes.svg");
+    background-image: url("../img/symbols.svg#icon-yes");
 
     fill: $red;
   }
@@ -308,10 +308,10 @@
         repeat: no-repeat;
       }
       &:first-child {
-        background-image: url("../img/icon-phone.svg");
+        background-image: url("../img/symbols.svg#icon-phone");
       }
       &:last-child {
-        background-image: url("../img/icon-mail.svg");
+        background-image: url("../img/symbols.svg#icon-mail");
       }
     }
     .contest__form-label {
