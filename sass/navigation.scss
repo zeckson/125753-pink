@@ -36,9 +36,9 @@
 .navigation__button {
   float: right;
 
-  cursor: hand;
-
   padding: 22px 0 0;
+
+  cursor: hand;
 }
 
 .navigation__logo {
@@ -130,6 +130,8 @@
   .navigation__menu {
     @include regular-text(18px);
 
+    position: static;
+
     display: block;
 
     width: auto;
@@ -138,7 +140,6 @@
     text-transform: capitalize;
 
     background: none;
-    position: static;
     &--hidden {
       display: block;
     }
