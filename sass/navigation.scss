@@ -1,5 +1,6 @@
 .navigation {
   width: 100%;
+
   color: $white;
   background-color: $grey;
 
@@ -59,9 +60,9 @@
   @include bold-text;
 
   width: 100%;
+  padding-top: 4px;
 
   text-transform: uppercase;
-  padding-top: 4px;
 }
 
 .navigation__list {
@@ -147,6 +148,7 @@
 
   .navigation__controls {
     width: auto;
+
     flex-grow: 1;
   }
 
@@ -155,7 +157,6 @@
   }
 
   .navigation__menu {
-    padding-top: 0;
     @include regular-text(18px);
 
     position: static;
@@ -163,6 +164,7 @@
     display: block;
 
     width: auto;
+    padding-top: 0;
 
     text-transform: capitalize;
 
@@ -182,5 +184,4 @@
 
     border: none;
   }
-
 }

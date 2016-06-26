@@ -85,26 +85,35 @@
   }
   .reviews__wrapper {
     position: relative;
+
     padding-top: 126px;
 
     &:before {
-      content: "";
       position: absolute;
-      display: block;
-      width: 22px;
-      height: 42px;
       top: 40%;
       left: 0;
+
+      display: block;
+
+      width: 22px;
+      height: 42px;
+
+      content: "";
+
       background-image: url("../img/bg-review-arrow-left.svg");
     }
     &:after {
-      content: "";
       position: absolute;
-      display: block;
-      width: 22px;
-      height: 42px;
       top: 40%;
       right: 0;
+
+      display: block;
+
+      width: 22px;
+      height: 42px;
+
+      content: "";
+
       background-image: url("../img/bg-review-arrow-right.svg");
     }
   }
