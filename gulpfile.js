@@ -12,7 +12,7 @@ var rename = require("gulp-rename");
 
 
 var style = function () {
-  return gulp.src("sass/style.scss")
+  gulp.src("sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
