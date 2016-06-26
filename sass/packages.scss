@@ -30,11 +30,7 @@
   left: -463px;
 
   width: 1064px;
-  th {
-    border-spacing: 0;
-
-    border: 1px solid #e5e5e5;
-  }
+  border: none;
 
   tbody {
     background-color: $white;
@@ -86,6 +82,10 @@
   background-repeat: no-repeat;
 
   font-weight: 100;
+}
+
+.packages__package-empty {
+  background-color: $light-grey;
 }
 
 .packages__package-title {
