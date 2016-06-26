@@ -10,19 +10,26 @@
 <body>
 
 <header class="header">
-  <nav class="navigation">
-    <div class="navigation__wrapper">
+  <nav class="navigation  navigation--closed">
+    <div class="navigation__wrapper  navigation__menu--closed">
+      <div class="navigation__controls">
+        <a class="navigation__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" width="74" height="24" alt="Logo">
+          </picture>
+        </a>
+        <a id="navigation-toggle" class="navigation__button" href="#">
+          <svg width="50" height="24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-menu-burger"></use>
+          </svg>
+          <svg width="24" height="24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-menu-cross"></use>
+          </svg>
+        </a>
+      </div>
       <div class="navigation__menu  navigation__menu--hidden">
-        <div class="navigation__controls">
-          <a class="navigation__logo" href="#">
-            <img src="img/logo-pink-white-mobile.svg" alt="Logo" width="74" height="23">
-          </a>
-          <a id="navigation-close" href="#" class="navigation__button  navigation__button--close">
-            <svg width="23" height="23">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-menu-cross"></use>
-            </svg>
-          </a>
-        </div>
         <ul class="navigation__list">
           <li class="navigation__item"><a href="index.html">Главная</a></li>
           <li class="navigation__item"><a href="photo.html">Фотографии</a></li>
@@ -30,22 +37,6 @@
           <li class="navigation__item"><a href="http://htmlacademy.ru">HTML academy</a></li>
         </ul>
       </div>
-      <section class="navigation__header">
-        <div class="navigation__header-wrapper">
-          <a class="navigation__logo" href="#">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
-              <source media="(min-width: 700px)" srcset="img/logo-pink-white-tablet.svg">
-              <img src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Logo">
-            </picture>
-          </a>
-          <a id="navigation-toggle" class="navigation__button" href="#">
-            <svg width="50" height="24">
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-menu-burger"></use>
-            </svg>
-          </a>
-        </div>
-      </section>
     </div>
   </nav>
 
