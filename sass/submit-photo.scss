@@ -25,13 +25,12 @@
 
   text-align: center;
 
-  border-bottom: thin solid $grey ;
+  border-bottom: thin solid $grey;
 }
 
 .submit-photo__control {
   margin-right: 15px;
   padding-left: 10px;
-
 
   &--active {
     fill: $red;
@@ -67,14 +66,15 @@
   text-decoration: none;
 
   color: $red;
-  border:  {
+  border: {
     width: medium;
 
     color: $red;
 
     radius: 45px;
     style: solid;
-  };
+  }
+;
   background-color: transparent;
 
   &:hover {
@@ -136,7 +136,8 @@
     margin-bottom: 45px;
     padding: 0;
 
-    img {
+    svg {
+      fill: $red;
       width: 25px;
       height: 25px;
       margin-right: 25px;
@@ -170,11 +171,12 @@
 @media #{$desktop-width} {
   .submit-photo {
     @include container;
+    padding-bottom: 41px;
   }
 
   .submit-photo__form {
-    width: 800px;
-    padding: 37px 10px 14px;
+    width: 820px;
+    padding: 37px 0 14px 20px;
   }
 
   .submit-photo__controls {
@@ -183,8 +185,8 @@
 
   .submit-photo__control {
     margin-bottom: 22px;
-    padding-left: 10px;
-    img {
+    padding-left: 0;
+    svg {
       width: 48px;
       height: 48px;
     }
@@ -192,14 +194,22 @@
 
   .submit-photo__actions {
     width: 410px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     margin: 0;
+    margin-top: 130px;
     padding: 0;
-    padding-top: 130px;
   }
 
   .submit-photo__button {
-    display: inline-block;
+    display: block;
+    margin: 0;
 
-    width: 200px;
+    width: 182px;
+
+    &:first-child {
+      margin: 0;
+    }
   }
 }
