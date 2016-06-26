@@ -58,14 +58,13 @@
   border:  {
     width: medium;
 
-    color: $grey;
+    color: $light-grey;
 
     radius: 90%;
     style: solid;
   }
-  img {
-    width: 20px;
-    height: 20px;
+  svg {
+    fill: $red;
   }
 }
 
