@@ -215,7 +215,12 @@
   border: 1px solid $grey;
   background-color: $white;
 }
+
 @media #{$tablet-width} {
+  .contest {
+    @include container;
+    display: flex;
+  }
 
   .contest__basic-info {
     padding-bottom: 0;
@@ -257,9 +262,7 @@
   }
 
   .contest__device {
-    @include container;
     @include outline;
-
     padding-top: 33px;
     padding-bottom: 27px;
 
@@ -303,16 +306,10 @@
       background: {
         color: $grey;
 
-        position-x: 96%;
-        position-y: 50%;
+        position: right center;
         repeat: no-repeat;
       }
-      &:first-child {
-        background-image: url("../img/symbols.svg#icon-phone");
-      }
-      &:last-child {
-        background-image: url("../img/symbols.svg#icon-mail");
-      }
+      background-image: url("../img/bg-input-phone.svg");
     }
     .contest__form-label {
       margin-top: 10px;
@@ -386,7 +383,6 @@
 
 @media #{$desktop-width} {
   .contest {
-    @include container;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -468,6 +464,6 @@
   .contest__submit {
     margin-top: 65px;
     padding-bottom: 0;
-    order:5;
+    order: 5;
   }
 }
