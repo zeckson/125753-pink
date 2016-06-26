@@ -1,5 +1,5 @@
 .packages {
-  padding: 65px 0 100px;
+  padding: 65px 0 500px;
 
   transform: skew(0deg, -4.4deg);
   transform-origin: left;
@@ -132,7 +132,6 @@
 @media #{$tablet-width} {
   .packages {
     padding-top: 36px;
-    padding-bottom: 182px;
   }
 
   .packages__table-wrapper {
@@ -184,7 +183,6 @@
   .packages {
     margin-top: -3px;
     padding-top: 68px;
-    padding-bottom: 186px;
   }
   .packages__table {
     width: 940px;
