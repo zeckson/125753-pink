@@ -1,26 +1,38 @@
 .posts {
+  padding-top: 23px;
+  padding-bottom: 1px;
+
+  color: $grey;
+  background-color: $white;
+}
+
+.posts__wrapper {
   @include container;
+  display: flex;
+  flex-direction: column;
 }
 
 .post {
   position: relative;
 
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   background-color: $light-grey;
+
 }
 
 .post__wrapper {
+  box-sizing: content-box;
+  min-height: 109px;
   padding-left: 18px;
+  padding-top: 8px;
 }
 
 .post__photo {
   overflow: hidden;
 
   margin: 0 auto;
-  padding-bottom: 8px;
-
   text-align: center;
 }
 
@@ -86,40 +98,40 @@
   text-transform: uppercase;
 
   color: $red;
+  fill: $red;
   span {
+    vertical-align: top;
     padding-left: 19px;
   }
 }
 
 @media #{$tablet-width} {
   .posts {
-    display: flex;
+    padding-top: 62px;
+  }
+  .posts__wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-top: 31px;
   }
 
   .post {
     width: 300px;
-    // Как это сделать без задания высоты?
-    min-height: 455px;
     margin-bottom: 20px;
   }
 
   .post:nth-child(1) {
     width: 100%;
-    min-height: 573px;
     margin-bottom: 50px;
 
     .post__like-panel {
       position: absolute;
-      top: -5px;
+      top: 24px;
       right: 29px;
 
       width: 120px;
-      img {
+      svg {
         float: right;
       }
       span {
@@ -129,14 +141,20 @@
 
     .post__wrapper {
       position: relative;
+      min-height: 104px;
+      padding-bottom: 0;
     }
   }
+
   .post__wrapper {
+    display: flex;
+    flex-direction: column;
     padding-left: 27px;
+    padding-top: 13px;
+    padding-bottom: 28px;
   }
 
   .post__photo {
-    padding-bottom: 13px;
     img {
       width: 300px;
     }
@@ -154,12 +172,13 @@
   }
 
   .post__like-panel {
-    position: absolute;
-    bottom: 3px;
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
 
     width: 241px;
 
-    img {
+    svg {
       float: right;
     }
     span {
@@ -170,16 +189,15 @@
 
 @media #{$desktop-width} {
   .posts {
-    padding-top: 40px;
+    padding-top: 57px;
   }
 
   .post {
-    min-height: 554px;
     margin-bottom: 55px;
   }
 
-  .post:nth-child(1) {
-    min-height: 548px;
+  .post:nth-child(1) .post__wrapper {
+    min-height: 78px;
   }
 
   .post__photo--wide {
