@@ -66,7 +66,8 @@ gulp.task("symbols", ["clean"], function () {
 
 var copyHTML = function () {
   return gulp.src("*.html")
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
 };
 gulp.task("copy-html", copyHTML);
 gulp.task("copy-html:clean", ["clean"], copyHTML);
@@ -93,7 +94,7 @@ gulp.task("serve", ["assemble"], function () {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html", ["copy-html"]).on("change", server.reload);
+  gulp.watch("*.html", ["copy-html"]);
   gulp.watch("js/*.js", ["scripts"]).on("change", server.reload);
 });
 
