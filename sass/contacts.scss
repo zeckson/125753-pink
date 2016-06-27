@@ -15,6 +15,7 @@
 }
 
 .contacts__type {
+  display: block;
   @include bold-text(18px, 1.4em);
 
   margin: 0;
