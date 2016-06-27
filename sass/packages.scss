@@ -10,9 +10,12 @@
 
 .packages__wrapper {
   @include center-block;
-  width: 320px;
-  overflow: hidden;
+
   position: relative;
+
+  overflow: hidden;
+
+  width: 320px;
 
   transform: skew(0deg, 4.4deg);
   transform-origin: left;
@@ -20,6 +23,7 @@
 
 .packages__table-wrapper {
   @include container;
+
   position: relative;
 
   overflow: visible;

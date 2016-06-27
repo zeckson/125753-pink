@@ -8,6 +8,7 @@
 
 .posts__wrapper {
   @include container;
+
   display: flex;
   flex-direction: column;
 }
@@ -19,20 +20,20 @@
   margin-bottom: 19px;
 
   background-color: $light-grey;
-
 }
 
 .post__wrapper {
   box-sizing: content-box;
   min-height: 109px;
-  padding-left: 18px;
   padding-top: 8px;
+  padding-left: 18px;
 }
 
 .post__photo {
   overflow: hidden;
 
   margin: 0 auto;
+
   text-align: center;
 }
 
@@ -98,10 +99,12 @@
   text-transform: uppercase;
 
   color: $red;
+
   fill: $red;
   span {
-    vertical-align: top;
     padding-left: 19px;
+
+    vertical-align: top;
   }
 }
 
@@ -113,7 +116,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
   }
 
   .post {
@@ -141,6 +143,7 @@
 
     .post__wrapper {
       position: relative;
+
       min-height: 104px;
       padding-bottom: 0;
     }
@@ -149,9 +152,10 @@
   .post__wrapper {
     display: flex;
     flex-direction: column;
-    padding-left: 27px;
+
     padding-top: 13px;
     padding-bottom: 28px;
+    padding-left: 27px;
   }
 
   .post__photo {
@@ -172,11 +176,10 @@
   }
 
   .post__like-panel {
+    width: 241px;
     margin: 0;
     margin-top: auto;
     padding: 0;
-
-    width: 241px;
 
     svg {
       float: right;

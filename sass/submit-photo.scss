@@ -1,6 +1,7 @@
 .submit-photo__wrapper {
-  background-color: $light-grey;
   padding: 20px 0 35px;
+
+  background-color: $light-grey;
 }
 
 .submit-photo__form {
@@ -65,7 +66,7 @@
   text-decoration: none;
 
   color: $red;
-  border: {
+  border:  {
     width: medium;
 
     color: $red;
@@ -73,8 +74,8 @@
     radius: 45px;
     style: solid;
   }
-;
   background-color: transparent;
+  ;
 
   &:hover {
     background-color: transparent;
@@ -136,12 +137,13 @@
     padding: 0;
 
     svg {
-      fill: $red;
       width: 25px;
       height: 25px;
       margin-right: 25px;
 
       vertical-align: middle;
+
+      fill: $red;
     }
   }
 
@@ -174,6 +176,7 @@
 
   .submit-photo__wrapper {
     @include container;
+
     padding-bottom: 41px;
   }
 
@@ -196,20 +199,22 @@
   }
 
   .submit-photo__actions {
-    width: 410px;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
+
+    width: 410px;
     margin: 0;
     margin-top: 130px;
     padding: 0;
+
+    flex-flow: row nowrap;
   }
 
   .submit-photo__button {
     display: block;
-    margin: 0;
 
     width: 182px;
+    margin: 0;
 
     &:first-child {
       margin: 0;
