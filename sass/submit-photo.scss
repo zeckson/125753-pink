@@ -1,7 +1,6 @@
-.submit-photo {
-  padding: 20px 0 35px;
-
+.submit-photo__wrapper {
   background-color: $light-grey;
+  padding: 20px 0 35px;
 }
 
 .submit-photo__form {
@@ -95,7 +94,7 @@
 }
 
 @media #{$tablet-width} {
-  .submit-photo {
+  .submit-photo__wrapper {
     padding: 20px 0;
   }
 
@@ -170,6 +169,10 @@
 
 @media #{$desktop-width} {
   .submit-photo {
+    padding-bottom: 28px;
+  }
+
+  .submit-photo__wrapper {
     @include container;
     padding-bottom: 41px;
   }

@@ -67,7 +67,6 @@
   fill: $green;
 }
 
-
 .packages__package-hit {
   @include bold-text(14px);
 
@@ -194,7 +193,7 @@ $gap: 60;
 @media #{$desktop-width} {
   .packages {
     margin-top: -3px;
-    padding-top: 68px;
+    padding-top: 56px;
   }
   .packages__table {
     width: 940px;

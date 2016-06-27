@@ -31,7 +31,7 @@
   width: 100%;
   height: 200px;
 
-  background:  {
+  background: {
     image: url("../img/bg-map-mobile@1x.png");
     repeat: no-repeat;
     size: 100% auto;
@@ -65,29 +65,31 @@
   }
 }
 
-.footer__logo {
-  padding-top: 40px;
+.footer__end {
+  @include container;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: space-around;
+  min-height: 270px;
+}
 
+.footer__logo {
+  margin-top: 20px;
   text-align: center;
-  img {
-    display: inline;
-  }
 }
 
 .footer__social {
   display: flex;
-  justify-content: center;
-
-  padding: 36px 0 37px 10px;
-
-  text-align: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 178px;
+  margin: 0 auto;
 }
 
 .footer__social-link {
-  margin-right: 11px;
-  padding: 7px 12px;
-
-  border:  {
+  padding: 8px 14px;
+  border: {
     width: medium;
 
     color: $light-grey;
@@ -104,17 +106,16 @@
   @include regular-text;
 
   text-align: center;
-}
-
-.footer__developer-logo {
-  margin-left: 10px;
-  img {
-    vertical-align: middle;
+  span {
+    vertical-align: super;
   }
 }
 
-.footer__end {
-  @include container;
+.footer__developer-logo {
+  margin-left: 8px;
+  img {
+    vertical-align: middle;
+  }
 }
 
 @media #{$tablet-width} {
@@ -142,39 +143,29 @@
   }
 
   .footer__end {
-    display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
 
-    padding: 36px 0;
+    padding-top: 14px;
+    min-height: 112px;
   }
 
-  .footer__social {
-    padding: 0;
-  }
-
-  .footer__logo {
-    padding: 0;
-  }
 }
 
 @media #{$desktop-width} {
-  .footer {
-    padding-top: 19px;
-    h2 {
-      @include light-text(50px);
-    }
+  .footer h2 {
+    @include light-text(50px);
   }
 
   .footer-index {
-    margin-top: -420px;
+    margin-top: -406px;
+    padding-top: 20px;
   }
 
   .footer__map {
     height: 510px;
     margin-top: -51px;
-    margin-bottom: -10px;
 
     &:after {
       border: 641px solid transparent;
@@ -186,12 +177,9 @@
     @include regular-text(18px);
   }
 
-  .footer__developer-logo {
-    margin-left: 4px;
-  }
-
   .footer__end {
-    padding: 79px 0;
+    padding-top: 50px;
+    min-height: 148px;
   }
 }
 

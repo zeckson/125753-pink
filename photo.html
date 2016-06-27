@@ -72,7 +72,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 215</span>
+            </svg>
+            <span>нравится: 215</span>
           </div>
         </div>
       </article>
@@ -96,7 +97,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 356</span>
+            </svg>
+            <span>нравится: 356</span>
           </div>
         </div>
       </article>
@@ -120,7 +122,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 666</span>
+            </svg>
+            <span>нравится: 666</span>
           </div>
         </div>
       </article>
@@ -144,7 +147,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 215</span>
+            </svg>
+            <span>нравится: 215</span>
           </div>
         </div>
       </article>
@@ -168,7 +172,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 4</span>
+            </svg>
+            <span>нравится: 4</span>
           </div>
         </div>
       </article>
@@ -192,7 +197,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 150</span>
+            </svg>
+            <span>нравится: 150</span>
           </div>
         </div>
       </article>
@@ -216,7 +222,8 @@
           <div class="post__like-panel">
             <svg width="12" height="12">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-heart"></use>
-            </svg><span>нравится: 2560</span>
+            </svg>
+            <span>нравится: 2560</span>
           </div>
         </div>
       </article>
@@ -227,45 +234,47 @@
     <p>Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
   </section>
   <section class="submit-photo">
-    <form class="submit-photo__form" action="http://dev.null">
-      <div class="submit-photo__preview">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x,
+    <div class="submit-photo__wrapper">
+      <form class="submit-photo__form" action="http://dev.null">
+        <div class="submit-photo__preview">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg 1x,
                                                               img/photo-7-desktop@2x.jpg 2x">
-          <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x,
+            <source media="(min-width: 700px)" srcset="img/photo-7-tablet@1x.jpg 1x,
                                                              img/photo-7-tablet@2x.jpg 2x">
-          <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x"
-               alt="User photo" height="374" width="280">
-        </picture>
-      </div>
-      <div class="submit-photo__controls">
-        <label for="crop" class="submit-photo__control  submit-photo__control--active">
-          <svg width="48" height="48">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-crop"></use>
-          </svg>
-          <input id="crop" class="submit-photo__slider  submit-photo__slider--active"
-                 type="range" name="control-value" min="0" max="100" step="5" value="70">
-        </label>
-        <label for="fill" class="submit-photo__control">
-          <svg width="48" height="48">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-fill"></use>
-          </svg>
-          <input id="fill" class="submit-photo__slider" type="range" name="control-value"
-                 min="0" max="100" step="5" value="70">
-        </label>
-        <label for="contrast" class="submit-photo__control">
-          <svg width="48" height="48">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-contrast"></use>
-          </svg>
-          <input id="contrast" class="submit-photo__slider" type="range"
-                 name="control-value" min="0" max="100" step="5" value="70">
-        </label>
-      </div>
-      <div class="submit-photo__actions">
-        <button class="submit-photo__button" type="submit">Запостить</button>
-        <button class="submit-photo__button" type="reset" disabled>Отмена</button>
-      </div>
-    </form>
+            <img src="img/photo-7-mobile@1x.jpg" srcset="img/photo-7-mobile@2x.jpg 2x"
+                 alt="User photo" height="374" width="280">
+          </picture>
+        </div>
+        <div class="submit-photo__controls">
+          <label for="crop" class="submit-photo__control  submit-photo__control--active">
+            <svg width="48" height="48">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-crop"></use>
+            </svg>
+            <input id="crop" class="submit-photo__slider  submit-photo__slider--active"
+                   type="range" name="control-value" min="0" max="100" step="5" value="70">
+          </label>
+          <label for="fill" class="submit-photo__control">
+            <svg width="48" height="48">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-fill"></use>
+            </svg>
+            <input id="fill" class="submit-photo__slider" type="range" name="control-value"
+                   min="0" max="100" step="5" value="70">
+          </label>
+          <label for="contrast" class="submit-photo__control">
+            <svg width="48" height="48">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-editor-contrast"></use>
+            </svg>
+            <input id="contrast" class="submit-photo__slider" type="range"
+                   name="control-value" min="0" max="100" step="5" value="70">
+          </label>
+        </div>
+        <div class="submit-photo__actions">
+          <button class="submit-photo__button" type="submit">Запостить</button>
+          <button class="submit-photo__button" type="reset" disabled>Отмена</button>
+        </div>
+      </form>
+    </div>
   </section>
 
 </main>
@@ -279,18 +288,18 @@
       </picture>
     </div>
     <div class="footer__social">
-      <a href="#" class="footer__social-link footer__social-link--twi">
-        <svg width="32" height="32">
+      <a href="http://twitter.com/pink" class="footer__social-link footer__social-link--twi">
+        <svg width="16" height="16">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-twitter"></use>
         </svg>
       </a>
-      <a href="#" class="footer__social-link footer__social-link--fb">
-        <svg width="32" height="32">
+      <a href="http://fb.com/pink" class="footer__social-link footer__social-link--fb">
+        <svg width="16" height="16">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-facebook"></use>
         </svg>
       </a>
-      <a href="#" class="footer__social-link footer__social-link--yt">
-        <svg width="32" height="32">
+      <a href="http://youtube.com/pink" class="footer__social-link footer__social-link--yt">
+        <svg width="16" height="16">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/symbols.svg#icon-youtube"></use>
         </svg>
       </a>
@@ -298,7 +307,7 @@
     <div class="footer__developer">
       <span>Разработано</span>
       <a href="https://htmlacademy.ru" class="footer__developer-logo">
-        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="32" height="34">
+        <img src="img/logo-htmlacademy.svg" alt="HTML Academy" width="28" height="36">
       </a>
     </div>
   </div>
