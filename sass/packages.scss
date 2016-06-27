@@ -9,8 +9,9 @@
 }
 
 .packages__wrapper {
-  @include container;
-
+  @include center-block;
+  width: 320px;
+  overflow: hidden;
   position: relative;
 
   transform: skew(0deg, 4.4deg);
@@ -18,6 +19,7 @@
 }
 
 .packages__table-wrapper {
+  @include container;
   position: relative;
 
   overflow: visible;
@@ -136,6 +138,10 @@ $gap: 60;
 @media #{$tablet-width} {
   .packages {
     padding-top: 36px;
+  }
+
+  .packages__wrapper {
+    width: auto;
   }
 
   .packages__table-wrapper {
