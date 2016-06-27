@@ -133,3 +133,9 @@
     quotes: none;
   }
 }
+
+@media (min-width: 1800px) {
+  .reviews__wrapper {
+    padding-bottom: 30px;
+  }
+}
