@@ -275,7 +275,7 @@
 
       justify-content: flex-start;
 
-      padding-bottom: 36px;
+      padding-bottom: 35px;
     }
 
     .contest__form-label {
@@ -300,20 +300,30 @@
 
       padding-top: 15px;
       padding-bottom: 15px;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 62px;
+        width: 62px;
+        right: 0;
+        background: {
+          repeat: no-repeat;
+          position: 20px;
+          image: url("../img/bg-input-phone.svg");
+          color: $border-grey;
+        }
+      }
+
+      &:last-child:after {
+        background-image: url("../img/bg-input-mail.svg");
+      }
     }
+
     .contest__form-input {
       width: 100%;
       margin: 0;
-
-      background: {
-        position: right center;
-
-        //TODO: fix image to the rigth
-        //color: $grey;
-
-        repeat: no-repeat;
-      }
-      background-image: url("../img/bg-input-phone.svg");
     }
     .contest__form-label {
       margin-top: 10px;
