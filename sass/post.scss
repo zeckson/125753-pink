@@ -127,25 +127,25 @@
     width: 100%;
     margin-bottom: 50px;
 
-    .post__like-panel {
-      position: absolute;
-      top: 24px;
-      right: 29px;
-
-      width: 120px;
-      svg {
-        float: right;
-      }
-      span {
-        padding-right: 18px;
-      }
-    }
-
     .post__wrapper {
       position: relative;
 
       min-height: 104px;
       padding-bottom: 0;
+    }
+  }
+
+  .post--wide .post__like-panel {
+    position: absolute;
+    top: 24px;
+    right: 29px;
+
+    width: 120px;
+    svg {
+      float: right;
+    }
+    span {
+      padding-right: 18px;
     }
   }
 
@@ -199,20 +199,18 @@
     margin-bottom: 55px;
   }
 
-  .post--wide {
-    .post__wrapper {
-      min-height: 78px;
-    }
+  .post--wide .post__wrapper {
+    min-height: 78px;
+  }
 
-    .post__photo {
-      height: 457px;
-      img {
-        top: -54px;
-        left: -130px;
+  .post--wide .post__photo {
+    height: 457px;
+    img {
+      top: -54px;
+      left: -130px;
 
-        width: 1200px;
-        height: 506px;
-      }
+      width: 1200px;
+      height: 506px;
     }
   }
 }
