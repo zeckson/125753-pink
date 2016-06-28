@@ -255,8 +255,8 @@
     padding: 3px 26px;
 
     br {
-      display: none;
-      :after {
+      content: "";
+      &:after {
         content: " ";
       }
     }
