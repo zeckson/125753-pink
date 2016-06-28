@@ -35,6 +35,19 @@
   }
 }
 
+.navigation--no-js {
+  position: static;
+  background-color: $grey;
+
+  .navigation__button{
+    display: none;
+  }
+
+  .navigation__menu {
+    display: block;
+  }
+}
+
 .navigation__controls {
   @include clear-fix;
   @include container;
@@ -104,6 +117,10 @@
   .navigation {
     position: absolute;
     z-index: 1;
+  }
+
+  .navigation--no-js {
+    position: static;
   }
 
   .navigation__controls {

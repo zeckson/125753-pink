@@ -2,6 +2,8 @@
   "use strict";
 
   var navigation = document.querySelector("nav.navigation");
+
+  navigation.classList.remove("navigation--no-js");
   var hideMenuClassName = "navigation--closed";
   var closed = navigation.classList.contains(hideMenuClassName);
 
