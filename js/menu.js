@@ -1,25 +1,19 @@
 (function () {
   "use strict";
 
-  var menu = document.querySelector(".navigation__menu");
-  var hidden = menu.classList.contains("navigation__menu--hidden");
+  var navigation = document.querySelector("nav.navigation");
 
-  function toggler() {
-    if (hidden) {
-      menu.classList.add("navigation__menu--hidden");
-    } else {
-      menu.classList.remove("navigation__menu--hidden");
-    }
-  }
+  navigation.classList.remove("navigation--no-js");
+  var hideMenuClassName = "navigation--closed";
+  var closed = navigation.classList.contains(hideMenuClassName);
 
   document.getElementById("navigation-toggle").onclick = function () {
-    hidden = !hidden;
-    toggler();
+    closed = !closed;
+    if (closed) {
+      navigation.classList.add(hideMenuClassName);
+    } else {
+      navigation.classList.remove(hideMenuClassName);
+    }
     return false;
   };
-  document.getElementById("navigation-close").onclick = function () {
-    hidden = true;
-    toggler();
-    return false;
-  }
 })();

@@ -84,12 +84,43 @@
     background-position-y: 70px;
   }
   .reviews__wrapper {
-    width: 678px;
+    position: relative;
+
     padding-top: 126px;
 
-    quotes: none;
+    &:before {
+      position: absolute;
+      top: 40%;
+      left: 0;
 
-    background-color: rgba($white, 0.9);
+      display: block;
+
+      width: 22px;
+      height: 42px;
+
+      content: "";
+
+      background-image: url("../img/bg-review-arrow-left.svg");
+    }
+    &:after {
+      position: absolute;
+      top: 40%;
+      right: 0;
+
+      display: block;
+
+      width: 22px;
+      height: 42px;
+
+      content: "";
+
+      background-image: url("../img/bg-review-arrow-right.svg");
+    }
+  }
+
+  .reviews__list {
+    width: 678px;
+    margin: 0 auto;
   }
 
   .reviews__item-author {
@@ -97,5 +128,14 @@
   }
   .reviews__item-author-description {
     @include regular-text(18px, 0.8em);
+  }
+  .reviews__item-text {
+    quotes: none;
+  }
+}
+
+@media (min-width: 1800px) {
+  .reviews__wrapper {
+    padding-bottom: 30px;
   }
 }

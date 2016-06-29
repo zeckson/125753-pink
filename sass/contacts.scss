@@ -2,6 +2,7 @@
   @include container;
 
   padding-top: 14px;
+  padding-bottom: 16px;
 
   text-align: center;
 
@@ -15,6 +16,8 @@
 
 .contacts__type {
   @include bold-text(18px, 1.4em);
+
+  display: block;
 
   margin: 0;
 }

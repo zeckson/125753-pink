@@ -9,30 +9,35 @@
 }
 
 .packages__wrapper {
-  @include container;
+  @include center-block;
 
   position: relative;
+
+  overflow: hidden;
+
+  width: 320px;
 
   transform: skew(0deg, 4.4deg);
   transform-origin: left;
 }
 
 .packages__table-wrapper {
-  overflow: visible;
+  @include container;
+
   position: relative;
+
+  overflow: visible;
+
   min-height: 284px;
 }
 
 .packages__table {
-  width: 1064px;
-
   position: absolute;
   left: -463px;
-  th {
-    border-spacing: 0;
 
-    border: 1px solid #e5e5e5;
-  }
+  width: 1064px;
+
+  border: none;
 
   tbody {
     background-color: $white;
@@ -66,7 +71,6 @@
   fill: $green;
 }
 
-
 .packages__package-hit {
   @include bold-text(14px);
 
@@ -86,6 +90,10 @@
   font-weight: 100;
 }
 
+.packages__package-empty {
+  background-color: $light-grey;
+}
+
 .packages__package-title {
   @include bold-text;
 
@@ -103,17 +111,18 @@
   text-align: center;
 }
 
+$padding: 23px;
+$gap: 60;
 .packages__package-option-name {
   @include regular-text;
 
-  text-transform: uppercase;
-
-  display: block;
   position: absolute;
   left: 470px;
 
-  $padding: 23px;
-  $gap: 60;
+  display: block;
+
+  text-transform: uppercase;
+
   &--first {
     bottom: (2 * $gap) + $padding;
   }
@@ -134,6 +143,10 @@
     padding-top: 36px;
   }
 
+  .packages__wrapper {
+    width: auto;
+  }
+
   .packages__table-wrapper {
     min-height: 0;
   }
@@ -141,6 +154,7 @@
   .packages__table {
     position: static;
     left: 0;
+
     width: 620px;
   }
 
@@ -152,13 +166,14 @@
   }
 
   .packages__package-option-name {
+    position: static;
+
+    display: table-cell;
+
     padding-left: 14px;
 
     text-align: start;
     text-transform: capitalize;
-
-    display: table-cell;
-    position: static;
   }
 
   .packages__package-option {
@@ -182,7 +197,7 @@
 @media #{$desktop-width} {
   .packages {
     margin-top: -3px;
-    padding-top: 68px;
+    padding-top: 56px;
   }
   .packages__table {
     width: 940px;

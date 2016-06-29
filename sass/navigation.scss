@@ -1,51 +1,82 @@
-.navigation__controls {
-  @include clear-fix;
-  @include container;
-}
-
-.navigation__header {
-  @include clear-fix;
-
-  position: absolute;
-  z-index: 1;
-
+.navigation {
   width: 100%;
-
-  background-color: rgba($black, 0.5);
-}
-
-.navigation__header-wrapper {
-  @include container;
-}
-
-.navigation__menu {
-  @include bold-text;
-
-  width: 100%;
-
-  text-transform: uppercase;
 
   color: $white;
   background-color: $grey;
 
-  &--hidden {
+  .navigation__button svg:first-child {
     display: none;
+  }
+
+  .navigation__button svg:last-child {
+    display: block;
+  }
+
+  .navigation__menu {
+    display: block;
+  }
+
+  &--closed {
+    position: absolute;
+    z-index: 1;
+
+    background-color: rgba($black, 0.5);
+
+    .navigation__button svg:first-child {
+      display: block;
+    }
+    .navigation__button svg:last-child {
+      display: none;
+    }
+
+    .navigation__menu {
+      display: none;
+    }
   }
 }
 
-.navigation__button {
-  float: right;
+.navigation--no-js {
+  position: static;
 
-  cursor: hand;
+  background-color: $grey;
 
-  padding: 22px 0 0;
+  .navigation__button {
+    display: none;
+  }
+
+  .navigation__menu {
+    display: block;
+  }
+}
+
+.navigation__controls {
+  @include clear-fix;
+  @include container;
+
+  padding-top: 20px;
+  padding-bottom: 16px;
 }
 
 .navigation__logo {
   display: inline-block;
   float: left;
 
-  padding: 22px 0 15px;
+  padding: 1px 0;
+}
+
+.navigation__button {
+  float: right;
+
+  cursor: pointer;
+}
+
+.navigation__menu {
+  @include bold-text;
+
+  width: 100%;
+  padding-top: 4px;
+
+  text-transform: uppercase;
 }
 
 .navigation__list {
@@ -61,50 +92,52 @@
 
   border-top: solid #485461 thin;
   border-bottom: solid black thin;
+}
 
-  a {
-    display: block;
+.navigation__item a {
+  display: block;
 
-    padding: 15px 0;
+  padding: 15px 0;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    color: $white;
+  color: $white;
 
-    &:hover {
-      text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
 
-      color: $red;
-    }
+    color: $red;
+  }
 
-    &:active {
-      color: rgba($white, 0.3);
-    }
+  &:active {
+    color: rgba($white, 0.3);
   }
 }
 
 @media #{$tablet-width} {
-  .navigation__header {
-    padding: 22px 0;
-  }
-
-  .navigation__logo {
-    padding: 2px 0 12px;
-
-    img {
-      width: 148px;
-      height: 46px;
-    }
-  }
-
-  .navigation__menu {
+  .navigation {
     position: absolute;
     z-index: 1;
-    top: 109px;
+  }
+
+  .navigation--no-js {
+    position: static;
   }
 
   .navigation__controls {
-    display: none;
+    padding-bottom: 32px;
+  }
+  .navigation__logo {
+    padding: 2px 0;
+
+    img {
+      width: 148px;
+      height: 48px;
+    }
+  }
+
+  .navigation__button {
+    margin-top: 24px;
   }
 }
 
@@ -116,32 +149,44 @@
     width: 100%;
 
     background-color: rgba($black, 0.5);
+
+    &--closed .navigation__menu {
+      display: block;
+    }
   }
 
   .navigation__wrapper {
     @include container;
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+  }
+
+  .navigation__controls {
+    width: auto;
+
+    flex-grow: 1;
+  }
+
+  .navigation__button {
+    display: none;
   }
 
   .navigation__menu {
     @include regular-text(18px);
 
+    position: static;
+
     display: block;
 
     width: auto;
-    min-height: 0;
+    padding-top: 0;
 
     text-transform: capitalize;
 
     background: none;
-    position: static;
-    &--hidden {
-      display: block;
-    }
   }
 
   .navigation__list {
@@ -155,29 +200,6 @@
 
     margin-left: 80px;
 
-    border: 0;
     border: none;
-  }
-
-  .navigation__header {
-    position: static;
-
-    display: block;
-
-    width: auto;
-
-    background: none;
-
-    flex-grow: 1;
-  }
-
-  .navigation__header-wrapper {
-    @include clear-fix;
-
-    width: auto;
-  }
-
-  .navigation__button {
-    display: none;
   }
 }
