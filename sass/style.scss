@@ -53,11 +53,11 @@ input[type=radio], input[type=checkbox] {
 
 input[type=radio] + label:before {
   border-radius: 50%;
+  content: " \25CF";
+  color: $white;
 }
 
 input[type=radio]:checked + label:before {
-  content: " \25CF";
-
   color: $red;
 }
 
