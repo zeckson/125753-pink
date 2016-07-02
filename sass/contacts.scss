@@ -29,8 +29,18 @@
 
   color: $red;
 
-  &, &:hover {
+  & {
     text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+
+    color: $grey;
+  }
+  &:active {
+    text-decoration: none;
+
+    color: rgba($grey, 0.3);
   }
 }
 
@@ -46,6 +56,8 @@
     padding-right: 8px;
     padding-bottom: 48px;
     padding-left: 8px;
+
+    vertical-align: middle;
   }
 }
 

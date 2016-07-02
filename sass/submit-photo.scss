@@ -1,3 +1,5 @@
+$reset-color: #dddfe0;
+$reset-bg-color: #b5b9be;
 .submit-photo__wrapper {
   padding: 20px 0 35px;
 
@@ -65,7 +67,6 @@
   text-align: center;
   text-decoration: none;
 
-  color: $red;
   border:  {
     width: medium;
 
@@ -75,22 +76,31 @@
     style: solid;
   }
   background-color: transparent;
-  ;
 
-  &:hover {
-    background-color: transparent;
-  }
-  &:active {
-    position: relative;
-    top: 1px;
-  }
-  &:disabled {
-    color: $grey;
-    border-color: $grey;
-  }
-
-  &:first-child {
+  &--submit {
     margin-bottom: 13px;
+
+    color: $red;
+    &:hover {
+      color: $white;
+      background-color: $red;
+    }
+    &:active {
+      color: rgba($white, 0.3);
+    }
+  }
+
+  &--reset {
+    color: $reset-color;
+    border-color: $reset-color;
+    &:hover {
+      color: $reset-bg-color;
+      border-color: $reset-bg-color;
+    }
+    &:active {
+      color: rgba($white, 0.3);
+      background-color: $reset-bg-color;
+    }
   }
 }
 
@@ -164,7 +174,7 @@
     padding-left: 27px;
   }
 
-  .submit-photo__button:first-child {
+  .submit-photo__button--submit {
     margin-bottom: 25px;
   }
 }
@@ -216,7 +226,7 @@
     width: 182px;
     margin: 0;
 
-    &:first-child {
+    &--submit {
       margin: 0;
     }
   }

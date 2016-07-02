@@ -32,7 +32,7 @@ input[type=radio], input[type=checkbox] {
   /* Hide original inputs */
 
   visibility: hidden;
-  & + label:before, & + label:before {
+  & + label:before {
     display: inline-block;
 
     box-sizing: border-box;
@@ -43,18 +43,28 @@ input[type=radio], input[type=checkbox] {
 
     content: " ";
     text-align: center;
+    vertical-align: baseline;
 
     border: 2px solid $border-grey;
     background-color: $white;
 
     font-size: 36px;
   }
+
+  &:hover + label:before {
+    border-color: $grey;
+  }
+
+  &:active + label:before {
+    border-color: $red;
+  }
 }
 
 input[type=radio] + label:before {
-  border-radius: 50%;
   content: " \25CF";
+
   color: $white;
+  border-radius: 50%;
 }
 
 input[type=radio]:checked + label:before {

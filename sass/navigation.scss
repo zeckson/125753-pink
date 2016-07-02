@@ -58,7 +58,6 @@
 }
 
 .navigation__logo {
-  display: inline-block;
   float: left;
 
   padding: 1px 0;
@@ -68,6 +67,16 @@
   float: right;
 
   cursor: pointer;
+
+  fill: $white;
+
+  &:hover {
+    fill: $red;
+  }
+
+  &:active {
+    fill: rgba($red, 0.3);
+  }
 }
 
 .navigation__menu {
@@ -104,13 +113,11 @@
   color: $white;
 
   &:hover {
-    text-decoration: underline;
-
     color: $red;
   }
 
   &:active {
-    color: rgba($white, 0.3);
+    color: rgba($red, 0.3);
   }
 }
 
@@ -196,8 +203,6 @@
   }
 
   .navigation__item {
-    display: inline-block;
-
     margin-left: 80px;
 
     border: none;

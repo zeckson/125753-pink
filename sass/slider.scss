@@ -1,3 +1,4 @@
+
 .slider__list {
   margin: 0;
   padding: 0;
@@ -33,15 +34,24 @@
   border:  {
     width: medium;
 
-    color: $black;
-
     radius: 50%;
     style: solid;
   }
+  border-color: $slider-normal;
   background: $white;
+
+  &:hover {
+    border-color: $slider-hover;
+  }
+  &:active {
+    border-color: $slider-active;
+  }
 
   &--active {
     width: 12px;
     height: 12px;
+    &, &:hover, &:active {
+      border-color: $black;
+    }
   }
 }
