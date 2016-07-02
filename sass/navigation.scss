@@ -67,6 +67,16 @@
   float: right;
 
   cursor: pointer;
+
+  fill: $white;
+
+  &:hover {
+    fill: $red;
+  }
+
+  &:active {
+    fill: rgba($red, 0.3);
+  }
 }
 
 .navigation__menu {
@@ -103,13 +113,11 @@
   color: $white;
 
   &:hover {
-    text-decoration: underline;
-
     color: $red;
   }
 
   &:active {
-    color: rgba($white, 0.3);
+    color: rgba($red, 0.3);
   }
 }
 
