@@ -58,7 +58,7 @@
   &:hover {
     border-color: $grey;
   }
-  &:active {
+  &:active, &:focus {
     border-color: $red;
   }
 }
@@ -202,6 +202,9 @@
   }
   &:active {
     color: rgba($white, 0.3);
+  }
+  &:disabled {
+    background-color: #e5e5e5;
   }
 }
 
