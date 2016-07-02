@@ -54,6 +54,13 @@
   min-width: 280px;
   height: 62px;
   padding-left: 20px;
+
+  &:hover {
+    border-color: $grey;
+  }
+  &:active {
+    border-color: $red;
+  }
 }
 
 .contest__achievements {
@@ -189,6 +196,13 @@
   color: $white;
   border: 0;
   background-color: $light-green;
+
+  &:hover {
+    background-color: $dark-green;
+  }
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .contest__hint {

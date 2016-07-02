@@ -32,7 +32,7 @@ input[type=radio], input[type=checkbox] {
   /* Hide original inputs */
 
   visibility: hidden;
-  & + label:before, & + label:before {
+  & + label:before {
     display: inline-block;
 
     box-sizing: border-box;
@@ -49,6 +49,14 @@ input[type=radio], input[type=checkbox] {
     background-color: $white;
 
     font-size: 36px;
+  }
+
+  &:hover + label:before {
+    border-color: $grey;
+  }
+
+  &:active + label:before {
+    border-color: $red;
   }
 }
 
