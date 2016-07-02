@@ -31,14 +31,14 @@
 
   vertical-align: middle;
 
-  border: {
+  border:  {
     width: medium;
 
     radius: 50%;
     style: solid;
   }
-  background: $white;
   border-color: $slider-normal;
+  background: $white;
 
   &:hover {
     border-color: $slider-hover;
@@ -48,10 +48,10 @@
   }
 
   &--active {
+    width: 12px;
+    height: 12px;
     &, &:hover, &:active {
       border-color: $black;
     }
-    width: 12px;
-    height: 12px;
   }
 }

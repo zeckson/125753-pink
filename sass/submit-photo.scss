@@ -1,3 +1,5 @@
+$reset-color: #dddfe0;
+$reset-bg-color: #b5b9be;
 .submit-photo__wrapper {
   padding: 20px 0 35px;
 
@@ -65,7 +67,7 @@
   text-align: center;
   text-decoration: none;
 
-  border: {
+  border:  {
     width: medium;
 
     color: $red;
@@ -77,10 +79,11 @@
 
   &--submit {
     margin-bottom: 13px;
+
     color: $red;
     &:hover {
-      background-color: $red;
       color: $white;
+      background-color: $red;
     }
     &:active {
       color: rgba($white, 0.3);
@@ -88,18 +91,17 @@
   }
 
   &--reset {
-    color: #dddfe0;
-    border-color: #dddfe0;
+    color: $reset-color;
+    border-color: $reset-color;
     &:hover {
-      color: #b5b9be;
-      border-color: #b5b9be;
+      color: $reset-bg-color;
+      border-color: $reset-bg-color;
     }
     &:active {
-      background-color: #b5b9be;
       color: rgba($white, 0.3);
+      background-color: $reset-bg-color;
     }
   }
-
 }
 
 @media #{$tablet-width} {

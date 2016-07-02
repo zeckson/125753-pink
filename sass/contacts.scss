@@ -29,15 +29,17 @@
 
   color: $red;
 
-  &{
+  & {
     text-decoration: none;
   }
   &:hover {
     text-decoration: underline;
+
     color: $grey;
   }
   &:active {
     text-decoration: none;
+
     color: rgba($grey, 0.3);
   }
 }
