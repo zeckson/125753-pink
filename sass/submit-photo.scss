@@ -65,8 +65,7 @@
   text-align: center;
   text-decoration: none;
 
-  color: $red;
-  border:  {
+  border: {
     width: medium;
 
     color: $red;
@@ -75,23 +74,32 @@
     style: solid;
   }
   background-color: transparent;
-  ;
 
-  &:hover {
-    background-color: transparent;
-  }
-  &:active {
-    position: relative;
-    top: 1px;
-  }
-  &:disabled {
-    color: $grey;
-    border-color: $grey;
-  }
-
-  &:first-child {
+  &--submit {
     margin-bottom: 13px;
+    color: $red;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+    &:active {
+      color: rgba($white, 0.3);
+    }
   }
+
+  &--reset {
+    color: #dddfe0;
+    border-color: #dddfe0;
+    &:hover {
+      color: #b5b9be;
+      border-color: #b5b9be;
+    }
+    &:active {
+      background-color: #b5b9be;
+      color: rgba($white, 0.3);
+    }
+  }
+
 }
 
 @media #{$tablet-width} {
@@ -164,7 +172,7 @@
     padding-left: 27px;
   }
 
-  .submit-photo__button:first-child {
+  .submit-photo__button--submit {
     margin-bottom: 25px;
   }
 }
@@ -216,7 +224,7 @@
     width: 182px;
     margin: 0;
 
-    &:first-child {
+    &--submit {
       margin: 0;
     }
   }
