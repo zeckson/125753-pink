@@ -29,8 +29,16 @@
 
   color: $red;
 
-  &, &:hover {
+  &{
     text-decoration: none;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: $grey;
+  }
+  &:active {
+    text-decoration: none;
+    color: $contact-link-active;
   }
 }
 
